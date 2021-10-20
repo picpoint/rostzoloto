@@ -11,7 +11,19 @@
 <body>
 
     <section class="homepage">
-        <h3>РОСТЗОЛОТО</h3>
+        <div class="homepage__header">
+            <div class="homepage__hdrblock">
+                <div class="homepage__post">
+
+                </div>
+                <div class="homepage__logo">
+
+                </div>
+                <div class="homepage__phone">
+
+                </div>
+            </div>
+        </div>
     </section>
 
 </body>
