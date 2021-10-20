@@ -1,4 +1,28 @@
 @import "var.scss";
+@import "fonts.scss";
+
+
+//---------------------
+// MIXINS
+
+@mixin mixincontacts {
+  border: $border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  i {
+    font-size: 1.7rem;
+    margin-right: 10px;
+  }
+  span {
+    font-size: 1.3rem;
+    font-family: Play-Regular;
+  }
+}
+
+//---------------------
+
 
 
 body {
@@ -30,15 +54,19 @@ body {
       width: 66%;
     }
     &__post {
-      border: $border;
-      width: 30%;
+      @include mixincontacts;
     }
     &__logo {
       border: $border;
+      display: flex;
+      justify-content: center;
       width: 40%;
+        img {
+          border: $border;
+          height: 100%;
+        }
     }
     &__phone {
-      border: $border;
-      width: 30%;
+      @include mixincontacts;
     }
 }

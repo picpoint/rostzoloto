@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/public/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Play-Bold";
+  src: url("/public/fonts/Play-Bold.ttf");
+}
+@font-face {
+  font-family: "Play-Regular";
+  src: url("/public/fonts/Play-Regular.ttf");
+}
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -28,13 +40,41 @@ body {
 }
 .homepage__post {
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
+}
+.homepage__post i {
+  font-size: 1.7rem;
+  margin-right: 10px;
+}
+.homepage__post span {
+  font-size: 1.3rem;
+  font-family: Play-Regular;
 }
 .homepage__logo {
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
   width: 40%;
+}
+.homepage__logo img {
+  border: 1px solid red;
+  height: 100%;
 }
 .homepage__phone {
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
+}
+.homepage__phone i {
+  font-size: 1.7rem;
+  margin-right: 10px;
+}
+.homepage__phone span {
+  font-size: 1.3rem;
+  font-family: Play-Regular;
 }
