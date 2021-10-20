@@ -22,4 +22,7 @@ const mix = require('laravel-mix');
 // }
 
 
-mix.sass('resources/assets/users/scss/style.scss', 'public/assets/users/css/style.css');
+mix.sass('resources/assets/users/scss/style.scss', 'public/assets/users/css/style.css')
+    .browserSync({
+        proxy: 'http://rostzoloto/'
+    });
