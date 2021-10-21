@@ -13,7 +13,7 @@
 
     <section class="homepage">
         <div class="homepage__header">
-            <div class="homepage__hdrblock">
+            <div class="homepage__headerwrapper">
                 <div class="homepage__post">
                     <i class="far fa-envelope"></i>
                     <span>1@rostzoloto23.ru</span>
@@ -27,6 +27,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="homepage__navbar">
+            <div class="homepage__navbarwrapper">
+                <div class="homepage__navigation">
+                    <a href="#">АКЦИИ</a>
+                    <a href="#">КАТАЛОГ</a>
+                    <a href="#">ГАЛЕРЕЯ</a>
+                    <a href="#">СОВЕТЫ</a>
+                    <a href="#">ЛОМБАРДЫ</a>
+                    <a href="#">ПАРТНЁРЫ</a>
+                    <a href="#">О НАС</a>
+                    <a href="#">КОНТАКТЫ</a>
+
+                </div>
+                <div class="homepage__profile">
+
+                </div>
+            </div>
+        </div>
+
     </section>
 
 </body>

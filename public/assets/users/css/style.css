@@ -21,25 +21,21 @@ body {
 }
 
 .homepage {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
 .homepage__header {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 100px;
 }
-.homepage__hdrblock {
-  border: 1px solid red;
+.homepage__headerwrapper {
   display: flex;
-  width: 66%;
+  width: 65%;
 }
 .homepage__post {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,17 +50,15 @@ body {
   font-family: Play-Regular;
 }
 .homepage__logo {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: 40%;
 }
 .homepage__logo img {
-  border: 1px solid red;
-  height: 100%;
+  align-self: center;
+  height: 95%;
 }
 .homepage__phone {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,4 +71,38 @@ body {
 .homepage__phone span {
   font-size: 1.3rem;
   font-family: Play-Regular;
+}
+.homepage__navbar {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background-color: #fbf6eb;
+}
+.homepage__navbarwrapper {
+  border: 1px solid red;
+  display: flex;
+  width: 65%;
+}
+.homepage__navigation {
+  border: 1px solid red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+}
+.homepage__navigation a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+  font-family: Play-Regular;
+}
+.homepage__navigation a:hover {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+.homepage__profile {
+  border: 1px solid red;
+  display: flex;
+  width: 30%;
 }
