@@ -21,6 +21,12 @@
   }
 }
 
+@mixin mixininfo {
+  //border: $border;
+  display: flex;
+  width: 20%;
+}
+
 //---------------------
 
 
@@ -40,8 +46,6 @@ body {
   //border: $border;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
     &__header {
       //border: $border;
       display: flex;
@@ -64,7 +68,7 @@ body {
         img {
           //border: $border;
           align-self: center;
-          height: 95%;
+          height: 85%;
         }
     }
     &__phone {
@@ -72,19 +76,19 @@ body {
     }
 
   &__navbar {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 70px;
     background-color: $brendcolor;
   }
   &__navbarwrapper {
-    border: $border;
+    //border: $border;
     display: flex;
     width: 65%;
   }
   &__navigation {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -103,9 +107,150 @@ body {
       }
   }
   &__profile {
+    //border: $border;
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+      a {
+        //border: $border;
+        display: flex;
+        align-items: center;
+          i {
+            font-size: 23px;
+            color: black;
+          }
+      }
+  }
+  &__slider {
+    //border: $border;
+    display: flex;
+    height: 700px;
+    background-image: url("/public/img/slide01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__info {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+  &__infowrapper {
+    //border: $border;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+  &__delivery {
+    @include mixininfo;
+  }
+  &__infologo {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  &__infobackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $brendcolor;
+      i {
+        font-size: 1.5rem;
+      }
+  }
+  &__infotext {
+    //border: $border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+      span {
+        font-size: 1rem;
+        font-family: Play-Regular;
+        text-align: center;
+          &:nth-child(1) {
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            font-size: 0.8rem;
+          }
+      }
+  }
+  &__gift {
+    @include mixininfo;
+  }
+  &__back {
+    @include mixininfo;
+  }
+  &__support {
+    @include mixininfo;
+  }
+
+
+
+  &__newitems {
     border: $border;
     display: flex;
-    width: 30%;
+    flex-direction: column;
+  }
+  &__newitemtitle {
+    border: $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    //margin-bottom: 50px;
+      span {
+        font-size: 2.3rem;
+        font-family: Play-Regular;
+      }
+  }
+  &__items {
+    border: $border;
+    display: flex;
+    justify-content: center;
+    //height: 100px;
+  }
+  &__itemswrapper {
+    border: $border;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 65%;
+  }
+  &__cardproduct {
+    border: $border;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 430px;
+    margin: 20px 0;
+    text-decoration: none;
+    font-family: Play-Regular;
+  }
+  &__pict {
+    border: $border;
+    width: 100%;
+    height: 80%;
+  }
+  &__productinfo {
+    border: $border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+      span {
+        border: $border;
+        font-size: 1.1rem;
+        color: black;
+      }
   }
 
 
