@@ -179,12 +179,10 @@ body {
   width: 20%;
 }
 .homepage__newitems {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
 }
 .homepage__newitemtitle {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,19 +193,17 @@ body {
   font-family: Play-Regular;
 }
 .homepage__items {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
 .homepage__itemswrapper {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 65%;
 }
 .homepage__cardproduct {
-  border: 1px solid red;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   width: 270px;
@@ -217,20 +213,45 @@ body {
   font-family: Play-Regular;
 }
 .homepage__pict {
-  border: 1px solid red;
+  border-bottom: 1px solid black;
   width: 100%;
-  height: 80%;
+  height: 75%;
+  overflow: hidden;
+}
+.homepage__pict img {
+  width: 100%;
 }
 .homepage__productinfo {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 20%;
+  height: 25%;
+  transition: ease-in-out 0.5s;
+}
+.homepage__productinfo:hover {
+  transition: ease-in-out 0.5s;
+}
+.homepage__productinfo:hover button {
+  opacity: 1;
+  top: 0px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
 }
 .homepage__productinfo span {
-  border: 1px solid red;
-  font-size: 1.1rem;
+  align-self: center;
+  font-size: 1rem;
   color: black;
+}
+.homepage__productinfo button {
+  opacity: 0;
+  position: relative;
+  top: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: 1.1rem;
+  font-family: Play-Regular;
+  background-color: #f7e5c3;
+  border: none;
+  transition: ease-in-out 0.5s;
 }

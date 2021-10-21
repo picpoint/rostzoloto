@@ -195,12 +195,12 @@ body {
 
 
   &__newitems {
-    border: $border;
+    //border: $border;
     display: flex;
     flex-direction: column;
   }
   &__newitemtitle {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,20 +212,20 @@ body {
       }
   }
   &__items {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: center;
     //height: 100px;
   }
   &__itemswrapper {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 65%;
   }
   &__cardproduct {
-    border: $border;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     width: 270px;
@@ -235,21 +235,49 @@ body {
     font-family: Play-Regular;
   }
   &__pict {
-    border: $border;
+    border-bottom: 1px solid black;
     width: 100%;
-    height: 80%;
+    height: 75%;
+    overflow: hidden;
+      img {
+        width: 100%;
+        //object-fit: cover;
+        //overflow: hidden;
+      }
   }
   &__productinfo {
-    border: $border;
+    //border: $border;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 20%;
+    height: 25%;
+    transition: $transition;
+      &:hover {
+        transition: $transition;
+        button {
+          opacity: 1;
+          top: 0px;
+          cursor: pointer;
+          transition: $transition;
+        }
+      }
       span {
-        border: $border;
-        font-size: 1.1rem;
+        align-self: center;
+        font-size: 1rem;
         color: black;
+      }
+      button {
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        width: 150px;
+        height: 40px;
+        font-size: 1.1rem;
+        font-family: Play-Regular;
+        background-color: $brendcolor;
+        border: none;
+        transition: $transition;
       }
   }
 

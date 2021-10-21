@@ -109,7 +109,7 @@
                 <div class="homepage__itemswrapper">
                     <div class="homepage__cardproduct">
                         <div class="homepage__pict">
-                            <img src="" alt="#">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
                         </div>
                         <span class="homepage__productinfo">
                             <span>название</span>
@@ -117,18 +117,56 @@
                             <button>в корзину</button>
                         </span>
                     </div>
-                    <a href="#" class="homepage__cardproduct">
-                        <span>CARD</span>
-                    </a>
-                    <a href="#" class="homepage__cardproduct">
-                        <span>CARD</span>
-                    </a>
-                    <a href="#" class="homepage__cardproduct">
-                        <span>CARD</span>
-                    </a>
-                    <a href="#" class="homepage__cardproduct">
-                        <span>CARD</span>
-                    </a>
+                    <div class="homepage__cardproduct">
+                        <div class="homepage__pict">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </div>
+                        <span class="homepage__productinfo">
+                            <span>название</span>
+                            <span>цена</span>
+                            <button>в корзину</button>
+                        </span>
+                    </div>
+                    <div class="homepage__cardproduct">
+                        <div class="homepage__pict">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </div>
+                        <span class="homepage__productinfo">
+                            <span>название</span>
+                            <span>цена</span>
+                            <button>в корзину</button>
+                        </span>
+                    </div>
+                    <div class="homepage__cardproduct">
+                        <div class="homepage__pict">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </div>
+                        <span class="homepage__productinfo">
+                            <span>название</span>
+                            <span>цена</span>
+                            <button>в корзину</button>
+                        </span>
+                    </div>
+                    <div class="homepage__cardproduct">
+                        <div class="homepage__pict">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </div>
+                        <span class="homepage__productinfo">
+                            <span>название</span>
+                            <span>цена</span>
+                            <button>в корзину</button>
+                        </span>
+                    </div>
+                    <div class="homepage__cardproduct">
+                        <div class="homepage__pict">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </div>
+                        <span class="homepage__productinfo">
+                            <span>название</span>
+                            <span>цена</span>
+                            <button>в корзину</button>
+                        </span>
+                    </div>
                 </div>
 
             </div>
