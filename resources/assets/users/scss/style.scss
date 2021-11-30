@@ -321,22 +321,28 @@ body {
   &__categorywrapper {
     border: $border;
     display: flex;
-    justify-content: space-around;
+    //justify-content: space-around;
     width: 65%;
+    height: 100%;
   }
   &__leftblock {
     border: $border;
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 100%;
   }
   &__lefttopblock {
     border: $border;
+    display: flex;
     height: 40%;
+    width: 100%;
   }
   &__leftbottomblock {
     border: $border;
+    display: flex;
     height: 60%;
+    width: 100%;
   }
 
 
@@ -348,11 +354,26 @@ body {
   }
   &__righttopblock {
     border: $border;
+    display: flex;
     height: 60%;
   }
   &__rightbottomblock {
     border: $border;
+    display: flex;
     height: 40%;
+  }
+
+  &__off {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
+  &__offwrapper {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    width: 65%;
   }
 
 

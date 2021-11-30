@@ -293,22 +293,27 @@ body {
 .homepage__categorywrapper {
   border: 1px solid red;
   display: flex;
-  justify-content: space-around;
   width: 65%;
+  height: 100%;
 }
 .homepage__leftblock {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 50%;
+  height: 100%;
 }
 .homepage__lefttopblock {
   border: 1px solid red;
+  display: flex;
   height: 40%;
+  width: 100%;
 }
 .homepage__leftbottomblock {
   border: 1px solid red;
+  display: flex;
   height: 60%;
+  width: 100%;
 }
 .homepage__rightblock {
   border: 1px solid red;
@@ -318,9 +323,21 @@ body {
 }
 .homepage__righttopblock {
   border: 1px solid red;
+  display: flex;
   height: 60%;
 }
 .homepage__rightbottomblock {
   border: 1px solid red;
+  display: flex;
   height: 40%;
+}
+.homepage__off {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+.homepage__offwrapper {
+  display: flex;
+  justify-content: center;
+  width: 65%;
 }

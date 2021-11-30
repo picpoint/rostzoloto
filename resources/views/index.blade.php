@@ -236,20 +236,34 @@
             <div class="homepage__categorywrapper">
                 <div class="homepage__leftblock">
                     <div class="homepage__lefttopblock">
-
+                        <a href="#">
+                            {{--<img src="public/assets/users/img/baner1.jpg" alt="baner">--}}
+                        </a>
                     </div>
                     <div class="homepage__leftbottomblock">
-
+                        <a href="#">
+                            {{--<img src="public/assets/users/img/baner2.jpg" alt="baner">--}}
+                        </a>
                     </div>
                 </div>
                 <div class="homepage__rightblock">
                     <div class="homepage__righttopblock">
-
+                        <a href="#">
+                            {{--<img src="public/assets/users/img/baner3.jpg" alt="baner">--}}
+                        </a>
                     </div>
                     <div class="homepage__rightbottomblock">
-
+                        <a href="#">
+                            {{--<img src="public/assets/users/img/baner4.jpg" alt="baner">--}}
+                        </a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="homepage__off">
+            <div class="homepage__offwrapper">
+
             </div>
         </div>
 
