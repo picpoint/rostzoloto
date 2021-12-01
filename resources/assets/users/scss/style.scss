@@ -125,7 +125,7 @@ body {
     //border: $border;
     display: flex;
     height: 700px;
-    background-image: url("/public/img/slide01.jpg");
+    background-image: url("/public/assets/users/img/slide01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -403,16 +403,95 @@ body {
   }
 
   &__off {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: center;
-    height: 400px;
+    //height: 500px;
+    margin: 20px 0;
   }
   &__offwrapper {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+      a {
+        //border: $border;
+        display: flex;
+        width: 100%;
+          img {
+            width: 100%;
+          }
+      }
+  }
+
+  &__blog {
     border: $border;
     display: flex;
     justify-content: center;
+    //height: 500px;
+  }
+  &__blogwrapper {
+    border: $border;
+    display: flex;
+    flex-direction: column;
     width: 65%;
+  }
+  &__bloghdr {
+    border: $border;
+    display: flex;
+    justify-content: center;
+      span {
+        font-size: 2.3rem;
+        font-family: Play-Regular;
+      }
+  }
+  &__blogcontent {
+    border: $border;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  &__blogpost {
+    border: $border;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 400px;
+    margin: 30px 0;
+      a {
+        border: $border;
+        height: 100%;
+        text-decoration: none;
+        color: black;
+        height: 400px;
+      }
+  }
+  &__blogpostimg {
+    border: $border;
+    height: 300px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+  }
+  &__blogpostcontent {
+    border: $border;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+      span {
+        border: $border;
+        font-family: Montserrat-Regular;
+        padding-left: 10px;
+        &:nth-child(1) {
+          font-size: 1.1rem;
+          font-weight: bolder;
+        }
+        &:nth-child(2) {
+          height: 100%;
+        }
+      }
   }
 
 
