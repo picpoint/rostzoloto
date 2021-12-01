@@ -285,58 +285,84 @@ body {
   transition: ease-in-out 0.5s;
 }
 .homepage__category {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 600px;
 }
 .homepage__categorywrapper {
-  border: 1px solid red;
   display: flex;
   width: 65%;
   height: 100%;
 }
 .homepage__leftblock {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 100%;
 }
 .homepage__lefttopblock {
-  border: 1px solid red;
   display: flex;
   height: 40%;
   width: 100%;
 }
+.homepage__lefttopblock a {
+  width: 100%;
+  margin: 10px;
+}
+.homepage__lefttopblock a img {
+  width: 100%;
+  height: 100%;
+}
 .homepage__leftbottomblock {
-  border: 1px solid red;
   display: flex;
   height: 60%;
   width: 100%;
 }
+.homepage__leftbottomblock a {
+  width: 100%;
+  margin: 10px;
+}
+.homepage__leftbottomblock a img {
+  width: 100%;
+  height: 100%;
+}
 .homepage__rightblock {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 .homepage__righttopblock {
-  border: 1px solid red;
   display: flex;
   height: 60%;
 }
+.homepage__righttopblock a {
+  width: 100%;
+  margin: 10px;
+}
+.homepage__righttopblock a img {
+  width: 100%;
+  height: 100%;
+}
 .homepage__rightbottomblock {
-  border: 1px solid red;
   display: flex;
   height: 40%;
 }
+.homepage__rightbottomblock a {
+  width: 100%;
+  margin: 10px;
+}
+.homepage__rightbottomblock a img {
+  width: 100%;
+  height: 100%;
+}
 .homepage__off {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 400px;
 }
 .homepage__offwrapper {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: 65%;
