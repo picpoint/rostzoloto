@@ -10,6 +10,15 @@
   font-family: "Play-Regular";
   src: url("/public/fonts/Play-Regular.ttf");
 }
+.personal {
+  border: 1px solid red;
+  display: flex;
+}
+.personal__reglog {
+  border: 1px solid red;
+  display: flex;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -52,7 +61,12 @@ body {
   justify-content: center;
   width: 40%;
 }
-.homepage__logo img {
+.homepage__logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__logo a img {
   align-self: center;
   height: 85%;
 }
@@ -434,20 +448,17 @@ body {
   height: 100%;
 }
 .homepage__partners {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 200px;
   margin-bottom: 30px;
 }
 .homepage__partnerswrapper {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 65%;
 }
 .homepage__partnershdr {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -456,14 +467,24 @@ body {
   font-family: Play-Regular;
 }
 .homepage__partnerscurrent {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
 .homepage__partnerscurrent img {
-  border: 1px solid red;
   width: 140px;
   height: 140px;
   margin: 0 10px;
+}
+.homepage__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #fae5e8;
+}
+.homepage__footer span {
+  font-size: 1.3rem;
+  font-family: Montserrat-Regular;
+  font-weight: bolder;
 }

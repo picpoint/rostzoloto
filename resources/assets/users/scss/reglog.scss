@@ -1,0 +1,8 @@
+.personal {
+  border: $border;
+  display: flex;
+    &__reglog {
+      border: $border;
+      display: flex;
+    }
+}
