@@ -323,9 +323,18 @@
                 <span>НАШИ ПАРТНЁРЫ</span>
             </div>
             <div class="homepage__partnerscurrent">
-
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
             </div>
         </div>
+    </div>
+
+    <div class="homepage__footer">
+        
     </div>
 
 

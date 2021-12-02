@@ -1,7 +1,6 @@
 @import "var.scss";
 @import "fonts.scss";
 
-
 //---------------------
 // MIXINS
 
@@ -29,8 +28,6 @@
 
 //---------------------
 
-
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -41,39 +38,38 @@ body {
   overflow-x: hidden;
 }
 
-
 .homepage {
   //border: $border;
   display: flex;
   flex-direction: column;
-    &__header {
+  &__header {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+  }
+  &__headerwrapper {
+    //border: $border;
+    display: flex;
+    width: 65%;
+  }
+  &__post {
+    @include mixincontacts;
+  }
+  &__logo {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    img {
       //border: $border;
-      display: flex;
-      justify-content: center;
-      height: 100px;
+      align-self: center;
+      height: 85%;
     }
-    &__headerwrapper {
-      //border: $border;
-      display: flex;
-      width: 65%;
-    }
-    &__post {
-      @include mixincontacts;
-    }
-    &__logo {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      width: 40%;
-        img {
-          //border: $border;
-          align-self: center;
-          height: 85%;
-        }
-    }
-    &__phone {
-      @include mixincontacts;
-    }
+  }
+  &__phone {
+    @include mixincontacts;
+  }
 
   &__navbar {
     //border: $border;
@@ -93,33 +89,33 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 70%;
-      a {
-        text-decoration: none;
-        margin-left: 20px;
-        color: black;
-        font-family: Play-Regular;
+    a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: black;
+      font-family: Play-Regular;
+      //transition: $transition;
+      &:hover {
+        border-bottom: 1px solid black;
+        font-weight: bold;
         //transition: $transition;
-          &:hover {
-            border-bottom: 1px solid black;
-            font-weight: bold;
-            //transition: $transition;
-          }
       }
+    }
   }
   &__profile {
     //border: $border;
     display: flex;
     justify-content: flex-end;
     width: 30%;
-      a {
-        //border: $border;
-        display: flex;
-        align-items: center;
-          i {
-            font-size: 23px;
-            color: black;
-          }
+    a {
+      //border: $border;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 23px;
+        color: black;
       }
+    }
   }
   &__slider {
     //border: $border;
@@ -159,9 +155,9 @@ body {
     height: 70px;
     border-radius: 50%;
     background-color: $brendcolor;
-      i {
-        font-size: 1.5rem;
-      }
+    i {
+      font-size: 1.5rem;
+    }
   }
   &__infotext {
     //border: $border;
@@ -170,17 +166,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 60%;
-      span {
-        font-size: 1rem;
-        font-family: Play-Regular;
-        text-align: center;
-          &:nth-child(1) {
-            font-weight: bold;
-          }
-          &:nth-child(2) {
-            font-size: 0.8rem;
-          }
+    span {
+      font-size: 1rem;
+      font-family: Play-Regular;
+      text-align: center;
+      &:nth-child(1) {
+        font-weight: bold;
       }
+      &:nth-child(2) {
+        font-size: 0.8rem;
+      }
+    }
   }
   &__gift {
     @include mixininfo;
@@ -191,8 +187,6 @@ body {
   &__support {
     @include mixininfo;
   }
-
-
 
   &__newitems {
     //border: $border;
@@ -206,10 +200,10 @@ body {
     align-items: center;
     height: 50px;
     //margin-bottom: 50px;
-      span {
-        font-size: 2.3rem;
-        font-family: Play-Regular;
-      }
+    span {
+      font-size: 2.3rem;
+      font-family: Play-Regular;
+    }
   }
   &__items {
     //border: $border;
@@ -242,20 +236,20 @@ body {
     width: 100%;
     height: 75%;
     overflow: hidden;
-      &:hover {
-        .homepage__addfuncs {
-          display: flex;
-          left: 110px;
-          opacity: 1;
-          transition: $transition;
-        }
+    &:hover {
+      .homepage__addfuncs {
+        display: flex;
+        left: 110px;
+        opacity: 1;
+        transition: $transition;
       }
-      img {
-        //border: $border;
-        position: absolute;
-        width: 270px;
-        height: 270px;
-      }
+    }
+    img {
+      //border: $border;
+      position: absolute;
+      width: 270px;
+      height: 270px;
+    }
   }
   &__addfuncs {
     //border: $border;
@@ -267,14 +261,14 @@ body {
     bottom: 100px;
     opacity: 0;
     transition: $transition;
-      a {
-        padding: 10px;
-        margin-bottom: 5px;
-        background-color: $brendcolor;
-        i {
-          color: black;
-        }
+    a {
+      padding: 10px;
+      margin-bottom: 5px;
+      background-color: $brendcolor;
+      i {
+        color: black;
       }
+    }
   }
   &__productinfo {
     //border: $border;
@@ -284,32 +278,32 @@ body {
     align-items: center;
     height: 25%;
     transition: $transition;
-      &:hover {
-        transition: $transition;
-        button {
-          opacity: 1;
-          top: 0px;
-          cursor: pointer;
-          transition: $transition;
-        }
-      }
-      span {
-        align-self: center;
-        font-size: 1rem;
-        color: black;
-      }
+    &:hover {
+      transition: $transition;
       button {
-        opacity: 0;
-        position: relative;
-        top: 20px;
-        width: 150px;
-        height: 40px;
-        font-size: 1.1rem;
-        font-family: Play-Regular;
-        background-color: $brendcolor;
-        border: none;
+        opacity: 1;
+        top: 0px;
+        cursor: pointer;
         transition: $transition;
       }
+    }
+    span {
+      align-self: center;
+      font-size: 1rem;
+      color: black;
+    }
+    button {
+      opacity: 0;
+      position: relative;
+      top: 20px;
+      width: 150px;
+      height: 40px;
+      font-size: 1.1rem;
+      font-family: Play-Regular;
+      background-color: $brendcolor;
+      border: none;
+      transition: $transition;
+    }
   }
 
   &__category {
@@ -336,34 +330,33 @@ body {
     display: flex;
     height: 40%;
     width: 100%;
-      a {
+    a {
+      //border: $border;
+      width: 100%;
+      margin: 10px;
+      img {
         //border: $border;
         width: 100%;
-        margin: 10px;
-          img {
-            //border: $border;
-            width: 100%;
-            height: 100%;
-          }
+        height: 100%;
       }
+    }
   }
   &__leftbottomblock {
     //border: $border;
     display: flex;
     height: 60%;
     width: 100%;
-      a {
+    a {
+      //border: $border;
+      width: 100%;
+      margin: 10px;
+      img {
         //border: $border;
         width: 100%;
-        margin: 10px;
-          img {
-            //border: $border;
-            width: 100%;
-            height: 100%;
-          }
+        height: 100%;
       }
+    }
   }
-
 
   &__rightblock {
     //border: $border;
@@ -375,31 +368,31 @@ body {
     //border: $border;
     display: flex;
     height: 60%;
-      a {
+    a {
+      //border: $border;
+      width: 100%;
+      margin: 10px;
+      img {
         //border: $border;
         width: 100%;
-        margin: 10px;
-          img {
-            //border: $border;
-            width: 100%;
-            height: 100%;
-          }
+        height: 100%;
       }
+    }
   }
   &__rightbottomblock {
     //border: $border;
     display: flex;
     height: 40%;
-      a {
+    a {
+      //border: $border;
+      width: 100%;
+      margin: 10px;
+      img {
         //border: $border;
         width: 100%;
-        margin: 10px;
-        img {
-          //border: $border;
-          width: 100%;
-          height: 100%;
-        }
+        height: 100%;
       }
+    }
   }
 
   &__off {
@@ -414,14 +407,14 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-      a {
-        //border: $border;
-        display: flex;
+    a {
+      //border: $border;
+      display: flex;
+      width: 100%;
+      img {
         width: 100%;
-          img {
-            width: 100%;
-          }
       }
+    }
   }
 
   &__blog {
@@ -440,10 +433,10 @@ body {
     //border: $border;
     display: flex;
     justify-content: center;
-      span {
-        font-size: 2.3rem;
-        font-family: Play-Regular;
-      }
+    span {
+      font-size: 2.3rem;
+      font-family: Play-Regular;
+    }
   }
   &__blogcontent {
     //border: $border;
@@ -459,40 +452,40 @@ body {
     width: 300px;
     height: 400px;
     margin: 30px 0;
-      a {
-        //border: $border;
-        height: 100%;
-        text-decoration: none;
-        color: black;
-        height: 400px;
-      }
+    a {
+      //border: $border;
+      height: 100%;
+      text-decoration: none;
+      color: black;
+      height: 400px;
+    }
   }
   &__blogpostimg {
     //border: $border;
     height: 300px;
     width: 300px;
     overflow: hidden;
-      img {
-        height: 100%;
-      }
+    img {
+      height: 100%;
+    }
   }
   &__blogpostcontent {
     //border: $border;
     display: flex;
     flex-direction: column;
     height: 100px;
-      span {
-        //border: $border;
-        font-family: Montserrat-Regular;
-        padding-left: 10px;
-        &:nth-child(1) {
-          font-size: 1.1rem;
-          font-weight: bolder;
-        }
-        &:nth-child(2) {
-          height: 100%;
-        }
+    span {
+      //border: $border;
+      font-family: Montserrat-Regular;
+      padding-left: 10px;
+      &:nth-child(1) {
+        font-size: 1.1rem;
+        font-weight: bolder;
       }
+      &:nth-child(2) {
+        height: 100%;
+      }
+    }
   }
 
   &__partners {
@@ -500,6 +493,7 @@ body {
     display: flex;
     justify-content: center;
     height: 200px;
+    margin-bottom: 30px;
   }
   &__partnerswrapper {
     border: $border;
@@ -511,17 +505,23 @@ body {
     border: $border;
     display: flex;
     justify-content: center;
-      span {
-        font-size: 2.3rem;
-        font-family: Play-Regular;
-      }
+    span {
+      font-size: 2.3rem;
+      font-family: Play-Regular;
+    }
   }
   &__partnerscurrent {
     border: $border;
     display: flex;
+    justify-content: space-between;
     height: 100%;
+      img {
+        border: $border;
+        width: 140px;
+        height: 140px;
+        margin: 0 10px;
+      }
+
   }
-
-
 
 }

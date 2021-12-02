@@ -438,6 +438,7 @@ body {
   display: flex;
   justify-content: center;
   height: 200px;
+  margin-bottom: 30px;
 }
 .homepage__partnerswrapper {
   border: 1px solid red;
@@ -457,5 +458,12 @@ body {
 .homepage__partnerscurrent {
   border: 1px solid red;
   display: flex;
+  justify-content: space-between;
   height: 100%;
+}
+.homepage__partnerscurrent img {
+  border: 1px solid red;
+  width: 140px;
+  height: 140px;
+  margin: 0 10px;
 }
