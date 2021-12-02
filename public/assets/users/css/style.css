@@ -74,7 +74,7 @@ body {
   display: flex;
   justify-content: center;
   height: 70px;
-  background-color: #f7e5c3;
+  background-color: #fae5e8;
 }
 .homepage__navbarwrapper {
   display: flex;
@@ -143,7 +143,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #f7e5c3;
+  background-color: #fae5e8;
 }
 .homepage__infobackground i {
   font-size: 1.5rem;
@@ -245,7 +245,7 @@ body {
 .homepage__addfuncs a {
   padding: 10px;
   margin-bottom: 5px;
-  background-color: #f7e5c3;
+  background-color: #fae5e8;
 }
 .homepage__addfuncs a i {
   color: black;
@@ -280,7 +280,7 @@ body {
   height: 40px;
   font-size: 1.1rem;
   font-family: Play-Regular;
-  background-color: #f7e5c3;
+  background-color: #fae5e8;
   border: none;
   transition: ease-in-out 0.5s;
 }
@@ -373,18 +373,16 @@ body {
   width: 100%;
 }
 .homepage__blog {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .homepage__blogwrapper {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 65%;
 }
 .homepage__bloghdr {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -393,43 +391,38 @@ body {
   font-family: Play-Regular;
 }
 .homepage__blogcontent {
-  border: 1px solid red;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
 .homepage__blogpost {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  width: 370px;
+  width: 300px;
   height: 400px;
   margin: 30px 0;
 }
 .homepage__blogpost a {
-  border: 1px solid red;
   height: 100%;
   text-decoration: none;
   color: black;
   height: 400px;
 }
 .homepage__blogpostimg {
-  border: 1px solid red;
   height: 300px;
+  width: 300px;
+  overflow: hidden;
 }
 .homepage__blogpostimg img {
   height: 100%;
-  width: 100%;
 }
 .homepage__blogpostcontent {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 100px;
 }
 .homepage__blogpostcontent span {
-  border: 1px solid red;
   font-family: Montserrat-Regular;
   padding-left: 10px;
 }
@@ -438,5 +431,31 @@ body {
   font-weight: bolder;
 }
 .homepage__blogpostcontent span:nth-child(2) {
+  height: 100%;
+}
+.homepage__partners {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+.homepage__partnerswrapper {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.homepage__partnershdr {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+.homepage__partnershdr span {
+  font-size: 2.3rem;
+  font-family: Play-Regular;
+}
+.homepage__partnerscurrent {
+  border: 1px solid red;
+  display: flex;
   height: 100%;
 }

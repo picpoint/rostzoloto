@@ -278,6 +278,17 @@
                 <span>НАШ БЛОГ</span>
             </div>
             <div class="homepage__blogcontent">
+                <div class="homepage__blogpost">
+                    <a href="#">
+                        <div class="homepage__blogpostimg">
+                            <img src="public/assets/users/img/girl.jpg" alt="img">
+                        </div>
+                        <div class="homepage__blogpostcontent">
+                            <span>Заголовок поста</span>
+                            <span>Какой то текст поста, о чём то, ни кто не знает о чём</span>
+                        </div>
+                    </a>
+                </div>
 
                 <div class="homepage__blogpost">
                     <a href="#">
@@ -301,17 +312,17 @@
                         </div>
                     </a>
                 </div>
-                <div class="homepage__blogpost">
-                    <a href="#">
-                        <div class="homepage__blogpostimg">
-                            <img src="public/assets/users/img/girl.jpg" alt="img">
-                        </div>
-                        <div class="homepage__blogpostcontent">
-                            <span>Заголовок поста</span>
-                            <span>Какой то текст поста, о чём то, ни кто не знает о чём</span>
-                        </div>
-                    </a>
-                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="homepage__partners">
+        <div class="homepage__partnerswrapper">
+            <div class="homepage__partnershdr">
+                <span>НАШИ ПАРТНЁРЫ</span>
+            </div>
+            <div class="homepage__partnerscurrent">
 
             </div>
         </div>
