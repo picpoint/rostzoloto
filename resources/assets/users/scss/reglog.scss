@@ -1,8 +1,40 @@
 .personal {
   border: $border;
   display: flex;
-    &__reglog {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+    &__headerpers {
+      border: $border;
+    }
+    &__reglogpers {
       border: $border;
       display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    &__reglogwrapper {
+      border: $border;
+      display: flex;
+      width: 65%;
+      height: 100%;
+    }
+    &__login {
+      border: $border;
+      display: flex;
+      width: 50%;
+      height: 100%;
+    }
+    &__registration {
+      border: $border;
+      display: flex;
+      width: 50%;
+    }
+
+
+    &__footerpers {
+      border: $border;
     }
 }

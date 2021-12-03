@@ -13,10 +13,40 @@
 .personal {
   border: 1px solid red;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
 }
-.personal__reglog {
+.personal__headerpers {
+  border: 1px solid red;
+}
+.personal__reglogpers {
   border: 1px solid red;
   display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.personal__reglogwrapper {
+  border: 1px solid red;
+  display: flex;
+  width: 65%;
+  height: 100%;
+}
+.personal__login {
+  border: 1px solid red;
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+.personal__registration {
+  border: 1px solid red;
+  display: flex;
+  width: 50%;
+}
+.personal__footerpers {
+  border: 1px solid red;
 }
 
 body {

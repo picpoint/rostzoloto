@@ -12,4 +12,9 @@ class PersonalController extends Controller
         return view('users.personal', compact('title'));
     }
 
+
+    public function login() {
+
+    }
+
 }

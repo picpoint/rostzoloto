@@ -13,13 +13,27 @@
 
     <section class="personal">
 
-        @include('layouts.header')
+        <div class="personal__headerpers">
+            @include('layouts.header')
+        </div>
 
-        <div class="personal__reglog">
+        <div class="personal__reglogpers">
             <div class="personal__reglogwrapper">
+                <div class="personal__login">
 
+                </div>
+                <div class="personal__registration">
+                    <form action="#" method="post">
+                        <input type="text" name="firstname">
+                    </form>
+                </div>
             </div>
         </div>
+
+        <div class="personal__footerpers">
+            @include('layouts.footer')
+        </div>
+
 
     </section>
 

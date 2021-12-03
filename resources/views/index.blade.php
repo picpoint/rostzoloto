@@ -336,9 +336,11 @@
         </div>
     </div>
 
-    <div class="homepage__footer">
-        <span>&#169 <?php echo date('Y')?> Ювелирная компания «РОСТЗОЛОТО»</span>
-    </div>
+    @include('layouts.footer')
+
+    {{--<div class="homepage__footer">--}}
+        {{--<span>&#169 <?php echo date('Y')?> Ювелирная компания «РОСТЗОЛОТО»</span>--}}
+    {{--</div>--}}
 
 
 </section>
