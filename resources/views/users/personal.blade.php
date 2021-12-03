@@ -20,12 +20,17 @@
         <div class="personal__reglogpers">
             <div class="personal__reglogwrapper">
                 <div class="personal__login">
-
+                    <div class="personal__loginhdr">
+                        <span>Авторизация</span>
+                    </div>
+                    <div class="personal__loginblock">
+                        <form action="#" method="post" class="personal__loginform">
+                            <input type="text" name="firstname" placeholder="Имя">
+                        </form>
+                    </div>
                 </div>
                 <div class="personal__registration">
-                    <form action="#" method="post">
-                        <input type="text" name="firstname">
-                    </form>
+
                 </div>
             </div>
         </div>
