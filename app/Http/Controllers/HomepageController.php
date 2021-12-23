@@ -8,7 +8,7 @@ class HomepageController extends Controller
 {
 
     public function index() {
-        $title = '>Ювелирная компания РОСТЗОЛОТО - купить ювелирные украшения (Сочи, Краснодар)';
+        $title = 'Ювелирная компания РОСТЗОЛОТО - купить ювелирные украшения (Сочи, Краснодар)';
         return view('index', compact('title'));
     }
 

@@ -32,6 +32,11 @@
         <div class="homepage__profile">
             <a href="{{ route('personal') }}">
                 <i class="fas fa-user"></i>
+
+                @if(Auth::user())
+                    <span>{{Auth::user()->firstname }}</span>
+                @endif
+
             </a>
         </div>
     </div>

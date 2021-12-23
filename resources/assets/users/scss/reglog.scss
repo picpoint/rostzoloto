@@ -1,46 +1,81 @@
+//------------------------
+// MIXINS
+
+@mixin mixinform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background-color: #f5f5f5;
+  border-radius: 7px;
+}
+
+@mixin mixinbtn {
+  border: none;
+  width: 370px;
+  height: 45px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.3rem;
+  font-family: Montserrat-Regular;
+  font-weight: bolder;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: $transition;
+    &:hover {
+      background-color: #442488;
+      transition: $transition;
+    }
+}
+
+//------------------------
+
+
 .personal {
-  border: $border;
+  //border: $border;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   width: 100vw;
     &__headerpers {
-      border: $border;
+      //border: $border;
     }
     &__reglogpers {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       width: 100%;
       height: 100%;
     }
     &__reglogwrapper {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 65%;
       height: 100%;
     }
     &__login {
-      border: $border;
+      //border: $border;
       display: flex;
       flex-direction: column;
       width: 50%;
       height: 100%;
     }
     &__loginhdr {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       margin-top: 20px;
         span {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
           font-weight: bold;
           font-family: Montserrat-Regular;
         }
     }
     &__loginblock {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,27 +83,44 @@
       height: 100%;
     }
     &__loginform {
-      border: $border;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      height: 80%;
+      //border: $border;
+      @include mixinform;
         input {
+          border: 1px solid gray;
           width: 350px;
-          height: 30px;
+          height: 40px;
           padding-left: 15px;
+          margin-bottom: 30px;
+          font-size: 1.1rem;
+          border-radius: 7px;
+          font-family: Montserrat-Regular;
+        }
+        button {
+          @include mixinbtn;
         }
     }
     &__registration {
-      border: $border;
+      //border: $border;
       display: flex;
+      flex-direction: column;
       width: 50%;
+    }
+    &__regform {
+      @include mixinform;
+        span {
+          //border: $border;
+          font-size: 1.2rem;
+          font-family: Montserrat-Regular;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        button {
+          @include mixinbtn
+        }
     }
 
 
     &__footerpers {
-      border: $border;
+      //border: $border;
     }
 }

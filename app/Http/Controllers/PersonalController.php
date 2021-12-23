@@ -8,13 +8,11 @@ class PersonalController extends Controller
 {
 
     public function index() {
-        $title = "Личный кабинет";
+        $title = "Личный кабинет | Ростзолото";
         return view('users.personal', compact('title'));
     }
 
 
-    public function login() {
 
-    }
 
 }

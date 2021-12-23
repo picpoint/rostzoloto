@@ -24,13 +24,24 @@
                         <span>Авторизация</span>
                     </div>
                     <div class="personal__loginblock">
-                        <form action="#" method="post" class="personal__loginform">
-                            <input type="text" name="firstname" placeholder="Имя">
+                        <form method="post" class="personal__loginform">
+                            <input type="email" name="email" placeholder="Почта">
+                            <input type="password" name="password" placeholder="Пароль">
+                            <button type="submit">Войти</button>
                         </form>
                     </div>
                 </div>
                 <div class="personal__registration">
-
+                    <div class="personal__loginhdr">
+                        <span>Регистрация</span>
+                    </div>
+                    <div class="personal__loginblock">
+                        <form action="{{ route('registered') }}" method="get" class="personal__regform">
+                            <span>Впервые у нас ?</span>
+                            <span>Кликай, переходи и регистрируйся</span>
+                            <button type="submit">Регистрация</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

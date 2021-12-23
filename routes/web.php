@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
 Route::get('/', 'HomepageController@index')->name('home');
 Route::get('/personal', 'PersonalController@index')->name('personal');
+Route::get('/registration', 'RegistrationController@index')->name('registered');
+Route::post('/registration', 'UserController@store')->name('registered.store');
 
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
+
