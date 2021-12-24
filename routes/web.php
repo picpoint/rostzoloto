@@ -19,6 +19,7 @@ Route::get('/', 'HomepageController@index')->name('home');
 Route::get('/personal', 'PersonalController@index')->name('personal');
 Route::get('/registration', 'RegistrationController@index')->name('registered');
 Route::post('/registration', 'UserController@store')->name('registered.store');
+Route::post('/personal', 'UserController@login')->name('authorization');
 
 
 

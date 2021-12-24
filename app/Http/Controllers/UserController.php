@@ -29,6 +29,29 @@ class UserController extends Controller
     }
 
 
+
+    public function login(Request $request) {
+
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt([
+            'email' => $request->email,
+            'password' => $request->password,
+        ])) {
+            if (Auth::user()) {
+                return redirect()->route('home');
+            }
+        }
+
+        return redirect()->back()->with('error', 'Логин или пароль неверны ...');
+
+    }
+
+
+
     public function logout() {
         Auth::logout();
 
