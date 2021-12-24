@@ -301,12 +301,15 @@
 
     @include('layouts.footer')
 
-    {{--<div class="homepage__footer">--}}
-        {{--<span>&#169 <?php echo date('Y')?> Ювелирная компания «РОСТЗОЛОТО»</span>--}}
-    {{--</div>--}}
-
 
 </section>
+
+<div class="top">
+    <img src="public/assets/users/img/arrow.png" alt="up">
+</div>
+
+<script src="public/assets/users/js/scrollUp.js"></script>
+
 
 </body>
 </html>
