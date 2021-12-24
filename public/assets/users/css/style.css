@@ -313,7 +313,6 @@ body {
   color: black;
 }
 .homepage__profile a span {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   font-size: 1rem;
