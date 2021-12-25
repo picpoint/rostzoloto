@@ -42,11 +42,11 @@
 
                     <form action="{{ route('registered.store') }}" method="post" class="registered__loginform">
                         @csrf
-                        <input type="text" name="firstname" placeholder="Имя" value="{{ old('firstname') }}">
+                        <input type="text" name="firstname" placeholder="*Имя" value="{{ old('firstname') }}">
                         <input type="text" name="lastname" placeholder="Фамилия" value="{{ old('lastname') }}">
-                        <input type="password" name="password" placeholder="Пароль">
-                        <input type="password" name="password_confirmation" placeholder="Подтверждение пароля">
-                        <input type="email" name="email" placeholder="Почта" value="{{ old('email') }}">
+                        <input type="password" name="password" placeholder="*Пароль">
+                        <input type="password" name="password_confirmation" placeholder="*Подтверждение пароля">
+                        <input type="email" name="email" placeholder="*Почта" value="{{ old('email') }}">
                         <button type="submit">Зарегистрироваться</button>
                     </form>
                 </div>
