@@ -25,6 +25,21 @@
                     <span>Личный кабинет</span>
                 </div>
                 <div class="registered__loginblock">
+
+                    <div class="registered__infomsg">
+
+                        @if($errors->any())
+                            <div class="reg__alert">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                    </div>
+
                     <form action="{{ route('registered.store') }}" method="post" class="registered__loginform">
                         @csrf
                         <input type="text" name="firstname" placeholder="Имя" value="{{ old('firstname') }}">

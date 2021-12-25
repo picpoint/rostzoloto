@@ -77,10 +77,17 @@
   &__loginblock {
     //border: $border;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+  }
+  &__infomsg {
+    //border: $border;
+    display: flex;
+    width: 550px;
+    border-radius: 7px;
   }
   &__loginform {
     //border: $border;

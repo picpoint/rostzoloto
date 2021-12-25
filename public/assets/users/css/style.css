@@ -162,10 +162,16 @@
 }
 .registered__loginblock {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+.registered__infomsg {
+  display: flex;
+  width: 550px;
+  border-radius: 7px;
 }
 .registered__loginform {
   display: flex;
