@@ -86,8 +86,15 @@
     &__authinfo {
       //border: $border;
       display: flex;
+      justify-content: center;
       width: 80%;
       margin-bottom: 10px;
+      border-radius: 7px;
+      background-color: $backgrounderror;
+      color: $colorerror;
+      font-weight: bold;
+      font-family: Montserrat-Regular;
+      
     }
     &__loginform {
       //border: $border;

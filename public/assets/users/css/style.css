@@ -54,8 +54,14 @@
 }
 .personal__authinfo {
   display: flex;
+  justify-content: center;
   width: 80%;
   margin-bottom: 10px;
+  border-radius: 7px;
+  background-color: #ffcece;
+  color: #a70000;
+  font-weight: bold;
+  font-family: Montserrat-Regular;
 }
 .personal__loginform {
   display: flex;

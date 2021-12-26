@@ -57,7 +57,7 @@ class UserController extends Controller
         $messages = [
             'email.required' => 'Поле "Почта" обязательное',
             'email.email' => 'Адрес почты должен содержать символ "@"',
-            'password' => 'Поле "Пароль" обязательное'
+            'password.required' => 'Поле "Пароль" обязательное'
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages)->validate();

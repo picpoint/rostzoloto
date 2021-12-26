@@ -11,51 +11,54 @@
 </head>
 <body>
 
-    <section class="personal">
+<section class="personal">
 
-        <div class="personal__headerpers">
-            @include('layouts.header')
-        </div>
+    <div class="personal__headerpers">
+        @include('layouts.header')
+    </div>
 
-        <div class="personal__reglogpers">
-            <div class="personal__reglogwrapper">
-                <div class="personal__login">
-                    <div class="personal__loginhdr">
-                        <span>Авторизация</span>
-                    </div>
-                    <div class="personal__loginblock">
-                        <div class="personal__authinfo">
-                            @include('layouts.errors')
-                        </div>
-                        <form action="{{ route('authorization') }}" method="post" class="personal__loginform">
-                            @csrf
-                            <input type="email" name="email" placeholder="Почта">
-                            <input type="password" name="password" placeholder="Пароль">
-                            <button type="submit">Войти</button>
-                        </form>
-                    </div>
+    <div class="personal__reglogpers">
+        <div class="personal__reglogwrapper">
+            <div class="personal__login">
+                <div class="personal__loginhdr">
+                    <span>Авторизация</span>
                 </div>
-                <div class="personal__registration">
-                    <div class="personal__loginhdr">
-                        <span>Регистрация</span>
+                <div class="personal__loginblock">
+                    <div class="personal__authinfo">
+                        @if(session('error'))
+                            {{ session('error') }}
+                        @endif
+                        @include('layouts.errors')
                     </div>
-                    <div class="personal__loginblock">
-                        <form action="{{ route('registered') }}" method="get" class="personal__regform">
-                            <span>Впервые у нас ?</span>
-                            <span>Кликай, переходи и регистрируйся</span>
-                            <button type="submit">Регистрация</button>
-                        </form>
-                    </div>
+                    <form action="{{ route('authorization') }}" method="post" class="personal__loginform">
+                        @csrf
+                        <input type="email" name="email" placeholder="Почта">
+                        <input type="password" name="password" placeholder="Пароль">
+                        <button type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+            <div class="personal__registration">
+                <div class="personal__loginhdr">
+                    <span>Регистрация</span>
+                </div>
+                <div class="personal__loginblock">
+                    <form action="{{ route('registered') }}" method="get" class="personal__regform">
+                        <span>Впервые у нас ?</span>
+                        <span>Кликай, переходи и регистрируйся</span>
+                        <button type="submit">Регистрация</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="personal__footerpers">
-            @include('layouts.footer')
-        </div>
+    <div class="personal__footerpers">
+        @include('layouts.footer')
+    </div>
 
 
-    </section>
+</section>
 
 </body>
 </html>
