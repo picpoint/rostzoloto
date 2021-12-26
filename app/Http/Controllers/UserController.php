@@ -57,17 +57,19 @@ class UserController extends Controller
         $messages = [
             'email.required' => 'Поле "Почта" обязательное',
             'email.email' => 'Адрес почты должен содержать символ "@"',
-            'password.required' => 'Поле "Пароль" обязательное'
+            'password' => 'Поле "Пароль" обязательное'
         ];
 
-        $validator = Validator::make($request->all(), $rules, $messages)->validate();
+        Validator::make($request->all(), $rules, $messages);
 
 
         if (Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,
         ])) {
-            if (Auth::user()) {
+            if (Auth::user()->is_admin) {
+                return redirect()->route('rmtar');
+            } elseif (Auth::user()) {
                 return redirect()->route('home');
             }
         }
@@ -80,6 +82,7 @@ class UserController extends Controller
 
     public function logout() {
         Auth::logout();
+
         return redirect()->route('home');
     }
 
