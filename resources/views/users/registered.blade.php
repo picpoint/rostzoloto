@@ -27,17 +27,7 @@
                 <div class="registered__loginblock">
 
                     <div class="registered__infomsg">
-
-                        @if($errors->any())
-                            <div class="reg__alert">
-                                <ul>
-                                    @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
+                        @include('layouts.errors')
                     </div>
 
                     <form action="{{ route('registered.store') }}" method="post" class="registered__loginform">

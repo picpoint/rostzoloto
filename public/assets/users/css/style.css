@@ -46,10 +46,16 @@
 }
 .personal__loginblock {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+.personal__authinfo {
+  display: flex;
+  width: 80%;
+  margin-bottom: 10px;
 }
 .personal__loginform {
   display: flex;
@@ -170,8 +176,10 @@
 }
 .registered__infomsg {
   display: flex;
+  justify-content: center;
   width: 550px;
   border-radius: 7px;
+  margin-bottom: 10px;
 }
 .registered__loginform {
   display: flex;
@@ -714,4 +722,17 @@ body {
   width: 100%;
   height: 100%;
   transition: ease-in-out 0.5s;
+}
+
+.errors {
+  display: flex;
+  justify-content: center;
+  background-color: #ffcece;
+  width: 100%;
+  border-radius: 7px;
+}
+.errors ul li {
+  color: #a70000;
+  font-weight: bold;
+  font-family: Montserrat-Regular;
 }

@@ -86,8 +86,10 @@
   &__infomsg {
     //border: $border;
     display: flex;
+    justify-content: center;
     width: 550px;
     border-radius: 7px;
+    margin-bottom: 10px;
   }
   &__loginform {
     //border: $border;

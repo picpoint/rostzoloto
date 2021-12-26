@@ -24,6 +24,9 @@
                         <span>Авторизация</span>
                     </div>
                     <div class="personal__loginblock">
+                        <div class="personal__authinfo">
+                            @include('layouts.errors')
+                        </div>
                         <form action="{{ route('authorization') }}" method="post" class="personal__loginform">
                             @csrf
                             <input type="email" name="email" placeholder="Почта">

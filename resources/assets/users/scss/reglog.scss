@@ -77,10 +77,17 @@
     &__loginblock {
       //border: $border;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%;
+    }
+    &__authinfo {
+      //border: $border;
+      display: flex;
+      width: 80%;
+      margin-bottom: 10px;
     }
     &__loginform {
       //border: $border;
