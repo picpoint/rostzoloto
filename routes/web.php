@@ -21,7 +21,12 @@ Route::get('/registration', 'RegistrationController@index')->name('registered');
 Route::post('/registration', 'UserController@store')->name('registered.store');
 Route::post('/personal', 'UserController@login')->name('authorization');
 
-Route::get('/rmtar', 'Admin\MainController@index')->name('rmtar');
+
+Route::group(['prefix' => 'rmtar', 'namespace' => 'Admin', 'middleware' => 'rmtar'], function () {
+    Route::get('/', 'MainController@index')->name('rmtar');
+});
+
+
 
 
 
