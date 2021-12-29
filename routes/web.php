@@ -24,6 +24,7 @@ Route::post('/personal', 'UserController@login')->name('authorization');
 
 Route::group(['prefix' => 'rmtar', 'namespace' => 'Admin', 'middleware' => 'rmtar'], function () {
     Route::get('/', 'MainController@index')->name('rmtar');
+    Route::resource('/products', 'ProductController');
 });
 
 
