@@ -68,7 +68,7 @@ class UserController extends Controller
             'password' => $request->password,
         ])) {
             if (Auth::user()->is_admin) {
-                return redirect()->route('rmtar');
+                return redirect()->route('admin');
             } elseif (Auth::user()) {
                 return redirect()->route('home');
             }

@@ -22,8 +22,8 @@ Route::post('/registration', 'UserController@store')->name('registered.store');
 Route::post('/personal', 'UserController@login')->name('authorization');
 
 
-Route::group(['prefix' => 'rmtar', 'namespace' => 'Admin', 'middleware' => 'rmtar'], function () {
-    Route::get('/', 'MainController@index')->name('rmtar');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+    Route::get('/', 'MainController@index')->name('admin');
     Route::resource('/products', 'ProductController');
 });
 
