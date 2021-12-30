@@ -1,5 +1,5 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <span>Раздел "Изделия"</span>
+    <span>Страница изделий</span>
 @endsection

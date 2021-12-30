@@ -1,5 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <span>create product</span>
+    <div>
+        <span>Создание товара</span>
+    </div>
 @endsection
