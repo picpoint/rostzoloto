@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 26 2021 г., 15:02
+-- Время создания: Дек 31 2021 г., 14:21
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -24,6 +24,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'серьги', 'sergi', '2021-12-31 06:19:54', '2021-12-31 06:19:54'),
+(2, 'Кольца', 'kolca', '2021-12-31 06:20:33', '2021-12-31 06:20:33'),
+(3, 'цепи', 'cepi', '2021-12-31 07:12:23', '2021-12-31 07:12:23'),
+(4, 'подвески', 'podveski', '2021-12-31 07:12:47', '2021-12-31 07:12:47'),
+(5, 'обручальные кольца', 'obruchalnye-kolca', '2021-12-31 07:12:58', '2021-12-31 07:12:58'),
+(6, 'крестики', 'krestiki', '2021-12-31 07:13:16', '2021-12-31 07:13:16'),
+(7, 'часы', 'chasy', '2021-12-31 07:13:21', '2021-12-31 07:13:21'),
+(8, 'броши', 'broshi', '2021-12-31 07:13:26', '2021-12-31 07:13:26'),
+(9, 'пирсинг', 'pirsing', '2021-12-31 07:13:37', '2021-12-31 07:13:37'),
+(10, 'колье', 'kole', '2021-12-31 07:13:41', '2021-12-31 07:13:41'),
+(11, 'запонки', 'zaponki', '2021-12-31 07:13:46', '2021-12-31 07:13:46'),
+(12, 'иконы', 'ikony', '2021-12-31 07:13:52', '2021-12-31 07:13:52'),
+(13, 'булавки', 'bulavki', '2021-12-31 07:13:56', '2021-12-31 07:13:56'),
+(14, 'сувениры', 'suveniry', '2021-12-31 07:14:09', '2021-12-31 07:14:09');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `failed_jobs`
 --
 
@@ -36,6 +70,28 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `materials`
+--
+
+CREATE TABLE `materials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `materials`
+--
+
+INSERT INTO `materials` (`id`, `title`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'золото', 'zoloto', '2021-12-31 08:20:40', '2021-12-31 08:20:40'),
+(2, 'серебро', 'serebro', '2021-12-31 08:20:50', '2021-12-31 08:20:50');
 
 -- --------------------------------------------------------
 
@@ -62,63 +118,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2020_05_21_100000_create_teams_table', 1),
 (7, '2020_05_21_200000_create_team_user_table', 1),
 (8, '2020_05_21_300000_create_team_invitations_table', 1),
-(9, '2021_10_17_113052_create_sessions_table', 1);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `personal_access_tokens`
---
-
-CREATE TABLE `personal_access_tokens` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_used_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `sessions`
---
-
-CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `payload` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_activity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Дамп данных таблицы `sessions`
---
-
-INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('c2gG8G1vToeq3K9NKT0j9VrrWZ9WdK1HEbCwoxCo', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWFlpQmhwWUhiS2ZVSmJQZ0trbTF3aDgzeGtmM2dSanhsS3dZOG5SSCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly9yb3N0em9sb3RvL3BlcnNvbmFsIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1638510764),
-('DLjjzKjAnhJIogboZFBKzcrBwPILzGT0NS3YTZM0', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYk1TeFpuUllzUmQyajk4dmdyUm5yZXBNRmZaQjZqeXgzQ2l5cjA0ZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly9yb3N0em9sb3RvL3BlcnNvbmFsIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1638539439),
-('fNhQ6oOVU8RBFrElROpGkD3gIllKXNvWb7qTs7t9', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibzNaN1FZWE5ianlCQ3JoZTJJQTc4VFRkNmtnanR0dTYybFRCaTg1NCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTc6Imh0dHA6Ly9yb3N0em9sb3RvIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1638424267),
-('IaucMG34AT274f7e3O82VRpShRKgFXffpslZGvYz', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieEk5NEppTVR2dHVQY1lpUGtOdzNsNk9uUWtqanBCaXFITDVDV3FHTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTc6Imh0dHA6Ly9yb3N0em9sb3RvIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1638366487),
-('tnAgf4kMLkfLECi4Wvwx1oTlB51Ntqo1nk9QTXbO', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicjdSRjhTbndyUVZFYmFKTlU0WmJseGxsY1ppMVFuT2FrWW5Td3RwdyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTc6Imh0dHA6Ly9yb3N0em9sb3RvIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1638453240);
+(9, '2021_10_17_113052_create_sessions_table', 1),
+(10, '2021_12_31_071739_create_categories_table', 2);
 
 -- --------------------------------------------------------
 
@@ -131,36 +132,6 @@ CREATE TABLE `teams` (
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `personal_team` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `team_invitations`
---
-
-CREATE TABLE `team_invitations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `team_id` bigint(20) UNSIGNED NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `team_user`
---
-
-CREATE TABLE `team_user` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `team_id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
-  `role` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -196,11 +167,18 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `email_verified_at`
 (8, 'Иван', 'Иванов', 'ivan@mail.ru', NULL, '$2y$10$sCXg9dJnPIL1NYyjY3Ifo.rCoUb9/4tnaAhoblViE.sNub4UnoETC', '0', NULL, NULL, NULL, NULL, NULL, '2021-12-26 08:54:35', '2021-12-26 08:54:35'),
 (9, 'Пётр', 'Петров', 'petr@mail.ru', NULL, '$2y$10$PDEY.wKmY/voBVqIPz4MEe3peFDeokiYULASnC4s/DgzDOaVuglNC', '0', NULL, NULL, NULL, NULL, NULL, '2021-12-26 08:56:42', '2021-12-26 08:56:42'),
 (10, 'Сидор', 'Сидоров', 'sidr@mail.ru', NULL, '$2y$10$B.Qy.hN/qoV8f2oZvCNLh..CutCmoGKgWpWwxfC51kFXGG.OkPNoS', '0', NULL, NULL, NULL, NULL, NULL, '2021-12-26 08:57:43', '2021-12-26 08:57:43'),
-(11, 'Денис', 'Белоцерковец', 'den@mail.ru', NULL, '$2y$10$U.xFan2tZlK12rSpGXwsMenLHyJGTHao2wCpQdyyweD1xXD1wbaCi', '1', NULL, NULL, NULL, NULL, NULL, '2021-12-26 09:02:04', '2021-12-26 09:02:04');
+(11, 'Денис', 'Белоцерковец', 'den@mail.ru', NULL, '$2y$10$U.xFan2tZlK12rSpGXwsMenLHyJGTHao2wCpQdyyweD1xXD1wbaCi', '1', NULL, NULL, NULL, NULL, NULL, '2021-12-26 09:02:04', '2021-12-26 09:02:04'),
+(18, '123', '123', '123@mail.ru', NULL, '$2y$10$ghjWtxrQpnm57NXv.6.j0uFJqOhLzmiY5jLptPmLhB1.BYozrIiWu', '0', NULL, NULL, NULL, NULL, NULL, '2021-12-31 05:36:42', '2021-12-31 05:36:42');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `failed_jobs`
@@ -210,32 +188,16 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Индексы таблицы `materials`
+--
+ALTER TABLE `materials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
-
---
--- Индексы таблицы `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
-
---
--- Индексы таблицы `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
-  ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
-
---
--- Индексы таблицы `sessions`
---
-ALTER TABLE `sessions`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `sessions_user_id_index` (`user_id`),
-  ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
 -- Индексы таблицы `teams`
@@ -243,20 +205,6 @@ ALTER TABLE `sessions`
 ALTER TABLE `teams`
   ADD PRIMARY KEY (`id`),
   ADD KEY `teams_user_id_index` (`user_id`);
-
---
--- Индексы таблицы `team_invitations`
---
-ALTER TABLE `team_invitations`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `team_invitations_team_id_email_unique` (`team_id`,`email`);
-
---
--- Индексы таблицы `team_user`
---
-ALTER TABLE `team_user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `team_user_team_id_user_id_unique` (`team_id`,`user_id`);
 
 --
 -- Индексы таблицы `users`
@@ -270,22 +218,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT для таблицы `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `materials`
+--
+ALTER TABLE `materials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT для таблицы `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `teams`
@@ -294,32 +248,10 @@ ALTER TABLE `teams`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `team_invitations`
---
-ALTER TABLE `team_invitations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT для таблицы `team_user`
---
-ALTER TABLE `team_user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- Ограничения внешнего ключа сохраненных таблиц
---
-
---
--- Ограничения внешнего ключа таблицы `team_invitations`
---
-ALTER TABLE `team_invitations`
-  ADD CONSTRAINT `team_invitations_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

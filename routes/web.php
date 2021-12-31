@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::get('/', 'MainController@index')->name('admin');
     Route::resource('/products', 'ProductController');
     Route::resource('/categories', 'CategoryController');
+    Route::resource('/materials', 'MaterialController');
 });
 
 
