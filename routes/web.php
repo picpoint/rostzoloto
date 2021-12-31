@@ -25,6 +25,7 @@ Route::post('/personal', 'UserController@login')->name('authorization');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin');
     Route::resource('/products', 'ProductController');
+    Route::resource('/categories', 'CategoryController');
 });
 
 

@@ -49,6 +49,24 @@
 
                         </ul>
                     </li>
+
+                    <li class="nav-item menu-open">
+                        <a href="{{ route('categories.index') }}" class="nav-link active">
+                            <i class="far fa-gem"></i>
+                            <p>Категория<i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('categories.create') }}" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Создать</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
         </div>
