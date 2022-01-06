@@ -44,6 +44,9 @@
   width: 80%;
   height: 100%;
 }
+.personal__alldatas h3 {
+  font-family: Montserrat-Regular;
+}
 .personal__alldatas a {
   text-decoration: none;
   font-family: Montserrat-Regular;

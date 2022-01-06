@@ -15,7 +15,8 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        return view('admin.materials.index');
+        $materials = Material::all();
+        return view('admin.materials.index', compact('materials'));
     }
 
     /**
@@ -87,6 +88,9 @@ class MaterialController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Material::destroy($id);
+        session()->flash('success', 'Материал удалён');
+
+        return redirect()->route('materials.index');
     }
 }
