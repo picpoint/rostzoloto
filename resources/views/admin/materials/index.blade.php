@@ -30,14 +30,14 @@
                         <th style="width: 50px; text-align: center">{{ $material->id }}</th>
                         <th>{{ $material->title }}</th>
                         <th style="width: 400px; text-align: center">
-                            <a href="#">
+                            <a href="{{ route('materials.edit', ['material' => $material->id]) }}">
                                 <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
                                 </button>
                             </a>
                             <form method="post" action="{{ route('materials.destroy', ['material' => $material->id]) }}">
                                 @csrf
                                 @method('DELETE')
-                                <a href="{{ route('materials.destroy', ['material' => $material->id]) }}">
+                                <a href="#">
                                     <button type="submit" class="btn btn-danger m-1">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>

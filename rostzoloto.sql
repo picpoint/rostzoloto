@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 31 2021 г., 14:21
+-- Время создания: Янв 07 2022 г., 23:34
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -124,6 +124,28 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `stones`
+--
+
+CREATE TABLE `stones` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `stones`
+--
+
+INSERT INTO `stones` (`id`, `title`, `slug`, `created_at`, `updated_at`) VALUES
+(5, 'агат', 'agat', '2022-01-07 17:33:37', '2022-01-07 17:33:37'),
+(6, 'хрусталь', 'hrustal', '2022-01-07 17:34:15', '2022-01-07 17:34:15');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `teams`
 --
 
@@ -200,6 +222,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `stones`
+--
+ALTER TABLE `stones`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `teams`
 --
 ALTER TABLE `teams`
@@ -240,6 +268,12 @@ ALTER TABLE `materials`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `stones`
+--
+ALTER TABLE `stones`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `teams`

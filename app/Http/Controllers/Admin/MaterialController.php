@@ -65,7 +65,8 @@ class MaterialController extends Controller
      */
     public function edit($id)
     {
-        //
+        $material = Material::find($id);
+        return view('admin.materials.edit', compact('material'));
     }
 
     /**
@@ -77,7 +78,13 @@ class MaterialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $material = Material::find($id);
+        $material->slug = null;
+        $material->update($request->all());
+        session()->flash('success', 'Материал обновлён');
+
+        return view('admin.materials.edit', compact('material'));
+
     }
 
     /**

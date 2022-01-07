@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Stone;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class StoneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('admin.categories.index', compact('categories'));
+        $stones = Stone::all();
+        return view('admin.stones.index', compact('stones'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        return view('admin.stones.create');
     }
 
     /**
@@ -37,13 +37,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        Category::create([
-            'title' => $request->title,
-        ]);
+        Stone::create($request->all());
+        session()->flash('success', 'Вставка сохранена');
 
-        session()->flash('success', 'Категория создана');
-
-        return redirect()->route('categories.create');
+        return redirect()->route('stones.index');
     }
 
     /**
@@ -65,8 +62,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        return view('admin.categories.edit', compact('category'));
+        //
     }
 
     /**
@@ -78,13 +74,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
-        $category->slug = null;
-        $category->update($request->all());
-
-        session()->flash('success', 'Категория обновлена');
-
-        return view('admin.categories.edit', compact('category'));
+        //
     }
 
     /**
@@ -95,8 +85,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        Category::destroy($id);
-        session('success', 'Категория удалена');
-        return redirect()->route('categories.index');
+        //
     }
 }
