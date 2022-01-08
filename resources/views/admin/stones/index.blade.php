@@ -27,7 +27,19 @@
                     <tr>
                         <td style="width: 50px; text-align: center">{{ $stone->id }}</td>
                         <td>{{ $stone->title }}</td>
-                        <td style="width: 400px; text-align: center">edit delete</td>
+                        <td style="width: 400px; text-align: center">
+                            <a href="{{ route('stones.edit', ['stone' => $stone->id]) }}">
+                                <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </a>
+                            <form action="{{ route('stones.destroy', ['stone' => $stone->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-1">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

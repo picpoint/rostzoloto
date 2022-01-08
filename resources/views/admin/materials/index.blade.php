@@ -27,9 +27,9 @@
 
                 @foreach($materials as $material)
                     <tr>
-                        <th style="width: 50px; text-align: center">{{ $material->id }}</th>
-                        <th>{{ $material->title }}</th>
-                        <th style="width: 400px; text-align: center">
+                        <td style="width: 50px; text-align: center">{{ $material->id }}</td>
+                        <td>{{ $material->title }}</td>
+                        <td style="width: 400px; text-align: center">
                             <a href="{{ route('materials.edit', ['material' => $material->id]) }}">
                                 <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
                                 </button>
@@ -43,7 +43,7 @@
                                     </button>
                                 </a>
                             </form>
-                        </th>
+                        </td>
                     </tr>
                 @endforeach
 

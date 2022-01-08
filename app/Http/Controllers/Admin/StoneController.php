@@ -38,9 +38,9 @@ class StoneController extends Controller
     public function store(Request $request)
     {
         Stone::create($request->all());
-        session()->flash('success', 'Вставка сохранена');
+        session()->flash('success', "Вставка \"$request->title\" сохранена");
 
-        return redirect()->route('stones.index');
+        return redirect()->route('stones.create');
     }
 
     /**
@@ -62,7 +62,8 @@ class StoneController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stone = Stone::find($id);
+        return view('admin.stones.edit', compact('stone'));
     }
 
     /**
@@ -74,7 +75,12 @@ class StoneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $stone = Stone::find($id);
+        $stone->slug = null;
+        $stone->update($request->all());
+        session()->flash('success', "Вставка \"$stone->title\" отредактированна");
+
+        return redirect()->route('stones.edit', compact('stone'));
     }
 
     /**
@@ -85,6 +91,9 @@ class StoneController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $stone = Stone::find($id);
+        Stone::destroy($id);
+        session()->flash('success', "Вставка \"$stone->title\"  удалена");
+        return redirect()->route('stones.index');
     }
 }

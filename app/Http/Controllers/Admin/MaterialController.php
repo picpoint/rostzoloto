@@ -37,11 +37,12 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
+        $material = $request->title;
         Material::create([
             'title' => $request->title
         ]);
 
-        session()->flash('success', 'Материал успешно создан');
+        session()->flash('success', "Материал \"$request->title\" успешно создан");
 
         return redirect()->route('materials.create');
     }

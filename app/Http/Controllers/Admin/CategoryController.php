@@ -37,11 +37,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $category = $request->title;
         Category::create([
             'title' => $request->title,
         ]);
 
-        session()->flash('success', 'Категория создана');
+        session()->flash('success', "Категория \"$request->title\" создана");
 
         return redirect()->route('categories.create');
     }
