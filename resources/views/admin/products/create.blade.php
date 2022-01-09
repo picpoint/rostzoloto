@@ -20,11 +20,11 @@
 
         <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
             @csrf
-
             <div class="card-body">
                 <div class="form-group">
                     <label for="title">Название изделия</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название изделия">
+                    <input type="text" name="title" class="form-control" id="title"
+                           placeholder="Введите название изделия">
                 </div>
             </div>
 
@@ -32,13 +32,17 @@
                 <label for="category_id">Выберите категорию</label>
                 <select class="form-control" id="category_id" name="category_id">
                     <option>---</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->title }}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="card-body">
                 <div class="form-group">
                     <label for="vendor_code">Артикул изделия</label>
-                    <input type="text" name="vendor_code" class="form-control" id="vendor_code" placeholder="Введите артикул изделия">
+                    <input type="text" name="vendor_code" class="form-control" id="vendor_code"
+                           placeholder="Введите артикул изделия">
                 </div>
             </div>
 
@@ -75,13 +79,6 @@
                 <div class="form-group">
                     <label for="price">Введите цену изделия</label>
                     <input type="text" name="price" class="form-control" id="price" placeholder="Цена изделия">
-                </div>
-            </div>
-
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="brand">Бренд</label>
-                    <input type="text" name="brand" class="form-control" id="brand" placeholder="Бренд изделия">
                 </div>
             </div>
 
