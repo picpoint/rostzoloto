@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Material;
+use App\Models\Product;
 use App\Models\Stone;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,22 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+//        dd($request->all());
+
+        Product::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'category_id' => $request->category_id,
+            'vendor_code' => $request->vendor_code,
+            'material_id' => $request->material_id,
+            'stone_id' => $request->stone_id,
+            'weight' => $request->weight,
+            'size' => $request->size,
+            'price' => $request->price,
+
+        ]);
+        session()->flash('success', 'Изделие сохранено');
+        return redirect()->route('products.create');
     }
 
     /**

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 08 2022 г., 15:32
+-- Время создания: Янв 12 2022 г., 16:55
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -125,6 +125,35 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `products`
+--
+
+CREATE TABLE `products` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vendor_code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `material_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `stone_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `weight` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `slug`, `category_id`, `vendor_code`, `material_id`, `stone_id`, `weight`, `size`, `price`, `picture`, `created_at`, `updated_at`) VALUES
+(90, 'кольцо', 'kolco', '23', '018869', '3', '25', '1.77', '20.5', '5298', NULL, '2022-01-12 10:55:06', '2022-01-12 10:55:06');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `stones`
 --
 
@@ -241,6 +270,13 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_vendor_code_index` (`vendor_code`);
+
+--
 -- Индексы таблицы `stones`
 --
 ALTER TABLE `stones`
@@ -287,6 +323,12 @@ ALTER TABLE `materials`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT для таблицы `stones`

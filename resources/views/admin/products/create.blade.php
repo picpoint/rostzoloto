@@ -48,16 +48,21 @@
 
             <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">
                 <label for="material">Выбирите материал изделия</label>
-                <select class="form-control" id="material" name="material">
+                <select class="form-control" id="material" name="material_id">
                     <option>---</option>
-
+                    @foreach($materials as $material)
+                        <option value="{{$material->id}}">{{ $material->title }}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">
                 <label for="stone">Выбирите вставку(камень)</label>
-                <select class="form-control" id="stone" name="stone">
+                <select class="form-control" id="stone" name="stone_id">
                     <option>---</option>
+                    @foreach($stones as $stone)
+                        <option value="{{ $stone->id }}">{{ $stone->title }}</option>
+                    @endforeach
                 </select>
             </div>
 
