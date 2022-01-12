@@ -42,7 +42,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
+
+        $categorySlug = new Product();
+
+        dd($categorySlug->category());
 
         Product::create([
             'title' => $request->title,
@@ -54,8 +57,9 @@ class ProductController extends Controller
             'weight' => $request->weight,
             'size' => $request->size,
             'price' => $request->price,
-
+            'picture' => $request->picture->store("img/products/" . $request->category),
         ]);
+
         session()->flash('success', 'Изделие сохранено');
         return redirect()->route('products.create');
     }
