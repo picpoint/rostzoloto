@@ -42,9 +42,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        
 
-        dd($request->all());
+        $allCategory = Category::all();
+        $nameFolder = '';
+
+        foreach ($allCategory as $cat) {
+            if ($cat->id == $request->category_id) {
+                $nameFolder = $cat->slug;
+            }
+        }
 
         Product::create([
             'title' => $request->title,
@@ -56,7 +62,7 @@ class ProductController extends Controller
             'weight' => $request->weight,
             'size' => $request->size,
             'price' => $request->price,
-            'picture' => $request->picture->storeAs("img/products/" . $request->category_id, $request->picture->getClientOriginalName()),
+            'picture' => $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName()),
         ]);
 
         session()->flash('success', 'Изделие сохранено');
