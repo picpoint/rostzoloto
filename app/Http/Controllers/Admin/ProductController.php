@@ -42,7 +42,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->picture);
+//        dd($request->picture->getClientOriginalName());
 
         Product::create([
             'title' => $request->title,
@@ -54,7 +54,7 @@ class ProductController extends Controller
             'weight' => $request->weight,
             'size' => $request->size,
             'price' => $request->price,
-            'picture' => $request->picture->storeAs($request->picture, "img/products/" . $request->category_id),
+            'picture' => $request->picture->storeAs("img/products/" . $request->category_id, $request->picture->getClientOriginalName()),
         ]);
 
         session()->flash('success', 'Изделие сохранено');
