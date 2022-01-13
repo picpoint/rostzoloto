@@ -42,7 +42,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->picture->getClientOriginalName());
+        
+
+        dd($request->all());
 
         Product::create([
             'title' => $request->title,
