@@ -28,6 +28,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::resource('/categories', 'CategoryController');
     Route::resource('/materials', 'MaterialController');
     Route::resource('/stones', 'StoneController');
+    Route::get('/autoload', 'ProductAutoloadController@create')->name('autoload');
+    Route::post('/autoload', 'ProductAutoloadController@autoloadFiles')->name('uploadprod');
 });
 
 

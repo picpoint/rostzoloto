@@ -46,6 +46,12 @@
                                     <p>Создать</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('autoload') }}" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Автозагрузка</p>
+                                </a>
+                            </li>
 
                         </ul>
                     </li>
