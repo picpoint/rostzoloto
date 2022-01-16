@@ -24,6 +24,21 @@
                 </thead>
                 <tbody>
 
+                @foreach($products as $product)
+                    <tr>
+                        <td style="width: 10px">{{ $product->id }}</td>
+                        <td>{{ $product->title }}</td>
+                        <td><img src="/public/assets/users/{{$product->picture}}" alt=""
+                                 style="width: 140px; height: 140px"></td>
+                        <td style="width: 120px; text-align: center">
+                            <a href="{{ route('products.edit', ['product' => $product->id]) }}">
+                                <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+
                 </tbody>
             </table>
         </div>
