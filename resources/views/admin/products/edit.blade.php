@@ -95,6 +95,7 @@
             </div>
 
             <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">
+                <img src="/public/assets/users/{{$product->picture}}" alt="product" style="width:150px; height:150px">
                 <label for="picture">Загрузить изображение</label>
                 <div class="input-group">
                     <div class="custom-file">

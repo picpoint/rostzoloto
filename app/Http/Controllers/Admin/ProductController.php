@@ -38,7 +38,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -73,7 +73,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -84,7 +84,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -99,23 +99,59 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
+        $allCategory = Category::all();
+        $nameFolder = '';
+
+        foreach ($allCategory as $cat) {
+            if ($cat->id == $request->category_id) {
+                $nameFolder = $cat->slug;
+            }
+        }
+
+        $product = Product::find($id);
+
+        $pathTopict = '';
+
+        if ($request->picture == null) {
+            $pathTopict = $product->picture;
+        } else {
+            $pathTopict = $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName());
+        }
+
+        $product->update([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'category_id' => $request->category_id,
+            'vendor_code' => $request->vendor_code,
+            'material_id' => $request->material_id,
+            'stone_id' => $request->stone_id,
+            'weight' => $request->weight,
+            'size' => $request->size,
+            'price' => $request->price,
+            'picture' => $pathTopict,
+        ]);
+        session()->flash('success', 'Изделие обновлено');
+
+        return redirect()->route('products.edit', compact('product'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        Product::destroy($id);
+        session()->flash('success', 'Изделие удалено');
+
+        return redirect()->route('products.index');
     }
 }

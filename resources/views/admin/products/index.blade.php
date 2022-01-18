@@ -35,6 +35,13 @@
                                 <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
                                 </button>
                             </a>
+                            <form method="post" action="{{ route('products.destroy', ['product' => $product->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-1">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
