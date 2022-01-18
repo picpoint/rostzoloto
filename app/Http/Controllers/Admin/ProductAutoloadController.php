@@ -44,7 +44,7 @@ class ProductAutoloadController extends Controller
 
             session()->flash('success', 'Загрузка завершена');
 
-            return redirect()->route('admin.products.autoload');
+            return redirect()->route('uploadprod');
 
         }
     }
