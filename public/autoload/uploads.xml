@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product>
+		<title>Брошь из серебра</title>
+		<category_id>17</category_id>
+		<vendor_code>94040247</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>11</stone_id>
+		<weight>1.77</weight>
+		<size>0</size>
+		<price>1266</price>
+		<picture>94040247.jpg</picture>
+	</product>
+	<product>
+		<title>Брошь из серебра</title>
+		<category_id>17</category_id>
+		<vendor_code>94040250</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>11</stone_id>
+		<weight>0.98</weight>
+		<size>0</size>
+		<price>630</price>
+		<picture>94040250.jpg</picture>
+	</product>
+	<product>
+		<title>Брошь из серебра</title>
+		<category_id>17</category_id>
+		<vendor_code>0401049</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>23</stone_id>
+		<weight>10.66</weight>
+		<size>0</size>
+		<price>12550</price>
+		<picture>0401049.jpg</picture>
+	</product>
+	<product>
+		<title>Брошь из серебра</title>
+		<category_id>17</category_id>
+		<vendor_code>94040249</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>23</stone_id>
+		<weight>4.26</weight>
+		<size>0</size>
+		<price>3150</price>
+		<picture>94040249.jpg</picture>
+	</product>
+	<product>
+		<title>Брошь из серебра</title>
+		<category_id>17</category_id>
+		<vendor_code>0402929</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>23</stone_id>
+		<weight>19.09</weight>
+		<size>0</size>
+		<price>14280</price>
+		<picture>0402929.jpg</picture>
+	</product>
+</products>
