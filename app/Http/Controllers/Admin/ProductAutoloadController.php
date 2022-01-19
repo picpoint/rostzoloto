@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -13,25 +14,24 @@ class ProductAutoloadController extends Controller
         return view('admin.products.autoload');
     }
 
+
     public function autoloadFiles(Request $request) {
-//        dd($request->autoload_file->path());
+
+        $categories = Category::all();
 
         $xml = simplexml_load_file($request->autoload_file);
 
         foreach ($xml as $product) {
-//            dump($product->title);
-//            dump($product->category_id);
-//            dump($product->vendor_code);
-//            dump($product->material_id);
-//            dump($product->stone_id);
-//            dump($product->weight);
-//            dump($product->size);
-//            dump($product->price);
-//            dump($product->picture);
+            $categorySlug = '';
+
+            foreach ($categories as $category) {
+                if ($category->id == $product->category_id) {
+                    $categorySlug = $category->slug;
+                }
+            }
 
             Product::create([
                 'title' => $product->title,
-                'slug' => $product->title,
                 'category_id' => $product->category_id,
                 'vendor_code' => $product->vendor_code,
                 'material_id' => $product->material_id,
@@ -39,14 +39,17 @@ class ProductAutoloadController extends Controller
                 'weight' => $product->weight,
                 'size' => $product->size,
                 'price' => $product->price,
-                'picture' => '000',
+                'picture' => "img/products/$categorySlug/$product->picture",
             ]);
 
-            session()->flash('success', 'Загрузка завершена');
-
-            return redirect()->route('uploadprod');
+            copy("C:/OpenServer/domains/rostzoloto/public/img/uploadsimg/$product->vendor_code.jpg", "C:/OpenServer/domains/rostzoloto/public/assets/users/img/products/$categorySlug/$product->vendor_code.jpg");
 
         }
+
+        session()->flash('success', 'Загрузка завершена');
+
+        return redirect()->route('uploadprod');
+
     }
 
 }
