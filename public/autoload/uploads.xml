@@ -55,4 +55,59 @@
 		<price>14280</price>
 		<picture>0402929.jpg</picture>
 	</product>
+	<product>
+		<title>Булавка из серебра</title>
+		<category_id>18</category_id>
+		<vendor_code>b_em_730</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>26</stone_id>
+		<weight>1.48</weight>
+		<size>0</size>
+		<price>700</price>
+		<picture>b_em_730.jpg</picture>
+	</product>
+	<product>
+		<title>Булавка из серебра</title>
+		<category_id>18</category_id>
+		<vendor_code>b_em_661</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>26</stone_id>
+		<weight>1.43</weight>
+		<size>0</size>
+		<price>730</price>
+		<picture>b_em_661.jpg</picture>
+	</product>
+	<product>
+		<title>Булавка из серебра</title>
+		<category_id>18</category_id>
+		<vendor_code>b_em_656</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>26</stone_id>
+		<weight>1.22</weight>
+		<size>0</size>
+		<price>630</price>
+		<picture>b_em_656.jpg</picture>
+	</product>
+	<product>
+		<title>Кинжал с бриллиантом</title>
+		<category_id>29</category_id>
+		<vendor_code>6499</vendor_code>
+		<material_id>3</material_id>
+		<stone_id>12</stone_id>
+		<weight>81.94</weight>
+		<size>0</size>
+		<price>468000</price>
+		<picture>6499.jpg</picture>
+	</product>
+	<product>
+		<title>Сувенир</title>
+		<category_id>29</category_id>
+		<vendor_code>15026</vendor_code>
+		<material_id>4</material_id>
+		<stone_id>11</stone_id>
+		<weight>3.5</weight>
+		<size>0</size>
+		<price>2800</price>
+		<picture>15026.jpg</picture>
+	</product>
 </products>
