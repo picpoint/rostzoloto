@@ -20,7 +20,7 @@
     <div class="homepage__navbarwrapper">
         <div class="homepage__navigation">
             <a href="#">АКЦИИ</a>
-            <a href="#">КАТАЛОГ</a>
+            <a href="{{ route('catalog') }}">КАТАЛОГ</a>
             <a href="#">ГАЛЕРЕЯ</a>
             <a href="#">СОВЕТЫ</a>
             <a href="#">ЛОМБАРДЫ</a>

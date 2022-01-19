@@ -20,6 +20,7 @@ Route::get('/personal', 'PersonalController@index')->name('personal');
 Route::get('/registration', 'RegistrationController@index')->name('registered');
 Route::post('/registration', 'UserController@store')->name('registered.store');
 Route::post('/personal', 'UserController@login')->name('authorization');
+Route::get('/catalog', 'CatalogController@index')->name('catalog');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
