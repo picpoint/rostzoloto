@@ -35,10 +35,12 @@
                             </div>
                             <div class="catalog__filtercategoryitems">
 
-                                <div class="catalog__itemcategory">
-                                    <input type="checkbox" name="itemcat" id="Браслет" value="Браслет">
-                                    <label for="Браслет">Браслет</label>
-                                </div>
+                                @foreach($categories as $category)
+                                    <div class="catalog__itemcategory">
+                                        <input type="checkbox" name="itemcat" id="{{ $category->id }}" value="Браслет">
+                                        <label for="{{ $category->id }}">{{ $category->title }}</label>
+                                    </div>
+                                @endforeach
 
                             </div>
                         </div>
