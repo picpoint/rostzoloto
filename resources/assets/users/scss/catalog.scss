@@ -15,9 +15,10 @@
 }
 
 @mixin catalogitems {
+  //border: $border;
   display: flex;
   align-items: center;
-  height: 25px;
+  height: 35px;
   padding-left: 10px;
   label {
     //border: $border;
@@ -32,8 +33,8 @@
   //border: $border;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  //height: 100vh;
+  //width: 100vw;
     &__headercat {
       //border: $border;
     }
@@ -90,7 +91,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 450px;
+      //height: 450px;
       margin-top: 25px;
     }
     &__filtercategoryhdr {
@@ -110,7 +111,7 @@
       border: 1px solid gray;
       display: flex;
       flex-direction: column;
-      height: 250px;
+      //height: 100px;
       width: 100%;
       margin-top: 25px;
     }
@@ -120,10 +121,42 @@
     &__filtermaterialitems {
       display: flex;
       flex-direction: column;
-      height: 100%;
     }
     &__itemmaterial {
       @include catalogitems;
+    }
+    &__filterstone {
+      border: 1px solid gray;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 25px;
+    }
+    &__filterstonehdr {
+      @include filtershdr;
+    }
+    &__filterstoneitems {
+      display: flex;
+      flex-direction: column;
+    }
+    &__itemstone {
+      @include catalogitems;
+    }
+    &__btnshow {
+      //border: $border;
+      display: flex;
+      width: 100%;
+      margin-top: 25px;
+        button {
+          border: none;
+          height: 50px;
+          width: 100%;
+          background-color: $brendcolor;
+          font-size: 1rem;
+          font-weight: bolder;
+          font-family: Montserrat-Regular;
+          cursor: pointer;
+        }
     }
 
 

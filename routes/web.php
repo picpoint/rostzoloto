@@ -21,6 +21,7 @@ Route::get('/registration', 'RegistrationController@index')->name('registered');
 Route::post('/registration', 'UserController@store')->name('registered.store');
 Route::post('/personal', 'UserController@login')->name('authorization');
 Route::get('/catalog', 'CatalogController@index')->name('catalog');
+Route::post('/catalog', 'CatalogController@showProds')->name('filter');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {

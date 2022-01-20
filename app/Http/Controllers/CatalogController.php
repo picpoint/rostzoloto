@@ -18,4 +18,9 @@ class CatalogController extends Controller
         return view('users.catalog', compact('categories', 'materials', 'stones'));
     }
 
+
+    public function showProds(Request $request) {
+        dd($request->all());
+    }
+
 }
