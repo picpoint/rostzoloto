@@ -31,17 +31,28 @@
                     <form action="#" method="get" class="catalog__filterform">
                         <div class="catalog__filtercategory">
                             <div class="catalog__filtercategoryhdr">
-                                <span>Категории</span>
+                                <span>КАТЕГОРИИ</span>
                             </div>
                             <div class="catalog__filtercategoryitems">
-
                                 @foreach($categories as $category)
                                     <div class="catalog__itemcategory">
-                                        <input type="checkbox" name="itemcat" id="{{ $category->id }}" value="Браслет">
+                                        <input type="checkbox" name="itemcat" id="{{ $category->id }}" value="{{ $category->id }}">
                                         <label for="{{ $category->id }}">{{ $category->title }}</label>
                                     </div>
                                 @endforeach
-
+                            </div>
+                        </div>
+                        <div class="catalog__filtermaterial">
+                            <div class="catalog__filtermaterialhdr">
+                                <span>МАТЕРИАЛ</span>
+                            </div>
+                            <div class="catalog__filtermaterialitems">
+                                @foreach($materials as $material)
+                                    <div class="catalog__itemmaterial">
+                                        <input type="checkbox" name="itemcat" id="{{ $material->id }}" value="{{ $material->id }}">
+                                        <label for="{{ $material->id }}">{{ $material->title }}</label>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </form>
