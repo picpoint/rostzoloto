@@ -303,12 +303,54 @@
 .catalog__filter {
   border: 1px solid red;
   display: flex;
-  width: 25%;
+  width: 30%;
+}
+.catalog__filterform {
+  border: 1px solid red;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 .catalog__allproducts {
   border: 1px solid red;
   display: flex;
-  width: 75%;
+  width: 70%;
+}
+.catalog__filtercategory {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+}
+.catalog__filtercategoryhdr {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #fae5e8;
+}
+.catalog__filtercategoryhdr span {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+}
+.catalog__filtercategoryitems {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.catalog__itemcategory {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding-left: 10px;
+}
+.catalog__itemcategory label {
+  font-size: 1.1rem;
+  font-family: Montserrat-Regular;
 }
 
 html {
