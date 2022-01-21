@@ -421,7 +421,31 @@
 }
 .catalog__allproducts {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 80%;
+}
+.catalog__allprodsorting {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 25px;
+  height: 45px;
+  width: 97%;
+  background-color: #fae5e8;
+}
+.catalog__allprodscards {
+  display: flex;
+  flex-grow: 1;
+}
+.catalog__allprodspagination {
+  display: flex;
+  align-self: flex-end;
+  height: 50px;
+  width: 97%;
+  background-color: #fae5e8;
+}
+.catalog__footercat {
+  margin-top: 50px;
 }
 
 html {

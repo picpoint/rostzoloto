@@ -76,10 +76,23 @@
 
                 </div>
                 <div class="catalog__allproducts">
+                    <div class="catalog__allprodsorting">
+
+                    </div>
+                    <div class="catalog__allprodscards">
+
+                    </div>
+                    <div class="catalog__allprodspagination">
+
+                    </div>
 
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="catalog__footercat">
+        @include('layouts.footer')
     </div>
 
 

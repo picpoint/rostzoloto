@@ -159,15 +159,43 @@
         }
     }
 
-
-
-
-
-
     &__allproducts {
       //border: $border;
       display: flex;
+      justify-content: space-between;
+      flex-direction: column;
       width: 80%;
+    }
+    &__allprodsorting {
+      //border: 1px solid #FAC2DF;
+      display: flex;
+      align-self: flex-end;
+      margin-top: 25px;
+      height: 45px;
+      width: 97%;
+      background-color: $brendcolor;
+    }
+    &__allprodscards {
+      //border: $border;
+      display: flex;
+      flex-grow: 1;
+    }
+    &__allprodspagination {
+      //border: #fa96cf;
+      display: flex;
+      align-self: flex-end;
+      height: 50px;
+      width: 97%;
+      background-color: $brendcolor;
+    }
+
+
+
+
+
+    &__footercat {
+      //border: $border;
+      margin-top: 50px;
     }
 
 
