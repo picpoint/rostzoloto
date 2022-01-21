@@ -434,14 +434,23 @@
   background-color: #fae5e8;
 }
 .catalog__allprodscards {
+  border: 1px solid red;
   display: flex;
+  justify-content: flex-end;
   flex-grow: 1;
+}
+.catalog__allprodswrp {
+  border: 1px solid red;
+  display: flex;
+  width: 97%;
+  height: 100%;
 }
 .catalog__allprodspagination {
   display: flex;
   align-self: flex-end;
   height: 50px;
   width: 97%;
+  margin-bottom: 2px;
   background-color: #fae5e8;
 }
 .catalog__footercat {

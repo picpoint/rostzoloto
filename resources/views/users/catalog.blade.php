@@ -80,7 +80,9 @@
 
                     </div>
                     <div class="catalog__allprodscards">
+                        <div class="catalog__allprodswrp">
 
+                        </div>
                     </div>
                     <div class="catalog__allprodspagination">
 

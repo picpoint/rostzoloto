@@ -176,9 +176,16 @@
       background-color: $brendcolor;
     }
     &__allprodscards {
-      //border: $border;
+      border: $border;
       display: flex;
+      justify-content: flex-end;
       flex-grow: 1;
+    }
+    &__allprodswrp {
+      border: $border;
+      display: flex;
+      width: 97%;
+      height: 100%;
     }
     &__allprodspagination {
       //border: #fa96cf;
@@ -186,6 +193,7 @@
       align-self: flex-end;
       height: 50px;
       width: 97%;
+      margin-bottom: 2px;
       background-color: $brendcolor;
     }
 
