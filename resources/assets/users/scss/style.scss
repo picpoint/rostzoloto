@@ -249,75 +249,76 @@ body {
   &__cardproduct {
     border: 1px solid black;
     display: flex;
-    flex-direction: column;
     width: 270px;
     height: 400px;
     margin: 20px 0;
     text-decoration: none;
     font-family: Play-Regular;
   }
+  &__cardproductform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
   &__pict {
     border-bottom: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
       a {
-        border: $border;
-        //display: flex;
-        position: relative;
+        display: flex;
+        align-items: center;
         width: 100%;
         height: 100%;
           img {
-            position: absolute;
-            width: 270px;
-            height: 270px;
+            width: 265px;
+            height: 265px;
           }
       }
       &:hover {
         .homepage__addfuncs {
+          //border: $border;
           display: flex;
-          position: relative;
-          right: 250px;
+          position: absolute;
           opacity: 1;
           transition: $transition;
             a {
-              //width: 20px;
-              //height: 20px;
+              position: relative;
+              left: 230px;
+              opacity: 1;
+              transition: $transition;
             }
         }
       }
-    //img {
-    //  //border: $border;
-    //  position: absolute;
-    //  width: 270px;
-    //  height: 270px;
-    //}
   }
+
   &__addfuncs {
     //border: $border;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 10;
-    left: 200px;
-    bottom: 110px;
-    //opacity: 0;
+    position: absolute;
+    //left: 5px;
+    opacity: 0;
     transition: $transition;
     a {
-      position: absolute;
+      position: relative;
+      left: 270px;
+      top: 5px;
       padding: 10px;
       margin-bottom: 5px;
       background-color: $brendcolor;
       width: 15px;
       height: 15px;
+      text-decoration: none;
+      opacity: 0;
+      transition: $transition;
       i {
         color: black;
       }
     }
   }
+
   &__productinfo {
     //border: $border;
     display: flex;
@@ -329,6 +330,7 @@ body {
     &:hover {
       transition: $transition;
       button {
+        position: relative;
         opacity: 1;
         top: 0px;
         cursor: pointer;
@@ -336,9 +338,16 @@ body {
       }
     }
     span {
+      //border: $border;
       align-self: center;
-      font-size: 1rem;
+      font-size: 1.3rem;
       color: black;
+      width: 95%;
+      height: 30px;
+      text-align: center;
+        &:nth-child(2) {
+          font-weight: bolder;
+        }
     }
     button {
       opacity: 0;

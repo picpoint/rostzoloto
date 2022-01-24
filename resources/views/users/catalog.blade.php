@@ -37,7 +37,8 @@
                             <div class="catalog__filtercategoryitems">
                                 @foreach($categories as $category)
                                     <div class="catalog__itemcategory">
-                                        <input type="checkbox" name="c_{{ $category->slug }}" id="{{ $category->slug }}" value="{{ $category->id }}">
+                                        <input type="checkbox" name="c_{{ $category->slug }}" id="{{ $category->slug }}"
+                                               value="{{ $category->id }}">
                                         <label for="{{ $category->slug }}">{{ $category->title }}</label>
                                     </div>
                                 @endforeach
@@ -50,7 +51,8 @@
                             <div class="catalog__filtermaterialitems">
                                 @foreach($materials as $material)
                                     <div class="catalog__itemmaterial">
-                                        <input type="checkbox" name="m_{{ $material->slug }}" id="{{ $material->slug }}" value="{{ $material->id }}">
+                                        <input type="checkbox" name="m_{{ $material->slug }}" id="{{ $material->slug }}"
+                                               value="{{ $material->id }}">
                                         <label for="{{ $material->slug }}">{{ $material->title }}</label>
                                     </div>
                                 @endforeach
@@ -63,7 +65,8 @@
                             <div class="catalog__filterstoneitems">
                                 @foreach($stones as $stone)
                                     <div class="catalog__itemstone">
-                                        <input type="checkbox" name="s_{{ $stone->slug }}" id="{{ $stone->slug }}" value="{{ $stone->id }}">
+                                        <input type="checkbox" name="s_{{ $stone->slug }}" id="{{ $stone->slug }}"
+                                               value="{{ $stone->id }}">
                                         <label for="{{ $stone->slug }}">{{ $stone->title }}</label>
                                     </div>
                                 @endforeach
@@ -81,6 +84,29 @@
                     </div>
                     <div class="catalog__allprodscards">
                         <div class="catalog__allprodswrp">
+
+                            @foreach($products as $product)
+                                <div class="homepage__cardproduct">
+                                    <form action="{{ route('filter', ['id' => $product->id]) }}" method="post" class="homepage__cardproductform">
+                                        @csrf
+                                        <div class="homepage__pict">
+                                            <div class="homepage__addfuncs">
+                                                <a href="eye.php"><i class="far fa-eye"></i></a>
+                                                <a href="heart.php"><i class="fas fa-heart"></i></a>
+                                            </div>
+                                            <a href="#">
+                                                <img src="public/assets/users/{{ $product->picture }}" alt="jewelry">
+                                            </a>
+                                        </div>
+                                        <div class="homepage__productinfo">
+                                            <span>{{ $product->title }}</span>
+                                            <span>{{ $product->price }} р.</span>
+                                            <button type="submit">в корзину</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            @endforeach
+
 
                         </div>
                     </div>
