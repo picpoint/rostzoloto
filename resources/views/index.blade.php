@@ -80,7 +80,9 @@
                             <a href="#"><i class="far fa-eye"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
-                        <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        <a href="#">
+                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
+                        </a>
                     </div>
                     <div class="homepage__productinfo">
                         <span>название</span>

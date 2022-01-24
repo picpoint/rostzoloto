@@ -686,34 +686,43 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75%;
+  height: 100%;
   overflow: hidden;
 }
-.homepage__pict:hover .homepage__addfuncs {
-  display: flex;
-  left: 110px;
-  opacity: 1;
-  transition: ease-in-out 0.5s;
+.homepage__pict a {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.homepage__pict img {
+.homepage__pict a img {
   position: absolute;
   width: 270px;
   height: 270px;
 }
+.homepage__pict:hover .homepage__addfuncs {
+  display: flex;
+  position: relative;
+  right: 250px;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
 .homepage__addfuncs {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: relative;
   z-index: 10;
-  left: 130px;
-  bottom: 100px;
-  opacity: 0;
+  left: 200px;
+  bottom: 110px;
   transition: ease-in-out 0.5s;
 }
 .homepage__addfuncs a {
+  position: absolute;
   padding: 10px;
   margin-bottom: 5px;
   background-color: #fae5e8;
+  width: 15px;
+  height: 15px;
 }
 .homepage__addfuncs a i {
   color: black;
