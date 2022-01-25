@@ -468,6 +468,14 @@
 .catalog__footercat {
   margin-top: 50px;
 }
+.catalog .items-center {
+  display: flex;
+}
+.catalog .shadow-sm {
+  display: flex;
+  height: 50px;
+  width: 200px;
+}
 
 html {
   scroll-behavior: smooth;
