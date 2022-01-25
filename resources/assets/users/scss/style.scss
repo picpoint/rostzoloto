@@ -342,9 +342,12 @@ body {
       align-self: center;
       font-size: 1.3rem;
       color: black;
-      width: 95%;
+      width: 90%;
       height: 30px;
       text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
         &:nth-child(2) {
           font-weight: bolder;
         }

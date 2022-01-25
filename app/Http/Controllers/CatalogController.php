@@ -15,7 +15,7 @@ class CatalogController extends Controller
         $categories = Category::all();
         $materials = Material::all();
         $stones = Stone::all();
-        $products = DB::table('products')->orderBy('id', 'desc')->get();
+        $products = DB::table('products')->orderBy('id', 'desc')->paginate(40);
 
         return view('users.catalog', compact('categories', 'materials', 'stones', 'products'));
     }

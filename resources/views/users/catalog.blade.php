@@ -20,8 +20,9 @@
         <div class="catalog__catwrapper">
 
             <div class="catalog__searchcat">
-                <form action="" method="get" name="formsearch" class="catalog__formsearch">
-                    <input type="search" name="inputsearch">
+                <form action="#search" method="get" name="formsearch" class="catalog__formsearch">
+                    <input type="text" name="s" placeholder="Поиск">
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
 
@@ -94,7 +95,7 @@
                                                 <a href="eye.php"><i class="far fa-eye"></i></a>
                                                 <a href="heart.php"><i class="fas fa-heart"></i></a>
                                             </div>
-                                            <a href="#">
+                                            <a href="single.php">
                                                 <img src="public/assets/users/{{ $product->picture }}" alt="jewelry">
                                             </a>
                                         </div>
@@ -111,7 +112,7 @@
                         </div>
                     </div>
                     <div class="catalog__allprodspagination">
-
+                        {{ $products->links() }}
                     </div>
 
                 </div>
