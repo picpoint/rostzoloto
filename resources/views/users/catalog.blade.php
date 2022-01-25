@@ -20,7 +20,7 @@
         <div class="catalog__catwrapper">
 
             <div class="catalog__searchcat">
-                <form action="#search" method="get" name="formsearch" class="catalog__formsearch">
+                <form action="{{ route('search') }}" method="get" name="formsearch" class="catalog__formsearch">
                     <input type="text" name="s" placeholder="Поиск">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
@@ -81,7 +81,13 @@
                 </div>
                 <div class="catalog__allproducts">
                     <div class="catalog__allprodsorting">
-
+                        <span>Сортировать по:</span>
+                        <select name="sorting" id="sorting">
+                            <option value="#">возрастанию цены</option>
+                            <option value="#">убыванию цены</option>
+                            <option value="#">популярности</option>
+                            <option value="#">новизне</option>
+                        </select>
                     </div>
                     <div class="catalog__allprodscards">
                         <div class="catalog__allprodswrp">
@@ -112,7 +118,7 @@
                         </div>
                     </div>
                     <div class="catalog__allprodspagination">
-                        {{ $products->links() }}
+                        {{ $products->links('vendor.pagination.bootstrap-4') }}
                     </div>
 
                 </div>
