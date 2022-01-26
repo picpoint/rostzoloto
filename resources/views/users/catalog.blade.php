@@ -92,33 +92,68 @@
                     <div class="catalog__allprodscards">
                         <div class="catalog__allprodswrp">
 
-                            @foreach($products as $product)
-                                <div class="homepage__cardproduct">
-                                    <form action="{{ route('filter', ['id' => $product->id]) }}" method="post" class="homepage__cardproductform">
-                                        @csrf
-                                        <div class="homepage__pict">
-                                            <div class="homepage__addfuncs">
-                                                <a href="eye.php"><i class="far fa-eye"></i></a>
-                                                <a href="heart.php"><i class="fas fa-heart"></i></a>
+                            @if($products != '')
+
+                                @foreach($products as $product)
+                                    <div class="homepage__cardproduct">
+                                        <form action="{{ route('filter', ['id' => $product->id]) }}" method="post"
+                                              class="homepage__cardproductform">
+                                            @csrf
+                                            <div class="homepage__pict">
+                                                <div class="homepage__addfuncs">
+                                                    <a href="eye.php"><i class="far fa-eye"></i></a>
+                                                    <a href="heart.php"><i class="fas fa-heart"></i></a>
+                                                </div>
+                                                <a href="single.php">
+                                                    <img src="public/assets/users/{{ $product->picture }}"
+                                                         alt="jewelry">
+                                                </a>
                                             </div>
-                                            <a href="single.php">
-                                                <img src="public/assets/users/{{ $product->picture }}" alt="jewelry">
-                                            </a>
-                                        </div>
-                                        <div class="homepage__productinfo">
-                                            <span>{{ $product->title }}</span>
-                                            <span>{{ $product->price }} р.</span>
-                                            <button type="submit">в корзину</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            @endforeach
+                                            <div class="homepage__productinfo">
+                                                <span>{{ $product->title }}</span>
+                                                <span>{{ $product->price }} р.</span>
+                                                <button type="submit">в корзину</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                @endforeach
+
+                            @elseif($resSearch)
+
+                                @foreach($resSearch as $res)
+                                    <div class="homepage__cardproduct">
+                                        <form action="{{ route('filter', ['id' => $res->id]) }}" method="post"
+                                              class="homepage__cardproductform">
+                                            @csrf
+                                            <div class="homepage__pict">
+                                                <div class="homepage__addfuncs">
+                                                    <a href="eye.php"><i class="far fa-eye"></i></a>
+                                                    <a href="heart.php"><i class="fas fa-heart"></i></a>
+                                                </div>
+                                                <a href="single.php">
+                                                    <img src="public/assets/users/{{ $res->picture }}"
+                                                         alt="jewelry">
+                                                </a>
+                                            </div>
+                                            <div class="homepage__productinfo">
+                                                <span>{{ $res->title }}</span>
+                                                <span>{{ $res->price }} р.</span>
+                                                <button type="submit">в корзину</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                @endforeach
+                            @else
+                                <span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+                            @endif
 
 
                         </div>
                     </div>
                     <div class="catalog__allprodspagination">
-                        {{ $products->links('vendor.pagination.bootstrap-4') }}
+                        @if($products != '')
+                            {{ $products->links('vendor.pagination.bootstrap-4') }}
+                        @endif
                     </div>
 
                 </div>
