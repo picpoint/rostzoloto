@@ -20,6 +20,12 @@ class SearchProductController extends Controller
         $products = '';
 
         $resSearch = Product::where('vendor_code', 'LIKE', "%{$request->s}%")->get();
+//        $resSearch = DB::table('products')->where('vendor_code', 'LIKE', "%{$request->s}%")->paginate(40);
+
+        if (count($resSearch) == 0) {
+            $resSearch = '';
+        }
+        
 
         return view('users.catalog', compact('resSearch', 'categories', 'materials', 'stones', 'products'));
 

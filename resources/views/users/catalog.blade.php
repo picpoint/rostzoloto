@@ -118,7 +118,7 @@
                                     </div>
                                 @endforeach
 
-                            @elseif($resSearch)
+                            @elseif($resSearch != '')
 
                                 @foreach($resSearch as $res)
                                     <div class="homepage__cardproduct">
@@ -143,8 +143,8 @@
                                         </form>
                                     </div>
                                 @endforeach
-                            @else
-                                <span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+                            @elseif($resSearch == '')
+                                <span class="noresult">По Вашему запросу ничего не найдено ...</span>
                             @endif
 
 

@@ -529,6 +529,13 @@
 .catalog__footercat {
   margin-top: 50px;
 }
+.catalog .noresult {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-family: Montserrat-Regular;
+}
 
 html {
   scroll-behavior: smooth;
