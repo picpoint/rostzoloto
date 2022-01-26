@@ -21,7 +21,7 @@
 
             <div class="catalog__searchcat">
                 <form action="{{ route('search') }}" method="get" name="formsearch" class="catalog__formsearch">
-                    <input type="text" name="s" placeholder="Поиск">
+                    <input type="text" name="s" placeholder="Поиск по артикулу">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
@@ -29,7 +29,7 @@
             <div class="catalog__productscat">
                 <div class="catalog__filter">
 
-                    <form action="{{ route('filter') }}" method="post" class="catalog__filterform">
+                    <form action="{{ route('filter') }}" method="get" class="catalog__filterform">
                         @csrf
                         <div class="catalog__filtercategory">
                             <div class="catalog__filtercategoryhdr">

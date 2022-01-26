@@ -19,8 +19,8 @@ class SearchProductController extends Controller
         $stones = Stone::all();
         $products = '';
 
-        $resSearch = Product::where('vendor_code', 'LIKE', "%{$request->s}%")->get();
-//        $resSearch = DB::table('products')->where('vendor_code', 'LIKE', "%{$request->s}%")->paginate(40);
+        $resSearch = DB::table('products')->where('vendor_code', 'LIKE', "%{$request->s}%")->get();
+
 
         if (count($resSearch) == 0) {
             $resSearch = '';

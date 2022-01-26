@@ -16,13 +16,10 @@ class CatalogController extends Controller
         $materials = Material::all();
         $stones = Stone::all();
         $products = DB::table('products')->orderBy('id', 'desc')->paginate(40);
+        $resSearch = '';
 
-        return view('users.catalog', compact('categories', 'materials', 'stones', 'products'));
+        return view('users.catalog', compact('categories', 'materials', 'stones', 'products', 'resSearch'));
     }
 
-
-    public function showProds(Request $request) {
-        dd($request->all());
-    }
 
 }
