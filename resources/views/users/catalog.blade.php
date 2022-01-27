@@ -143,6 +143,34 @@
                                         </form>
                                     </div>
                                 @endforeach
+
+                            @elseif($filters != '')
+
+                                @foreach($filters as $filter)
+                                    <div class="homepage__cardproduct">
+                                        <form action="{{ route('filter', ['id' => $filter->id]) }}" method="post"
+                                              class="homepage__cardproductform">
+                                            @csrf
+                                            <div class="homepage__pict">
+                                                <div class="homepage__addfuncs">
+                                                    <a href="eye.php"><i class="far fa-eye"></i></a>
+                                                    <a href="heart.php"><i class="fas fa-heart"></i></a>
+                                                </div>
+                                                <a href="single.php">
+                                                    <img src="public/assets/users/{{ $filter->picture }}"
+                                                         alt="jewelry">
+                                                </a>
+                                            </div>
+                                            <div class="homepage__productinfo">
+                                                <span>{{ $filter->title }}</span>
+                                                <span>{{ $filter->price }} р.</span>
+                                                <button type="submit">в корзину</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                @endforeach
+
+
                             @elseif($resSearch == '')
                                 <span class="noresult">По Вашему запросу ничего не найдено ...</span>
                             @endif
