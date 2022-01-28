@@ -537,6 +537,13 @@
   font-family: Montserrat-Regular;
 }
 
+.current {
+  border: 1px solid red;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }

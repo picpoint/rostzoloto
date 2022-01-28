@@ -104,7 +104,7 @@
                                                     <a href="eye.php"><i class="far fa-eye"></i></a>
                                                     <a href="heart.php"><i class="fas fa-heart"></i></a>
                                                 </div>
-                                                <a href="single.php">
+                                                <a href="{{ route('product') }}">
                                                     <img src="public/assets/users/{{ $product->picture }}"
                                                          alt="jewelry">
                                                 </a>
@@ -130,7 +130,7 @@
                                                     <a href="eye.php"><i class="far fa-eye"></i></a>
                                                     <a href="heart.php"><i class="fas fa-heart"></i></a>
                                                 </div>
-                                                <a href="single.php">
+                                                <a href="{{ route('product') }}">
                                                     <img src="public/assets/users/{{ $res->picture }}"
                                                          alt="jewelry">
                                                 </a>
@@ -156,7 +156,7 @@
                                                     <a href="eye.php"><i class="far fa-eye"></i></a>
                                                     <a href="heart.php"><i class="fas fa-heart"></i></a>
                                                 </div>
-                                                <a href="single.php">
+                                                <a href="{{ route('product') }}">
                                                     <img src="public/assets/users/{{ $filter->picture }}"
                                                          alt="jewelry">
                                                 </a>
