@@ -1,6 +1,41 @@
 .current {
-  border: $border;
+  //border: $border;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
+    &__headercur {
+      //border: $border;
+    }
+    &__contentcur {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    &__contentcurwrapper {
+      border: $border;
+      display: flex;
+      width: 70%;
+    }
+    &__contentcurpict {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+        img {
+          border: $border;
+          width: 500px;
+          height: 500px;
+          margin-top: 30px;
+        }
+    }
+    &__contentcurdesc {
+      border: $border;
+      display: flex;
+      width: 50%;
+    }
+
+
 }

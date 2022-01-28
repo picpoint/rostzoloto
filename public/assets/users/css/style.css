@@ -538,10 +538,39 @@
 }
 
 .current {
-  border: 1px solid red;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
+}
+.current__contentcur {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.current__contentcurwrapper {
+  border: 1px solid red;
+  display: flex;
+  width: 70%;
+}
+.current__contentcurpict {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.current__contentcurpict img {
+  border: 1px solid red;
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+}
+.current__contentcurdesc {
+  border: 1px solid red;
+  display: flex;
+  width: 50%;
 }
 
 html {
