@@ -39,7 +39,28 @@ class FilterController extends Controller
             }
         }
 
-        dump($stonesArr);
+
+
+        if(count($categoriesArr) == 0) {
+            foreach ($categories as $cat) {
+                $categoriesArr[] = $cat->id;
+            }
+        }
+
+
+        if (count($materialsArr) == 0) {
+            foreach ($materials as $mat) {
+                $materialsArr[] = $mat->id;
+            }
+        }
+
+
+        if (count($stonesArr) == 0) {
+            foreach ($stones as $st) {
+                $stonesArr[] = $st->id;
+            }
+        }
+
 
 
         $filters = DB::table('products')
@@ -54,7 +75,6 @@ class FilterController extends Controller
 
 
         return view('users.catalog', compact('filters', 'categories', 'materials', 'stones', 'products', 'resSearch'));
-
 
     }
 
