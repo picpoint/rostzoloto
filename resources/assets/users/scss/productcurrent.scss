@@ -1,3 +1,28 @@
+//------------------------------
+//MIXINS
+
+@mixin contentcurdescs {
+  //border: $border;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  span {
+    &:nth-child(1) {
+      text-align: center;
+      font-weight: bolder;
+      width: 150px;
+    }
+    //border: $border;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-right: 20px;
+    font-family: Montserrat-Regular;
+  }
+}
+
+
+//------------------------------
+
 .current {
   //border: $border;
   display: flex;
@@ -9,32 +34,74 @@
       //border: $border;
     }
     &__contentcur {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       flex-grow: 1;
     }
     &__contentcurwrapper {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 70%;
     }
     &__contentcurpict {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       width: 50%;
         img {
-          border: $border;
-          width: 500px;
-          height: 500px;
+          //border: $border;
+          width: 600px;
+          height: 600px;
           margin-top: 30px;
         }
     }
     &__contentcurdesc {
-      border: $border;
+      //border: $border;
       display: flex;
+      justify-content: center;
       width: 50%;
+    }
+    &__contentcurdescwrapper {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 600px;
+      height: 600px;
+      margin-top: 30px;
+    }
+    &__contentcurtitle {
+      @include contentcurdescs;
+      background-color: $brendcolor;
+    }
+    &__contentcurcategory {
+      @include contentcurdescs;
+      background-color: #faf1f1;
+    }
+    &__contentcurvendorcode {
+      @include contentcurdescs;
+      background-color: $brendcolor;
+    }
+    &__contentcurmaterial {
+      @include contentcurdescs;
+      background-color: #faf1f1;
+    }
+    &__contentcurstone {
+      @include contentcurdescs;
+      background-color: $brendcolor;
+    }
+    &__contentcurweight {
+      @include contentcurdescs;
+      background-color: #faf1f1;
+    }
+    &__contentcursize {
+      @include contentcurdescs;
+      background-color: $brendcolor;
+    }
+    &__contentcurprice {
+      @include contentcurdescs;
+      background-color: #faf1f1;
     }
 
 

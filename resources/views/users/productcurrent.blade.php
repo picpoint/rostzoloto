@@ -18,10 +18,43 @@
         <div class="current__contentcur">
             <div class="current__contentcurwrapper">
                 <div class="current__contentcurpict">
-                    <img src="#" alt="prooduct">
+                    <img src="public/assets/users/{{$currentProduct->picture}}" alt="prooduct">
                 </div>
                 <div class="current__contentcurdesc">
-
+                    <div class="current__contentcurdescwrapper">
+                        <div class="current__contentcurtitle">
+                            <span>Название:</span>
+                            <span>{{ $currentProduct->title }}</span>
+                        </div>
+                        <div class="current__contentcurcategory">
+                            <span>Категория:</span>
+                            <span>{{ $currentProduct->category_id }}</span>
+                        </div>
+                        <div class="current__contentcurvendorcode">
+                            <span>Артикул:</span>
+                            <span>{{ $currentProduct->vendor_code }}</span>
+                        </div>
+                        <div class="current__contentcurmaterial">
+                            <span>Материал:</span>
+                            <span>{{ $currentProduct->material_id }}</span>
+                        </div>
+                        <div class="current__contentcurstone">
+                            <span>Вставка:</span>
+                            <span>{{ $currentProduct->stone_id }}</span>
+                        </div>
+                        <div class="current__contentcurweight">
+                            <span>Вес:</span>
+                            <span>{{ $currentProduct->weight }}</span>
+                        </div>
+                        <div class="current__contentcursize">
+                            <span>Размер:</span>
+                            <span>{{ $currentProduct->size }}</span>
+                        </div>
+                        <div class="current__contentcurprice">
+                            <span>Цена:</span>
+                            <span>{{ $currentProduct->price }} р.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
