@@ -36,6 +36,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::resource('/stones', 'StoneController');
     Route::get('/autoload', 'ProductAutoloadController@create')->name('autoload');
     Route::post('/autoload', 'ProductAutoloadController@autoloadFiles')->name('uploadprod');
+    Route::resource('/promotions', 'PromoutionController');
 });
 
 

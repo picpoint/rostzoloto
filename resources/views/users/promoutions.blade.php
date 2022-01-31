@@ -20,20 +20,16 @@
             <div class="promo__contentpromowrapper">
 
                 <div class="promo__currentpromo">
-
+                    <div class="promo__currentpromopict">
+                        <a href="#">
+                            <img src="public/assets/users/img/promotions/somepromo/promo.jpg" alt="promo">
+                        </a>
+                    </div>
+                    <div class="promo__currentpromodesc">
+                        <span>Порадуй друзей!</span>
+                    </div>
                 </div>
 
-                <div class="promo__currentpromo">
-
-                </div>
-
-                <div class="promo__currentpromo">
-
-                </div>
-
-                <div class="promo__currentpromo">
-
-                </div>
 
             </div>
         </div>
