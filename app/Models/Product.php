@@ -29,7 +29,17 @@ class Product extends Model
 
 
     public function category() {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+
+    public function material() {
+        return $this->belongsTo(Material::class);
+    }
+
+
+    public function stone() {
+        return $this->belongsTo(Stone::class);
     }
 
 

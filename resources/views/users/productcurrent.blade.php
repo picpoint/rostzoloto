@@ -23,12 +23,12 @@
                 <div class="current__contentcurdesc">
                     <div class="current__contentcurdescwrapper">
                         <div class="current__contentcurtitle">
-                            <span>Название:</span>
+                            <span>Описание:</span>
                             <span>{{ $currentProduct->title }}</span>
                         </div>
                         <div class="current__contentcurcategory">
                             <span>Категория:</span>
-                            <span>{{ $currentProduct->category_id }}</span>
+                            <span>{{ $currentProduct->category->title }}</span>
                         </div>
                         <div class="current__contentcurvendorcode">
                             <span>Артикул:</span>
@@ -36,11 +36,11 @@
                         </div>
                         <div class="current__contentcurmaterial">
                             <span>Материал:</span>
-                            <span>{{ $currentProduct->material_id }}</span>
+                            <span>{{ $currentProduct->material->title }}</span>
                         </div>
                         <div class="current__contentcurstone">
                             <span>Вставка:</span>
-                            <span>{{ $currentProduct->stone_id }}</span>
+                            <span>{{ $currentProduct->stone->title }}</span>
                         </div>
                         <div class="current__contentcurweight">
                             <span>Вес:</span>
@@ -48,7 +48,13 @@
                         </div>
                         <div class="current__contentcursize">
                             <span>Размер:</span>
-                            <span>{{ $currentProduct->size }}</span>
+                            <span>
+                                @if(!empty($currentProduct->size))
+                                    {{ $currentProduct->size }}
+                                @else
+                                    {{ "---" }}
+                                @endif
+                            </span>
                         </div>
                         <div class="current__contentcurprice">
                             <span>Цена:</span>

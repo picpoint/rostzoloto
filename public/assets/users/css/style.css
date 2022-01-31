@@ -580,7 +580,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #fae5e8;
+  background-color: #faf5f6;
 }
 .current__contentcurtitle span {
   font-size: 1.2rem;
@@ -597,7 +597,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #faf1f1;
+  background-color: white;
 }
 .current__contentcurcategory span {
   font-size: 1.2rem;
@@ -614,7 +614,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #fae5e8;
+  background-color: #faf5f6;
 }
 .current__contentcurvendorcode span {
   font-size: 1.2rem;
@@ -631,7 +631,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #faf1f1;
+  background-color: white;
 }
 .current__contentcurmaterial span {
   font-size: 1.2rem;
@@ -648,7 +648,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #fae5e8;
+  background-color: #faf5f6;
 }
 .current__contentcurstone span {
   font-size: 1.2rem;
@@ -665,7 +665,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #faf1f1;
+  background-color: white;
 }
 .current__contentcurweight span {
   font-size: 1.2rem;
@@ -682,7 +682,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #fae5e8;
+  background-color: #faf5f6;
 }
 .current__contentcursize span {
   font-size: 1.2rem;
@@ -699,7 +699,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #faf1f1;
+  background-color: white;
 }
 .current__contentcurprice span {
   font-size: 1.2rem;

@@ -48,6 +48,7 @@
       //border: $border;
       display: flex;
       justify-content: center;
+      //align-items: center;
       width: 50%;
         img {
           //border: $border;
@@ -73,35 +74,35 @@
     }
     &__contentcurtitle {
       @include contentcurdescs;
-      background-color: $brendcolor;
+      background-color: #faf5f6;
     }
     &__contentcurcategory {
       @include contentcurdescs;
-      background-color: #faf1f1;
+      background-color: white;
     }
     &__contentcurvendorcode {
       @include contentcurdescs;
-      background-color: $brendcolor;
+      background-color: #faf5f6;
     }
     &__contentcurmaterial {
       @include contentcurdescs;
-      background-color: #faf1f1;
+      background-color: white;
     }
     &__contentcurstone {
       @include contentcurdescs;
-      background-color: $brendcolor;
+      background-color: #faf5f6;
     }
     &__contentcurweight {
       @include contentcurdescs;
-      background-color: #faf1f1;
+      background-color: white;
     }
     &__contentcursize {
       @include contentcurdescs;
-      background-color: $brendcolor;
+      background-color: #faf5f6;
     }
     &__contentcurprice {
       @include contentcurdescs;
-      background-color: #faf1f1;
+      background-color: white;
     }
 
 
