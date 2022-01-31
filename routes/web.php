@@ -24,6 +24,7 @@ Route::get('/catalog', 'CatalogController@index')->name('catalog');
 Route::get('/search', 'SearchProductController@search')->name('search');
 Route::get('/filter', 'FilterController@showFilter')->name('filter');
 Route::get('productcurrent', 'ProductCurrentController@index')->name('product');
+Route::get('/promoutions', 'PromoutionsController@index')->name('promo');
 
 
 

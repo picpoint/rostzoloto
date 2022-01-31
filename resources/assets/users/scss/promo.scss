@@ -1,0 +1,37 @@
+.promo {
+  //border: $border;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+    &__headerpromo {
+      //border: $border;
+    }
+    &__contentpromo {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    &__contentpromowrapper {
+      border: $border;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 65%;
+    }
+    &__currentpromo {
+      border: $border;
+      display: flex;
+      width: 500px;
+      height: 350px;
+      margin: 50px;
+    }
+
+    &__footerpromo {
+      //border: $border;
+    }
+
+
+}

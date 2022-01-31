@@ -713,6 +713,32 @@
   width: 150px;
 }
 
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+.promo__contentpromo {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.promo__contentpromowrapper {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 65%;
+}
+.promo__currentpromo {
+  border: 1px solid red;
+  display: flex;
+  width: 500px;
+  height: 350px;
+  margin: 50px;
+}
 html {
   scroll-behavior: smooth;
 }
