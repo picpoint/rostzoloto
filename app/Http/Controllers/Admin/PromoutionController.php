@@ -46,11 +46,12 @@ class PromoutionController extends Controller
 //        dd(Str::slug($request->title));
 
 
-        dd($request->slug);
+//        dd($request->slug);
 
 
         Promoution::create([
             'title' => $request->title,
+            'slug' => $request->slug,
             'content' => $request->content,
             'picture' => $request->picture->storeAs("img\promotions",  $request->picture->getClientOriginalName()),
 

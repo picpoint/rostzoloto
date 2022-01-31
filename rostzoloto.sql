@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 25 2022 г., 08:26
+-- Время создания: Янв 31 2022 г., 23:35
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -163,14 +163,14 @@ INSERT INTO `products` (`id`, `title`, `slug`, `category_id`, `vendor_code`, `ma
 (110, 'Запонки из серебра', 'zaponki-iz-serebra', '20', '140009р', '4', '11', '6.12', NULL, '2042', 'img/products/zaponki/140009r.jpg', '2022-01-17 10:33:48', '2022-01-17 10:33:48'),
 (111, 'Колье из золота', 'kole-iz-zolota', '21', '07-0199-00-000-1140-48', '3', '11', '3.73', '45-50.0', '33421', 'img/products/kole/07_0199_00_000_1140_48.jpg', '2022-01-17 10:35:52', '2022-01-17 10:35:52'),
 (112, 'Колье из серебра', 'kole-iz-serebra', '21', '94070121', '4', '23', '5.46', '45.0', '3440', 'img/products/kole/94070121.jpg', '2022-01-17 10:37:00', '2022-01-17 10:37:00'),
-(113, 'Колье из серебра', 'kole-iz-serebra-2', '21', 'ст083', '4', '11', '2.78', NULL, '24778', 'img/products/kole/st083.jpg', '2022-01-17 10:38:06', '2022-01-17 10:38:06'),
+(113, 'Колье из серебра', 'kole-iz-serebra-2', '21', 'ст083', '4', '11', '2.78', NULL, '50.0', 'img/products/kole/st083.jpg', '2022-01-17 10:38:06', '2022-01-17 10:38:06'),
 (114, 'крест из серебра', 'krest-iz-serebra', '22', 'п-37305з-13', '3', '10', '1.07', NULL, '1124', 'img/products/krestiki/p_37305z_13.jpg', '2022-01-17 14:30:12', '2022-01-17 14:30:12'),
 (115, 'крест из серебра', 'krest-iz-serebra-2', '22', 'п1018ч', '4', '11', '14.99', NULL, '4620', 'img/products/krestiki/p1018ch.jpg', '2022-01-17 14:33:34', '2022-01-17 14:33:34'),
 (116, 'БР382130', 'br382130', '22', 'БР382130', '3', '14', '2.41', NULL, '81000', 'img/products/krestiki/br382130.jpg', '2022-01-17 14:37:16', '2022-01-17 14:37:16'),
 (117, 'Кольцо мужское', 'kolco-muzhskoe', '23', 'к359-20', '3', '9', '4.5', '19.5', '28350', 'img/products/muzhskie-kolca/k359_20.jpg', '2022-01-17 14:41:17', '2022-01-17 14:41:17'),
 (118, 'Кольцо мужское из серебра', 'kolco-muzhskoe-iz-serebra', '23', 'ТНК905БЗ', '4', '16', '6.88', '19.5', '2890', 'img/products/muzhskie-kolca/tnk_905bz.jpg', '2022-01-17 14:43:50', '2022-01-17 14:43:50'),
 (119, 'Кольцо мужское из серебра', 'kolco-muzhskoe-iz-serebra-2', '23', '10271', '4', '11', '11.86', '20.5', '4200', 'img/products/muzhskie-kolca/10271.jpg', '2022-01-17 14:45:50', '2022-01-17 14:45:50'),
-(120, 'Кольцо обручальное из золота', 'kolco-obruchalnoe-iz-zolota', '24', '3921267/0.8s', '3', '11', '1.07', '18.0', '1374', 'img/products/obruchalnye-kolca/3921267_0_8s.jpg', '2022-01-17 14:49:32', '2022-01-17 14:49:32'),
+(120, 'Кольцо обручальное из золота', 'kolco-obruchalnoe-iz-zolota', '24', '3921267/0.8s', '3', '11', '1.07', '18.0', '18.5', 'img/products/obruchalnye-kolca/3921267_0_8s.jpg', '2022-01-17 14:49:32', '2022-01-17 14:49:32'),
 (121, 'Кольцо обручальное из золота', 'kolco-obruchalnoe-iz-zolota-2', '24', '1007', '3', '11', '4.56', '16.0', '2240', 'img/products/obruchalnye-kolca/1007.jpg', '2022-01-17 14:51:27', '2022-01-17 14:51:27'),
 (122, 'Кольцо обручальное', 'kolco-obruchalnoe', '24', '11101р', '4', '23', '3.07', '17.5', '840', 'img/products/obruchalnye-kolca/11101r.jpg', '2022-01-17 14:53:26', '2022-01-17 14:53:26'),
 (123, 'Пирсинг из золота', 'pirsing-iz-zolota', '25', '190170', '3', '23', '1.33', NULL, '8938', 'img/products/pirsing/190170.jpg', '2022-01-18 08:31:00', '2022-01-18 08:31:00'),
@@ -191,6 +191,30 @@ INSERT INTO `products` (`id`, `title`, `slug`, `category_id`, `vendor_code`, `ma
 (138, 'Часы из золота', 'chasy-iz-zolota', '31', '53550', '3', '11', '25.84', NULL, '1900', 'img/products/chasy/53550.jpg', '2022-01-18 09:43:17', '2022-01-18 09:43:17'),
 (139, 'Часы', 'chasy', '31', '45131', '4', '11', '0', NULL, '1900', 'img/products/chasy/45131.jpg', '2022-01-18 09:44:39', '2022-01-18 09:44:39'),
 (140, 'Часы', 'chasy-2', '31', '47710', '4', '23', '0', NULL, '1400', 'img/products/chasy/47710.jpg', '2022-01-18 09:46:28', '2022-01-18 09:46:28');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `promoutions`
+--
+
+CREATE TABLE `promoutions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `promoutions`
+--
+
+INSERT INTO `promoutions` (`id`, `title`, `slug`, `content`, `picture`, `created_at`, `updated_at`) VALUES
+(1, 'Домашние', 'domashnie', 'ыффывфвыфыв', 'img\\promotions/qqq.jpg', '2022-01-31 17:06:40', '2022-01-31 17:06:40'),
+(2, 'Домашние', 'domashnie-2', 'ыффывфвыфыв', 'img\\promotions/qqq.jpg', '2022-01-31 17:06:58', '2022-01-31 17:06:58');
 
 -- --------------------------------------------------------
 
@@ -318,6 +342,12 @@ ALTER TABLE `products`
   ADD KEY `products_vendor_code_index` (`vendor_code`);
 
 --
+-- Индексы таблицы `promoutions`
+--
+ALTER TABLE `promoutions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `stones`
 --
 ALTER TABLE `stones`
@@ -369,7 +399,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
+
+--
+-- AUTO_INCREMENT для таблицы `promoutions`
+--
+ALTER TABLE `promoutions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `stones`
