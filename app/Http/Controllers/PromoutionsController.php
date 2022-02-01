@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Promoution;
 use Illuminate\Http\Request;
 
 class PromoutionsController extends Controller
 {
 
     public function index() {
-        return view('users.promoutions');
+        $allPromo = Promoution::all();
+
+        return view('users.promoutions', compact('allPromo'));
     }
+
+
+    public function currentPromo() {
+        return view('users.currentpromo');
+    }
+
 
 }

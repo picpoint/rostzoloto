@@ -11,34 +11,43 @@
 </head>
 <body>
 
-    <section class="promo">
-        <div class="promo__headerpromo">
-            @include('layouts.header')
-        </div>
+<section class="promo">
+    <div class="promo__headerpromo">
+        @include('layouts.header')
+    </div>
 
-        <div class="promo__contentpromo">
-            <div class="promo__contentpromowrapper">
+    <div class="promo__contentpromo">
+        <div class="promo__contentpromowrapper">
+
+            @if(count($allPromo) != 0)
+
+            @foreach($allPromo as $promo)
 
                 <div class="promo__currentpromo">
                     <div class="promo__currentpromopict">
-                        <a href="#">
-                            <img src="public/assets/users/img/promotions/somepromo/promo.jpg" alt="promo">
+                        <a href="{{ route("{slug}", ['slug' => $promo->slug]) }}">
+                            <img src="public/assets/users/{{ $promo->picture }}" alt="promo">
                         </a>
                     </div>
                     <div class="promo__currentpromodesc">
-                        <span>Порадуй друзей!</span>
+                        <span>{{ $promo->title }}</span>
                     </div>
                 </div>
 
+            @endforeach
+                @else
+                <span class="promo__currentpromoempty">Пока нет ни одной действующей акции... :-(</span>
+            @endif
 
-            </div>
+
         </div>
+    </div>
 
-        <div class="promo__footerpromo">
-            @include('layouts.footer')
-        </div>
+    <div class="promo__footerpromo">
+        @include('layouts.footer')
+    </div>
 
-    </section>
+</section>
 
 </body>
 </html>
