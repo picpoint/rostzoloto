@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Promoution;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PromoutionsController extends Controller
 {
@@ -15,8 +16,14 @@ class PromoutionsController extends Controller
     }
 
 
-    public function currentPromo() {
-        return view('users.currentpromo');
+    public function currentPromo(Request $request, $slug) {
+//        dump($slug);
+//        dd($request->all());
+
+        $currentPromo = DB::table('promoutions')->where('slug', '=', $slug)->get();
+//        dd($currentPromo);
+
+        return view('users.currentpromo', compact('currentPromo'));
     }
 
 

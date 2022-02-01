@@ -25,7 +25,7 @@
 
                 <div class="promo__currentpromo">
                     <div class="promo__currentpromopict">
-                        <a href="{{ route("{slug}", ['slug' => $promo->slug]) }}">
+                        <a href="{{ route("currentpromo", ['slug' => $promo->slug])}}">
                             <img src="public/assets/users/{{ $promo->picture }}" alt="promo">
                         </a>
                     </div>

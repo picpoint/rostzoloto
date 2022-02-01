@@ -4,5 +4,60 @@
   justify-content: space-between;
   height: 100vh;
   width: 100vw;
+    &__headercurpromo {
+      //border: $border;
+    }
+    &__contentcurpromo {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      margin-bottom: 50px;
+    }
+    &__contentcurpromowrp {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 65%;
+    }
+    &__contentcurpromopict {
+      //border: $border;
+      display: flex;
+      width: 500px;
+      height: 300px;
+      margin-top: 30px;
+        img {
+          //border: $border;
+          width: 100%;
+          height: 100%;
+        }
+    }
+    &__contentcurpromodesc {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 90%;
+        span {
+          //border: $border;
+          display: flex;
+          font-family: Montserrat-Regular;
+          &:nth-child(1) {
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 20px;
+          }
+          &:nth-child(2) {
+            justify-content: center;
+            font-size: 1.3rem;
+          }
+        }
+    }
+
+
+    &__footercurpromo {
+      //border: $border;
+    }
 
 }

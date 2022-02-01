@@ -776,7 +776,47 @@
   height: 100vh;
   width: 100vw;
 }
-
+.currrentpromo__contentcurpromo {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-bottom: 50px;
+}
+.currrentpromo__contentcurpromowrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+}
+.currrentpromo__contentcurpromopict {
+  display: flex;
+  width: 500px;
+  height: 300px;
+  margin-top: 30px;
+}
+.currrentpromo__contentcurpromopict img {
+  width: 100%;
+  height: 100%;
+}
+.currrentpromo__contentcurpromodesc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 90%;
+}
+.currrentpromo__contentcurpromodesc span {
+  display: flex;
+  font-family: Montserrat-Regular;
+}
+.currrentpromo__contentcurpromodesc span:nth-child(1) {
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 20px;
+}
+.currrentpromo__contentcurpromodesc span:nth-child(2) {
+  justify-content: center;
+  font-size: 1.3rem;
+}
 html {
   scroll-behavior: smooth;
 }

@@ -6,7 +6,7 @@
         </div>
         <div class="homepage__logo">
             <a href="/">
-                <img src="public/assets/users/img/logo.png" alt="logo">
+                <img src="/public/assets/users/img/logo.png" alt="logo">
             </a>
         </div>
         <div class="homepage__phone">
