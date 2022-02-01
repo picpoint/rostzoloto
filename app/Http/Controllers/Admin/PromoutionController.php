@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Promoution;
 use Illuminate\Http\Request;
-use Psy\Util\Str;
+use Illuminate\Support\Str;
+
 
 class PromoutionController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -37,23 +40,14 @@ class PromoutionController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
 
-//        $nameFolder = '';
-
-
-//        $prom = Promoution::slugged($request->title);
-//        dd(Str::slug($request->title));
-
-
-//        dd($request->slug);
+        $slugFolder = Str::slug($request->title, '-');
 
 
         Promoution::create([
             'title' => $request->title,
-            'slug' => $request->slug,
             'content' => $request->content,
-            'picture' => $request->picture->storeAs("img\promotions",  $request->picture->getClientOriginalName()),
+            'picture' => $request->picture->storeAs("img/promotions/$slugFolder",  $request->picture->getClientOriginalName()),
 
         ]);
 
@@ -106,4 +100,6 @@ class PromoutionController extends Controller
     {
         //
     }
+
+
 }
