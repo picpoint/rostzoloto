@@ -12,12 +12,13 @@
       display: flex;
       justify-content: center;
       flex-grow: 1;
-      margin-bottom: 50px;
+      //margin-bottom: 50px;
     }
     &__contentcurpromowrp {
       //border: $border;
       display: flex;
       flex-direction: column;
+      //justify-content: center;
       align-items: center;
       width: 65%;
     }
@@ -26,7 +27,7 @@
       display: flex;
       width: 500px;
       height: 300px;
-      margin-top: 30px;
+      margin-top: 50px;
         img {
           //border: $border;
           width: 100%;

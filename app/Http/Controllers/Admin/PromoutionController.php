@@ -19,7 +19,8 @@ class PromoutionController extends Controller
      */
     public function index()
     {
-        return view('admin.promotions.index');
+        $allPromo = Promoution::all();
+        return view('admin.promotions.index', compact('allPromo'));
     }
 
     /**
@@ -42,7 +43,6 @@ class PromoutionController extends Controller
     {
 
         $slugFolder = Str::slug($request->title, '-');
-
 
         Promoution::create([
             'title' => $request->title,
@@ -75,7 +75,8 @@ class PromoutionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $promo = Promoution::find($id);
+        return view('admin.promotions.edit', compact('promo'));
     }
 
     /**
