@@ -15,8 +15,9 @@
             <h3 class="card-title">Редактирование акции</h3>
         </div>
 
-        <form action="{{ route('promotions.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('promotions.update', ['promotion' => $promo->id]) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PATCH')
             <div class="card-body">
                 <div class="form-group">
                     <label for="title">Название акции</label>

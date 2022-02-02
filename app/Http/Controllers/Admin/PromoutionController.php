@@ -88,7 +88,15 @@ class PromoutionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $currentPromo = Promoution::find($id);
+        $currentPromo->slug = null;
+        $currentPromo->update($request->all());
+
+        session()->flash('success', 'Статья обновлена');
+
+        return redirect()->route('promotions.index');
+
     }
 
     /**
