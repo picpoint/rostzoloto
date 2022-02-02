@@ -53,7 +53,7 @@ class PromoutionController extends Controller
 
         session()->flash('success', 'Акция успешно сохранена');
 
-        return redirect()->route('promotions.create');
+        return redirect()->route('promotions.index');
     }
 
     /**
@@ -90,8 +90,28 @@ class PromoutionController extends Controller
     {
 
         $currentPromo = Promoution::find($id);
-        $currentPromo->slug = null;
-        $currentPromo->update($request->all());
+
+        if($request->title != $currentPromo->title || $request->content != $currentPromo->content) {
+            $currentPromo->slug = null;
+
+            $slugFolder = Str::slug($request->title, '-');
+
+            if($request->picture == null) {
+
+                $currentPromo->update([
+                    'title' => $request->title,
+                    'content' => $request->content,
+                ]);
+
+            } else {
+                $currentPromo->update([
+                    'title' => $request->title,
+                    'content' => $request->content,
+                    'picture' => $request->picture->storeAs("img/promotions/$slugFolder",  $request->picture->getClientOriginalName()),
+                ]);
+            }
+
+        }
 
         session()->flash('success', 'Статья обновлена');
 
@@ -107,7 +127,12 @@ class PromoutionController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        Promoution::destroy($id);
+
+        session()->flash('success', 'Акция удалена');
+        return redirect()->route('promotions.index');
+
     }
 
 
