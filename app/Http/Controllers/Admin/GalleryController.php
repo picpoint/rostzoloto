@@ -24,7 +24,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.gallery.create');
     }
 
     /**
