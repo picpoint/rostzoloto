@@ -26,6 +26,7 @@ Route::get('/filter', 'FilterController@showFilter')->name('filter');
 Route::get('productcurrent', 'ProductCurrentController@index')->name('product');
 Route::get('/promoutions', 'PromoutionsController@index')->name('promo');
 Route::get('/currentpromo/{slug}', 'PromoutionsController@currentPromo')->name("currentpromo");
+Route::get('/gallery', 'GalleryController@index')->name('gallery');
 
 
 
@@ -38,6 +39,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::get('/autoload', 'ProductAutoloadController@create')->name('autoload');
     Route::post('/autoload', 'ProductAutoloadController@autoloadFiles')->name('uploadprod');
     Route::resource('/promotions', 'PromoutionController');
+    Route::resource('/gallery', 'GalleryController');
 });
 
 
