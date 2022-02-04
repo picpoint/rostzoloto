@@ -47,7 +47,7 @@ class PromoutionController extends Controller
         Promoution::create([
             'title' => $request->title,
             'content' => $request->content,
-            'picture' => $request->picture->storeAs("img/promotions/$slugFolder",  $request->picture->getClientOriginalName()),
+            'preview' => $request->preview->storeAs("img/promotions/$slugFolder",  $request->preview->getClientOriginalName()),
 
         ]);
 

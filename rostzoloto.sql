@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 03 2022 г., 22:59
+-- Время создания: Фев 04 2022 г., 08:43
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -75,10 +75,10 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `gallery`
+-- Структура таблицы `galleries`
 --
 
-CREATE TABLE `gallery` (
+CREATE TABLE `galleries` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -340,9 +340,9 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Индексы таблицы `gallery`
+-- Индексы таблицы `galleries`
 --
-ALTER TABLE `gallery`
+ALTER TABLE `galleries`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -407,9 +407,9 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `gallery`
+-- AUTO_INCREMENT для таблицы `galleries`
 --
-ALTER TABLE `gallery`
+ALTER TABLE `galleries`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

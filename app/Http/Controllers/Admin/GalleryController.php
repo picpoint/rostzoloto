@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class GalleryController extends Controller
 {
@@ -35,7 +37,16 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+//        dd($request->all());
+
+        $nameAlbum = Str::slug($request->title, '-');
+//        dd($nameAlbum);
+
+        Gallery::create([
+            'title' => $request->title,
+            'preview' => $request->preview->storeAs("img/gallery/$nameAlbum", $request->preview->getClientOriginalName()),
+        ]);
+
     }
 
     /**

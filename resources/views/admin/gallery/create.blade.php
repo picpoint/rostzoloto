@@ -34,15 +34,15 @@
                 </div>
             </div>
 
-            <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">
-                <label for="detail">Загрузить коллекцию слайдов</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="form-control-file" name="detail[]" id="detail" multiple>
-                        <label class="custom-file-label" for="detail">Выберите коллекцию</label>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">--}}
+                {{--<label for="detail">Загрузить коллекцию слайдов</label>--}}
+                {{--<div class="input-group">--}}
+                    {{--<div class="custom-file">--}}
+                        {{--<input type="file" class="form-control-file" name="detail[]" id="detail" multiple>--}}
+                        {{--<label class="custom-file-label" for="detail">Выберите коллекцию</label>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Создать</button>

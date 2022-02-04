@@ -11,7 +11,7 @@ class Gallery extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['title', 'slug', 'preview_picture', 'detail_picture'];
+    protected $fillable = ['title', 'slug', 'preview', 'detail'];
 
 
     /**
