@@ -15,7 +15,7 @@
             <h3 class="card-title">Создание албома</h3>
         </div>
 
-        <form action="{{ route('materials.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('gallery.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -38,7 +38,7 @@
                 <label for="detail">Загрузить коллекцию слайдов</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="form-control-file" name="detail" id="detail">
+                        <input type="file" class="form-control-file" name="detail[]" id="detail" multiple>
                         <label class="custom-file-label" for="detail">Выберите коллекцию</label>
                     </div>
                 </div>
