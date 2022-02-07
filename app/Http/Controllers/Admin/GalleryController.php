@@ -37,15 +37,22 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
-
         $nameAlbum = Str::slug($request->title, '-');
-//        dd($nameAlbum);
 
-        Gallery::create([
-            'title' => $request->title,
-            'preview' => $request->preview->storeAs("img/gallery/$nameAlbum", $request->preview->getClientOriginalName()),
-        ]);
+        foreach ($request->detail as $detail) {
+
+            Gallery::create([
+                'title' => $request->title,
+                'preview' => $request->preview->storeAs("img/gallery/$nameAlbum", $request->preview->getClientOriginalName()),
+                'detail' => $detail->storeAs("img/gallery/$nameAlbum", $detail->getClientOriginalName()),
+            ]);
+
+        }
+
+        session()->flash('success', 'Картинки загружены в альбом');
+
+        return redirect()->route('gallery.create');
+
 
     }
 
