@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 04 2022 г., 08:43
+-- Время создания: Фев 07 2022 г., 23:10
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -82,11 +82,24 @@ CREATE TABLE `galleries` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `preview_picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `detail_picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `preview` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `detail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL,
   `updated_at` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `title`, `slug`, `preview`, `detail`, `created_at`, `updated_at`) VALUES
+(1, 'наташа либелле', 'natasha-libelle', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/0c3dc09d619800f3d10e0ffdff1c1b09.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
+(2, 'наташа либелле', 'natasha-libelle-2', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/8f5f81a3533fefed7c2dca2d93ee53ee.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
+(3, 'наташа либелле', 'natasha-libelle-3', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/e995d69a8feb277b2be30b9ef1e968e0.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
+(4, 'соколов стайл', 'sokolov-stayl', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/3ce70109f49632a91af84e9d5e2718f6.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
+(5, 'соколов стайл', 'sokolov-stayl-2', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/jewellerymag-ru-1-sokolov-basic.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
+(6, 'соколов стайл', 'sokolov-stayl-3', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/product1.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
+(7, 'соколов стайл', 'sokolov-stayl-4', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/sokolov-cover.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12');
 
 -- --------------------------------------------------------
 
@@ -410,7 +423,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `materials`
