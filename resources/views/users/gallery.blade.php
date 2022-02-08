@@ -11,29 +11,37 @@
 </head>
 <body>
 
-    <section class="gallery">
-        <div class="gallery__headerglr">
-            @include('layouts.header')
+<section class="gallery">
+    <div class="gallery__headerglr">
+        @include('layouts.header')
+    </div>
+    <div class="gallery__contentglr">
+        <div class="gallery__contentglrwrp">
+
+
+            {{--@foreach($albums as $album)--}}
+
+                {{--<div class="gallery__albumglr">--}}
+                    {{--<a href="#">--}}
+
+                    {{--</a>--}}
+                {{--</div>--}}
+
+            {{--@endforeach--}}
+
+            {{--<div class="gallery__albumglr">--}}
+            {{--<a href="#">--}}
+
+            {{--</a>--}}
+            {{--</div>--}}
+
+
         </div>
-        <div class="gallery__contentglr">
-            <div class="gallery__contentglrwrp">
-
-
-                <div class="gallery__albumglr">
-                    <a href="#">
-
-                    </a>
-                </div>
-
-
-
-
-            </div>
-        </div>
-        <div class="gallery__footerglr">
-            @include('layouts.footer')
-        </div>
-    </section>
+    </div>
+    <div class="gallery__footerglr">
+        @include('layouts.footer')
+    </div>
+</section>
 
 </body>
 </html>
