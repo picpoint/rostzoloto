@@ -27,7 +27,7 @@ Route::get('productcurrent', 'ProductCurrentController@index')->name('product');
 Route::get('/promoutions', 'PromoutionsController@index')->name('promo');
 Route::get('/currentpromo/{slug}', 'PromoutionsController@currentPromo')->name("currentpromo");
 Route::get('/gallery', 'GalleryController@index')->name('gallery');
-
+Route::get('/album', 'GalleryController@showAlbum')->name('album');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {

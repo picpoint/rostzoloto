@@ -11,22 +11,26 @@
       flex-grow: 1;
     }
     &__contentglrwrp {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       width: 65%;
     }
     &__albumglr {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 200px;
       height: 200px;
       margin: 30px;
         a {
-          border: $border;
+          //border: $border;
           width: 100%;
           height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
         }
     }
 

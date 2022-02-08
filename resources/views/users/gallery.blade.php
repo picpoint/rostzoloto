@@ -19,21 +19,16 @@
         <div class="gallery__contentglrwrp">
 
 
-            {{--@foreach($albums as $album)--}}
+            @foreach($picts as $key => $value)
 
-                {{--<div class="gallery__albumglr">--}}
-                    {{--<a href="#">--}}
+                <div class="gallery__albumglr">
+                    <a href="#">
+                        <img src="/public/assets/users/{{ $value }}" alt="preview">
+                    </a>
+                </div>
 
-                    {{--</a>--}}
-                {{--</div>--}}
-
-            {{--@endforeach--}}
-
-            {{--<div class="gallery__albumglr">--}}
-            {{--<a href="#">--}}
-
-            {{--</a>--}}
-            {{--</div>--}}
+            @endforeach
+            
 
 
         </div>
