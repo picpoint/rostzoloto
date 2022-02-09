@@ -35,8 +35,27 @@ class GalleryController extends Controller
     }
 
 
-    public function showAlbum() {
-        return view();
+    public function showAlbum($slug) {
+//        dump($slug);
+        $allDatas = Gallery::all();
+
+//        dd(strlen($slug));
+
+        $arrPicts = [];
+
+        foreach ($allDatas as $data) {
+//            dump($data->slug);
+
+            if (mb_substr($data->slug, 0, strlen($slug)) == $slug) {
+                $arrPicts[] = $data->detail;
+            }
+
+        }
+
+
+//        dd($arrPicts);
+
+        return view('users.album', compact('arrPicts'));
     }
 
 

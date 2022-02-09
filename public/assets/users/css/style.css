@@ -848,6 +848,38 @@
   height: 100%;
 }
 
+.album {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.album__contentalb {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.album__contentalbwrp {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 65%;
+}
+.album__albumalb {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  margin: 30px;
+}
+.album__albumalb a {
+  width: 100%;
+  height: 100%;
+}
+.album__albumalb a img {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }

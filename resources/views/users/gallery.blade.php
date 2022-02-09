@@ -24,7 +24,7 @@
             @foreach($res as $key => $value)
 
                 <div class="gallery__albumglr">
-                    <a href="{{$key}}">
+                    <a href="{{ route('album', ['slug' => $key]) }}">
                         <img src="/public/assets/users/{{ $value }}" alt="preview">
                     </a>
                 </div>
