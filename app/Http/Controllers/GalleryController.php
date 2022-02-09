@@ -19,30 +19,19 @@ class GalleryController extends Controller
         }
 
 
-
-//        $arrNames = array_unique($arrTitles);
-//
-//        dd($arrNames);
-//
-//        $arrAllPictures = DB::table('galleries')->where()
-
-
         $arrNames = array_unique($arrTitles);
         $picts = [];
 
-//        dd($arrNames);
 
         foreach ($arrNames as $key => $value) {
             $picts[] = DB::table('galleries')->where('title', '=', $value)->value('preview');
-            $ids[] = DB::table('galleries')->where('title', '=', $value)->pluck( 'preview', 'id');
+            $slugs[] = DB::table('galleries')->where('title', '=', $value)->value('slug');
         }
 
-
-        dump($ids);
-        dd($picts);
+        $res = array_combine($slugs, $picts);
 
 
-        return view('users.gallery', compact('picts'));
+        return view('users.gallery', compact('res'));
     }
 
 

@@ -21,10 +21,10 @@
 
 
 
-            @foreach($picts as $key => $value)
+            @foreach($res as $key => $value)
 
                 <div class="gallery__albumglr">
-                    <a href="#">
+                    <a href="{{$key}}">
                         <img src="/public/assets/users/{{ $value }}" alt="preview">
                     </a>
                 </div>
