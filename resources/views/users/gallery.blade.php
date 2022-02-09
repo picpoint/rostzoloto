@@ -19,6 +19,8 @@
         <div class="gallery__contentglrwrp">
 
 
+
+
             @foreach($picts as $key => $value)
 
                 <div class="gallery__albumglr">
