@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class GalleryController extends Controller
@@ -16,7 +17,21 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('admin.gallery.index');
+        $datas = [];
+        $allDatas = Gallery::all()->pluck('title');
+
+        foreach ($allDatas as $dts) {
+            $datas[] = $dts;
+        }
+
+        $uniqueValues = array_unique($datas);
+
+        foreach ($uniqueValues as $key => $value) {
+            $res[] = DB::table('galleries')->where('title', '=', $value)->first();
+        }
+
+
+        return view('admin.gallery.index', compact('res'));
     }
 
     /**
@@ -98,6 +113,7 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        dd($id);
     }
 }
