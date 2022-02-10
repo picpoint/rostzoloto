@@ -25,24 +25,29 @@
                 </thead>
                 <tbody>
 
-                @foreach($res as $rs)
-                    <tr>
-                        <td style="width: 50px; text-align: center">{{ $rs->id }}</td>
-                        <td>{{ $rs->title }}</td>
-                        <td><img src="/public/assets/users/{{ $rs->preview }}" alt="preview" style="width: 100px; height: 100px"></td>
-                        <td style="width: 400px; text-align: center; vertical-align: middle">
-                            <form method="post" action="{{ route('gallery.destroy', ['gallery' => $rs->title]) }}">
-                                @csrf
-                                @method('DELETE')
-                                <a href="#">
-                                    <button type="submit" class="btn btn-danger m-1">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </a>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
+                @if($res != '')
+
+                    @foreach($res as $rs)
+                        <tr>
+                            <td style="width: 50px; text-align: center">{{ $rs->id }}</td>
+                            <td>{{ $rs->title }}</td>
+                            <td><img src="/public/assets/users/{{ $rs->preview }}" alt="preview"
+                                     style="width: 100px; height: 100px"></td>
+                            <td style="width: 400px; text-align: center; vertical-align: middle">
+                                <form method="post" action="{{ route('gallery.destroy', ['gallery' => $rs->title]) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <a href="#">
+                                        <button type="submit" class="btn btn-danger m-1">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </a>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+
+                @endif
 
                 </tbody>
             </table>

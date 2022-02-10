@@ -30,6 +30,10 @@ class GalleryController extends Controller
             $res[] = DB::table('galleries')->where('title', '=', $value)->first();
         }
 
+        if (empty($res)) {
+            $res = '';
+        }
+
 
         return view('admin.gallery.index', compact('res'));
     }
@@ -111,9 +115,22 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($title)
     {
-        
-        dd($id);
+
+        $nameFolder = DB::table('galleries')->where('title', '=', $title)->pluck('slug')->first();
+//        dd($nameFolder);
+//        DB::table('galleries')->where('title', '=', $title)->delete();
+
+        $dir="public/assets/users/img/gallery/natasha-libelle";
+//        dd($dir);
+        array_map('unlink', glob("$dir/*.*"));
+        rmdir($dir);
+
+//        rmdir("public/assets/users/img/gallery/$nameFolder");
+        session()->flash('success', 'Галерея удалена');
+
+        return redirect()->route('gallery.index');
+
     }
 }
