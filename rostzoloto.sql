@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 07 2022 г., 23:10
+-- Время создания: Фев 10 2022 г., 21:40
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -99,7 +99,12 @@ INSERT INTO `galleries` (`id`, `title`, `slug`, `preview`, `detail`, `created_at
 (4, 'соколов стайл', 'sokolov-stayl', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/3ce70109f49632a91af84e9d5e2718f6.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
 (5, 'соколов стайл', 'sokolov-stayl-2', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/jewellerymag-ru-1-sokolov-basic.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
 (6, 'соколов стайл', 'sokolov-stayl-3', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/product1.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
-(7, 'соколов стайл', 'sokolov-stayl-4', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/sokolov-cover.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12');
+(7, 'соколов стайл', 'sokolov-stayl-4', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/sokolov-cover.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
+(8, 'летний бриз', 'letniy-briz', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/0c3bef1ce8fcd88195f70d365fc13f1b.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
+(9, 'летний бриз', 'letniy-briz-2', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/d1e0ff28a8fa78125a3ab7481e28921d.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
+(10, 'летний бриз', 'letniy-briz-3', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/dxlXFgTvbCY.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
+(11, 'летний бриз', 'letniy-briz-4', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/fKXa1-7fZkU.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
+(12, 'летний бриз', 'letniy-briz-5', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/topaz.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39');
 
 -- --------------------------------------------------------
 
@@ -423,7 +428,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `materials`
