@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 10 2022 г., 22:57
+-- Время создания: Фев 14 2022 г., 16:43
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -93,18 +93,22 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `title`, `slug`, `preview`, `detail`, `created_at`, `updated_at`) VALUES
-(1, 'наташа либелле', 'natasha-libelle', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/0c3dc09d619800f3d10e0ffdff1c1b09.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
-(2, 'наташа либелле', 'natasha-libelle-2', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/8f5f81a3533fefed7c2dca2d93ee53ee.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
-(3, 'наташа либелле', 'natasha-libelle-3', 'img/gallery/natasa-libelle/natashalibel.jpg', 'img/gallery/natasa-libelle/e995d69a8feb277b2be30b9ef1e968e0.jpg', '2022-02-07 16:44:39', '2022-02-07 16:44:39'),
-(4, 'соколов стайл', 'sokolov-stayl', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/3ce70109f49632a91af84e9d5e2718f6.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
-(5, 'соколов стайл', 'sokolov-stayl-2', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/jewellerymag-ru-1-sokolov-basic.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
-(6, 'соколов стайл', 'sokolov-stayl-3', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/product1.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
-(7, 'соколов стайл', 'sokolov-stayl-4', 'img/gallery/sokolov-stail/6.jpg', 'img/gallery/sokolov-stail/sokolov-cover.jpg', '2022-02-07 17:06:12', '2022-02-07 17:06:12'),
-(8, 'летний бриз', 'letniy-briz', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/0c3bef1ce8fcd88195f70d365fc13f1b.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
-(9, 'летний бриз', 'letniy-briz-2', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/d1e0ff28a8fa78125a3ab7481e28921d.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
-(10, 'летний бриз', 'letniy-briz-3', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/dxlXFgTvbCY.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
-(11, 'летний бриз', 'letniy-briz-4', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/fKXa1-7fZkU.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39'),
-(12, 'летний бриз', 'letniy-briz-5', 'img/gallery/letnii-briz/karatov.png', 'img/gallery/letnii-briz/topaz.jpg', '2022-02-10 15:39:39', '2022-02-10 15:39:39');
+(41, 'natasha libelle', 'natasha-libelle', 'img/gallery/natasha-libelle/natashalibel.jpg', 'img/gallery/natasha-libelle/0c3dc09d619800f3d10e0ffdff1c1b09.jpg', '2022-02-14 10:41:18', '2022-02-14 10:41:18'),
+(42, 'natasha libelle', 'natasha-libelle-2', 'img/gallery/natasha-libelle/natashalibel.jpg', 'img/gallery/natasha-libelle/8f5f81a3533fefed7c2dca2d93ee53ee.jpg', '2022-02-14 10:41:18', '2022-02-14 10:41:18'),
+(43, 'natasha libelle', 'natasha-libelle-3', 'img/gallery/natasha-libelle/natashalibel.jpg', 'img/gallery/natasha-libelle/e995d69a8feb277b2be30b9ef1e968e0.jpg', '2022-02-14 10:41:18', '2022-02-14 10:41:18'),
+(44, 'pomelnilov', 'pomelnilov', 'img/gallery/pomelnilov/Без названия.png', 'img/gallery/pomelnilov/66037337_1276928852469443_12489094881869824_n.jpg', '2022-02-14 10:41:43', '2022-02-14 10:41:43'),
+(45, 'pomelnilov', 'pomelnilov-2', 'img/gallery/pomelnilov/Без названия.png', 'img/gallery/pomelnilov/W2Wjf8C0GZzdqR8pGYCciwypLrY-6fXVV67SlNlyorrUV8r2O8qNCPivvK-YWOX-.jpg', '2022-02-14 10:41:43', '2022-02-14 10:41:43'),
+(46, 'pomelnilov', 'pomelnilov-3', 'img/gallery/pomelnilov/Без названия.png', 'img/gallery/pomelnilov/Без названия (1).jpg', '2022-02-14 10:41:43', '2022-02-14 10:41:43'),
+(47, 'pomelnilov', 'pomelnilov-4', 'img/gallery/pomelnilov/Без названия.png', 'img/gallery/pomelnilov/Без названия.jpg', '2022-02-14 10:41:43', '2022-02-14 10:41:43'),
+(48, 'letniy briz', 'letniy-briz', 'img/gallery/letniy-briz/karatov.png', 'img/gallery/letniy-briz/0c3bef1ce8fcd88195f70d365fc13f1b.jpg', '2022-02-14 10:42:14', '2022-02-14 10:42:14'),
+(49, 'letniy briz', 'letniy-briz-2', 'img/gallery/letniy-briz/karatov.png', 'img/gallery/letniy-briz/d1e0ff28a8fa78125a3ab7481e28921d.jpg', '2022-02-14 10:42:14', '2022-02-14 10:42:14'),
+(50, 'letniy briz', 'letniy-briz-3', 'img/gallery/letniy-briz/karatov.png', 'img/gallery/letniy-briz/dxlXFgTvbCY.jpg', '2022-02-14 10:42:14', '2022-02-14 10:42:14'),
+(51, 'letniy briz', 'letniy-briz-4', 'img/gallery/letniy-briz/karatov.png', 'img/gallery/letniy-briz/fKXa1-7fZkU.jpg', '2022-02-14 10:42:14', '2022-02-14 10:42:14'),
+(52, 'letniy briz', 'letniy-briz-5', 'img/gallery/letniy-briz/karatov.png', 'img/gallery/letniy-briz/topaz.jpg', '2022-02-14 10:42:14', '2022-02-14 10:42:14'),
+(53, 'sokolov stayl', 'sokolov-stayl', 'img/gallery/sokolov-stayl/6.jpg', 'img/gallery/sokolov-stayl/3ce70109f49632a91af84e9d5e2718f6.jpg', '2022-02-14 10:42:40', '2022-02-14 10:42:40'),
+(54, 'sokolov stayl', 'sokolov-stayl-2', 'img/gallery/sokolov-stayl/6.jpg', 'img/gallery/sokolov-stayl/jewellerymag-ru-1-sokolov-basic.jpg', '2022-02-14 10:42:40', '2022-02-14 10:42:40'),
+(55, 'sokolov stayl', 'sokolov-stayl-3', 'img/gallery/sokolov-stayl/6.jpg', 'img/gallery/sokolov-stayl/product1.jpg', '2022-02-14 10:42:40', '2022-02-14 10:42:40'),
+(56, 'sokolov stayl', 'sokolov-stayl-4', 'img/gallery/sokolov-stayl/6.jpg', 'img/gallery/sokolov-stayl/sokolov-cover.jpg', '2022-02-14 10:42:40', '2022-02-14 10:42:40');
 
 -- --------------------------------------------------------
 
@@ -428,7 +432,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT для таблицы `materials`

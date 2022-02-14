@@ -119,30 +119,14 @@ class GalleryController extends Controller
     {
 
         $nameFolder = DB::table('galleries')->where('title', '=', $title)->pluck('slug')->first();
-//        dd($nameFolder);
-//        DB::table('galleries')->where('title', '=', $title)->delete();
 
+        DB::table('galleries')->where('title', '=', $title)->delete();
 
-        $dir = "C:/OpenServer/domains/rostzoloto/public/assets/users/img/gallery";
+        $dir="C:/OpenServer/domains/rostzoloto/public/assets/users/img/gallery/$nameFolder";
 
-        dump($nameFolder);
+        array_map('unlink', glob("$dir/*.*"));
+        rmdir($dir);
 
-        foreach (scandir($dir) as $key => $value) {
-//            dump($value);
-//            dump("namefolder => " . $nameFolder);
-
-            if (strcasecmp($nameFolder, $value) !== 0) {
-                dump('YES');
-            }
-
-        }
-
-
-//        dump($nameFolder);
-        dd(scandir($dir));
-
-
-//        rmdir("public/assets/users/img/gallery/$nameFolder");
         session()->flash('success', 'Галерея удалена');
 
         return redirect()->route('gallery.index');
