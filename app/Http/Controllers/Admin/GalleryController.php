@@ -122,10 +122,25 @@ class GalleryController extends Controller
 //        dd($nameFolder);
 //        DB::table('galleries')->where('title', '=', $title)->delete();
 
-        $dir="public/assets/users/img/gallery/natasha-libelle";
-//        dd($dir);
-        array_map('unlink', glob("$dir/*.*"));
-        rmdir($dir);
+
+        $dir = "C:/OpenServer/domains/rostzoloto/public/assets/users/img/gallery";
+
+        dump($nameFolder);
+
+        foreach (scandir($dir) as $key => $value) {
+//            dump($value);
+//            dump("namefolder => " . $nameFolder);
+
+            if (strcasecmp($nameFolder, $value) !== 0) {
+                dump('YES');
+            }
+
+        }
+
+
+//        dump($nameFolder);
+        dd(scandir($dir));
+
 
 //        rmdir("public/assets/users/img/gallery/$nameFolder");
         session()->flash('success', 'Галерея удалена');
