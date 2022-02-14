@@ -37,13 +37,13 @@ class GalleryController extends Controller
     }
 
 
-    public function showAlbum($slug) {
-        $allDatas = Gallery::all();
+    public function showAlbum($slug) {          // метод показа конкретного альбома
+        $allDatas = Gallery::all();         // получаем все записи
         $arrPicts = [];
 
-        foreach ($allDatas as $data) {
-            if (mb_substr($data->slug, 0, strlen($slug)) == $slug) {
-                $arrPicts[] = $data->detail;
+        foreach ($allDatas as $data) {          // перебираем все записи
+            if (mb_substr($data->slug, 0, strlen($slug)) == $slug) {            // если slug-подстрока с 0 позиции  == длинне строки слага(т.е. если строка слаг из БД == строке слаг из URL)
+                $arrPicts[] = $data->detail;            // в массив записываем все детальные картинки
             }
         }
 

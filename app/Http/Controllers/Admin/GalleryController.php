@@ -18,19 +18,19 @@ class GalleryController extends Controller
     public function index()
     {
         $datas = [];
-        $allDatas = Gallery::all()->pluck('title');
+        $allDatas = Gallery::all()->pluck('title');         // получаем все заголовки из таблицы galleries
 
-        foreach ($allDatas as $dts) {
-            $datas[] = $dts;
+        foreach ($allDatas as $dts) {           // перебираем заголовки
+            $datas[] = $dts;            // помещаем их в массив
         }
 
-        $uniqueValues = array_unique($datas);
+        $uniqueValues = array_unique($datas);           // делаем из всех заголовков, массив уникальных
 
-        foreach ($uniqueValues as $key => $value) {
-            $res[] = DB::table('galleries')->where('title', '=', $value)->first();
+        foreach ($uniqueValues as $key => $value) {         // перебираем массив уникальных заголовков
+            $res[] = DB::table('galleries')->where('title', '=', $value)->first();          // берём из таблицы первую запись, у которой заголовок == уникальному заголовку, для показа в админке
         }
 
-        if (empty($res)) {
+        if (empty($res)) {          // если такого нет, присваиваем переменной пустую строку
             $res = '';
         }
 
@@ -56,14 +56,14 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $nameAlbum = Str::slug($request->title, '-');
+        $nameAlbum = Str::slug($request->title, '-');           // формируем slug из title для создания папки
 
-        foreach ($request->detail as $detail) {
+        foreach ($request->detail as $detail) {     // перебираем массив детальных картинок который пришёл из формы
 
             Gallery::create([
                 'title' => $request->title,
-                'preview' => $request->preview->storeAs("img/gallery/$nameAlbum", $request->preview->getClientOriginalName()),
-                'detail' => $detail->storeAs("img/gallery/$nameAlbum", $detail->getClientOriginalName()),
+                'preview' => $request->preview->storeAs("img/gallery/$nameAlbum", $request->preview->getClientOriginalName()),          // сохраняем превью картинки в папку $nameAlbum с оригинальным именем
+                'detail' => $detail->storeAs("img/gallery/$nameAlbum", $detail->getClientOriginalName()),           // сохраняем детальные картинки в папку $nameAlbum с оригинальными именами
             ]);
 
         }
@@ -118,14 +118,14 @@ class GalleryController extends Controller
     public function destroy($title)
     {
 
-        $nameFolder = DB::table('galleries')->where('title', '=', $title)->pluck('slug')->first();
+        $nameFolder = DB::table('galleries')->where('title', '=', $title)->pluck('slug')->first();          // выбираем первую запись из бд где title == пришедшему slug-у из URL
 
-        DB::table('galleries')->where('title', '=', $title)->delete();
+        DB::table('galleries')->where('title', '=', $title)->delete();          // удаляем из таблицы записи, где заголовки == пришедшему slug-у из URL-a
 
-        $dir="C:/OpenServer/domains/rostzoloto/public/assets/users/img/gallery/$nameFolder";
+        $dir="C:/OpenServer/domains/rostzoloto/public/assets/users/img/gallery/$nameFolder";            // получем путь к папке в которой лежат картинки конкретного альбома
 
-        array_map('unlink', glob("$dir/*.*"));
-        rmdir($dir);
+        array_map('unlink', glob("$dir/*.*"));          // удаляем все файлы из данной папки
+        rmdir($dir);            // удаляем саму папку
 
         session()->flash('success', 'Галерея удалена');
 

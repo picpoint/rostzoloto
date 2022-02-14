@@ -15,7 +15,7 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        $materials = Material::all();
+        $materials = Material::all();           // получаем все записи материаллов из БД
         return view('admin.materials.index', compact('materials'));
     }
 
@@ -37,9 +37,9 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
-        $material = $request->title;
+        $material = $request->title;            // получаем название материалла из поля формы
         Material::create([
-            'title' => $request->title
+            'title' => $request->title          // записываем в БД название материалла
         ]);
 
         session()->flash('success', "Материал \"$request->title\" успешно создан");
@@ -66,8 +66,8 @@ class MaterialController extends Controller
      */
     public function edit($id)
     {
-        $material = Material::find($id);
-        return view('admin.materials.edit', compact('material'));
+        $material = Material::find($id);            // ищем конкретную запись в БД по id
+        return view('admin.materials.edit', compact('material'));           // передаём её на страницу
     }
 
     /**
@@ -79,9 +79,9 @@ class MaterialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $material = Material::find($id);
-        $material->slug = null;
-        $material->update($request->all());
+        $material = Material::find($id);            // получаем из БД конкретный материал по id
+        $material->slug = null;         // обнуляем ему slug
+        $material->update($request->all());         // обновляем все поля по данной записи
         session()->flash('success', 'Материал обновлён');
 
         return view('admin.materials.edit', compact('material'));
@@ -96,7 +96,7 @@ class MaterialController extends Controller
      */
     public function destroy($id)
     {
-        Material::destroy($id);
+        Material::destroy($id);         // удаляем запись о материалле из БД по конкретному id
         session()->flash('success', 'Материал удалён');
 
         return redirect()->route('materials.index');

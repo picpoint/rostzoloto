@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::all();          // получаем все категории и передаём на страницу
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -37,9 +37,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = $request->title;
+        $category = $request->title;            // получаем пришедший title
         Category::create([
-            'title' => $request->title,
+            'title' => $request->title,         // создаём в БД из title определённую категорию
         ]);
 
         session()->flash('success', "Категория \"$request->title\" создана");
@@ -66,8 +66,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        return view('admin.categories.edit', compact('category'));
+        $category = Category::find($id);            // находим в БД определённую категорию по пришедшему id
+        return view('admin.categories.edit', compact('category'));          // передаём на страницу для редактирования
     }
 
     /**
@@ -79,9 +79,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
-        $category->slug = null;
-        $category->update($request->all());
+        $category = Category::find($id);            // находим конкретную категорию по пришедшему id
+        $category->slug = null;         // обнуляем слаг данной категории
+        $category->update($request->all());         // обновляем все поля данной категории
 
         session()->flash('success', 'Категория обновлена');
 
@@ -96,7 +96,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        Category::destroy($id);
+        Category::destroy($id);         // удаляем категорию из БД по конкретному id
         session('success', 'Категория удалена');
         return redirect()->route('categories.index');
     }
