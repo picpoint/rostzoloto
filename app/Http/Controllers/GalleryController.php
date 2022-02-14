@@ -14,15 +14,13 @@ class GalleryController extends Controller
         $arrTitles = [];            // пустой массив для заголовков
         $allDatas = Gallery::all();       // все данные из таблицы galleries
 
-        if (count($allDatas) != 0) {
+        if (count($allDatas) != 0) {            // если из БД пришёл не пустой массив
             foreach ($allDatas as $data) {        // перебираем весь массив данных
                 $arrTitles[] = $data->title;            // создаём массив заголовков
             }
 
-
             $arrNames = array_unique($arrTitles);           // из всего массива заголовков оставляем только уникальные
             $picts = [];            // создаём пустой массив для картинок
-
 
             foreach ($arrNames as $key => $value) {         // перебираем массив уникальных заголовков
                 $picts[] = DB::table('galleries')->where('title', '=', $value)->value('preview');           // в массив для картинок помещаем картинку из preview
@@ -40,24 +38,14 @@ class GalleryController extends Controller
 
 
     public function showAlbum($slug) {
-//        dump($slug);
         $allDatas = Gallery::all();
-
-//        dd(strlen($slug));
-
         $arrPicts = [];
 
         foreach ($allDatas as $data) {
-//            dump($data->slug);
-
             if (mb_substr($data->slug, 0, strlen($slug)) == $slug) {
                 $arrPicts[] = $data->detail;
             }
-
         }
-
-
-//        dd($arrPicts);
 
         return view('users.album', compact('arrPicts'));
     }
