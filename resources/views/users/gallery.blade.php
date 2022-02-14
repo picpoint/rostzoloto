@@ -19,18 +19,21 @@
         <div class="gallery__contentglrwrp">
 
 
+            @if($res != '')
+                @foreach($res as $key => $value)
 
+                    <div class="gallery__albumglr">
+                        <a href="{{ route('album', ['slug' => $key]) }}">
+                            <img src="/public/assets/users/{{ $value }}" alt="preview">
+                        </a>
+                    </div>
 
-            @foreach($res as $key => $value)
-
-                <div class="gallery__albumglr">
-                    <a href="{{ route('album', ['slug' => $key]) }}">
-                        <img src="/public/assets/users/{{ $value }}" alt="preview">
-                    </a>
+                @endforeach
+            @else
+                <div class="gallery__albumglrempty">
+                    <span>Пока нет ни одного альбома ...</span>
                 </div>
-
-            @endforeach
-            
+            @endif
 
 
         </div>
