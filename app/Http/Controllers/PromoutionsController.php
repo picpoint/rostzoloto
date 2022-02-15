@@ -10,18 +10,14 @@ class PromoutionsController extends Controller
 {
 
     public function index() {
-        $allPromo = Promoution::all();
-
+        $allPromo = Promoution::all();          // получаем из БД все акции
         return view('users.promoutions', compact('allPromo'));
     }
 
 
     public function currentPromo(Request $request, $slug) {
-//        dump($slug);
-//        dd($request->all());
 
-        $currentPromo = DB::table('promoutions')->where('slug', '=', $slug)->get();
-//        dd($currentPromo);
+        $currentPromo = DB::table('promoutions')->where('slug', '=', $slug)->get();         // получаем из БД акцию, у которой слаг == текущему полученному слагу
 
         return view('users.currentpromo', compact('currentPromo'));
     }

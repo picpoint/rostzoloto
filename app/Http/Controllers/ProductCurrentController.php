@@ -9,8 +9,8 @@ class ProductCurrentController extends Controller
 {
 
     public function index(Request $request) {
-        $idProduct = $request->product;
-        $currentProduct = Product::find($idProduct);
+        $idProduct = $request->product;         // получаем данные из запроса
+        $currentProduct = Product::find($idProduct);            // получаем данные о текущем изделии
 
         return view('users.productcurrent', compact('currentProduct'));
     }

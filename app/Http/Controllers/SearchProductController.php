@@ -14,12 +14,12 @@ class SearchProductController extends Controller
 
     public function search(Request $request) {
 
-        $categories = Category::all();
-        $materials = Material::all();
-        $stones = Stone::all();
+        $categories = Category::all();          // получаем все категории
+        $materials = Material::all();           // получаем все материаллы
+        $stones = Stone::all();         // получаем все вставки
         $products = '';
 
-        $resSearch = DB::table('products')->where('vendor_code', 'LIKE', "%{$request->s}%")->get();
+        $resSearch = DB::table('products')->where('vendor_code', 'LIKE', "%{$request->s}%")->get();         // получаем из БД изделия у которых артикул частично совпадает с введёнными данными из поля поиск
 
 
         if (count($resSearch) == 0) {
