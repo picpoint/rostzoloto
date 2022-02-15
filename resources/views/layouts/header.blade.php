@@ -22,7 +22,7 @@
             <a href="{{ route('promo') }}">АКЦИИ</a>
             <a href="{{ route('catalog') }}">КАТАЛОГ</a>
             <a href="{{ route('gallery') }}">ГАЛЕРЕЯ</a>
-            <a href="#">БЛОГ</a>
+            <a href="{{ route('blog') }}">БЛОГ</a>
             <a href="#">ЛОМБАРДЫ</a>
             <a href="#">ПАРТНЁРЫ</a>
             <a href="#">О НАС</a>

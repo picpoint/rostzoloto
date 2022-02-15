@@ -20,7 +20,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="title">Название альбома</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название альбома">
+                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название альбома(только латиница)">
                 </div>
             </div>
 

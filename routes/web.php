@@ -28,6 +28,7 @@ Route::get('/promoutions', 'PromoutionsController@index')->name('promo');
 Route::get('/currentpromo/{slug}', 'PromoutionsController@currentPromo')->name("currentpromo");
 Route::get('/gallery', 'GalleryController@index')->name('gallery');
 Route::get('/gallery/{slug}', 'GalleryController@showAlbum')->name('album');
+Route::get('/blog', 'BlogController@index')->name('blog');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
@@ -40,6 +41,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::post('/autoload', 'ProductAutoloadController@autoloadFiles')->name('uploadprod');
     Route::resource('/promotions', 'PromoutionController');
     Route::resource('/gallery', 'GalleryController');
+    Route::resource('/blog', 'BlogController');
 });
 
 

@@ -74,134 +74,33 @@
         <div class="homepage__items">
             <div class="homepage__itemswrapper">
 
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
+                @if($products != '')
+
+                    @foreach($products as $product)
+                        <div class="homepage__cardproduct">
+                            <form action="{{ route('filter', ['id' => $product->id]) }}" method="post"
+                                  class="homepage__cardproductform">
+                                @csrf
+                                <div class="homepage__pict">
+                                    <div class="homepage__addfuncs">
+                                        <a href="eye.php"><i class="far fa-eye"></i></a>
+                                        <a href="heart.php"><i class="fas fa-heart"></i></a>
+                                    </div>
+                                    <a href="{{ route('product', ['product' => $product->id]) }}">
+                                        <img src="public/assets/users/{{ $product->picture }}"
+                                             alt="jewelry">
+                                    </a>
+                                </div>
+                                <div class="homepage__productinfo">
+                                    <span>{{ $product->title }}</span>
+                                    <span>{{ $product->price }} р.</span>
+                                    <button type="submit">в корзину</button>
+                                </div>
+                            </form>
                         </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
-                <div class="homepage__cardproduct">
-                    <div class="homepage__pict">
-                        <div class="homepage__addfuncs">
-                            <a href="eye.php"><i class="far fa-eye"></i></a>
-                            <a href="heart.php"><i class="fas fa-heart"></i></a>
-                        </div>
-                        <a href="single.php">
-                            <img src="public/assets/users/img/ring.jpg" alt="jewelry">
-                        </a>
-                    </div>
-                    <div class="homepage__productinfo">
-                        <span>название</span>
-                        <span>цена</span>
-                        <button>в корзину</button>
-                    </div>
-                </div>
+                    @endforeach
+
+                @endif
 
             </div>
         </div>
@@ -265,7 +164,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="homepage__blogpost">
                     <a href="#">
                         <div class="homepage__blogpostimg">
@@ -288,7 +186,6 @@
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
     </div>
