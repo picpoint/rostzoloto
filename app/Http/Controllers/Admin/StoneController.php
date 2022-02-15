@@ -15,7 +15,7 @@ class StoneController extends Controller
      */
     public function index()
     {
-        $stones = Stone::all();
+        $stones = Stone::all();         // получаем все вставки
         return view('admin.stones.index', compact('stones'));
     }
 
@@ -37,7 +37,7 @@ class StoneController extends Controller
      */
     public function store(Request $request)
     {
-        Stone::create($request->all());
+        Stone::create($request->all());         // сохраняем инфармацию в БД по пришедшим полям
         session()->flash('success', "Вставка \"$request->title\" сохранена");
 
         return redirect()->route('stones.create');
@@ -62,7 +62,7 @@ class StoneController extends Controller
      */
     public function edit($id)
     {
-        $stone = Stone::find($id);
+        $stone = Stone::find($id);          // находим конкретную вставку по id
         return view('admin.stones.edit', compact('stone'));
     }
 
@@ -75,9 +75,9 @@ class StoneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $stone = Stone::find($id);
-        $stone->slug = null;
-        $stone->update($request->all());
+        $stone = Stone::find($id);          // находим конкретную вставку по id
+        $stone->slug = null;            // обнуляем ей слаг
+        $stone->update($request->all());            // обновляем все поля в БД по конкретной вставке
         session()->flash('success', "Вставка \"$stone->title\" отредактированна");
 
         return redirect()->route('stones.edit', compact('stone'));
@@ -91,8 +91,8 @@ class StoneController extends Controller
      */
     public function destroy($id)
     {
-        $stone = Stone::find($id);
-        Stone::destroy($id);
+        $stone = Stone::find($id);          // находим конкретную вставку по id
+        Stone::destroy($id);            // удаляем запись по конкретной вставке
         session()->flash('success', "Вставка \"$stone->title\"  удалена");
         return redirect()->route('stones.index');
     }

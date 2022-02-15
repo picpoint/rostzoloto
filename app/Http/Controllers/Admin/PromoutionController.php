@@ -19,7 +19,7 @@ class PromoutionController extends Controller
      */
     public function index()
     {
-        $allPromo = Promoution::all();
+        $allPromo = Promoution::all();          // получаем все акции
         return view('admin.promotions.index', compact('allPromo'));
     }
 
@@ -42,12 +42,12 @@ class PromoutionController extends Controller
     public function store(Request $request)
     {
 
-        $slugFolder = Str::slug($request->title, '-');
+        $slugFolder = Str::slug($request->title, '-');          // имя папки делаем слагом из из пришедшего title
 
-        Promoution::create([
+        Promoution::create([            // сохраняем запись по данной акции в БД
             'title' => $request->title,
             'content' => $request->content,
-            'preview' => $request->preview->storeAs("img/promotions/$slugFolder",  $request->preview->getClientOriginalName()),
+            'preview' => $request->preview->storeAs("img/promotions/$slugFolder",  $request->preview->getClientOriginalName()),         // картинку сохраняем с исходным именем в папку имя которой слаг, полученный из заголовка акции
 
         ]);
 
@@ -75,7 +75,7 @@ class PromoutionController extends Controller
      */
     public function edit($id)
     {
-        $promo = Promoution::find($id);
+        $promo = Promoution::find($id);         // находим конкретную акцию по пришедшему id
         return view('admin.promotions.edit', compact('promo'));
     }
 
@@ -89,21 +89,21 @@ class PromoutionController extends Controller
     public function update(Request $request, $id)
     {
 
-        $currentPromo = Promoution::find($id);
+        $currentPromo = Promoution::find($id);          // находим конкретную акцию по id
 
-        if($request->title != $currentPromo->title || $request->content != $currentPromo->content) {
-            $currentPromo->slug = null;
+        if($request->title != $currentPromo->title || $request->content != $currentPromo->content) {            // если заголовок из пришедшего запроса != заголовку который в БД или пришедший контент акции != контенту акции из БД(т.е. пользователь изменил заголовок или контент акции)
+            $currentPromo->slug = null;         // слаг поста в БД обнуляем
 
-            $slugFolder = Str::slug($request->title, '-');
+            $slugFolder = Str::slug($request->title, '-');          // имя папки = слаг из title который пришёл из формы
 
-            if($request->picture == null) {
+            if($request->picture == null) {         // если картинки пуста(т.е. пользователь не менял картинку)
 
-                $currentPromo->update([
+                $currentPromo->update([         // обновляем только заголовок и контент акции
                     'title' => $request->title,
                     'content' => $request->content,
                 ]);
 
-            } else {
+            } else {            // иначе(т.е. пользователь изменил картинку акции) обновляем всю информацию по данной акции
                 $currentPromo->update([
                     'title' => $request->title,
                     'content' => $request->content,
@@ -128,7 +128,7 @@ class PromoutionController extends Controller
     public function destroy($id)
     {
 
-        Promoution::destroy($id);
+        Promoution::destroy($id);           // находим конкретную акцию по id и удаляем
 
         session()->flash('success', 'Акция удалена');
         return redirect()->route('promotions.index');

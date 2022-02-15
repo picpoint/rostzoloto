@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::all();         // получаем все изделия
         return view('admin.products.index', compact('products'));
     }
 
@@ -29,9 +29,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $materials = Material::all();
-        $stones = Stone::all();
+        $categories = Category::all();          // получаем все категории
+        $materials = Material::all();           // получаем все материалы
+        $stones = Stone::all();         // получаем все вставки
         return view('admin.products.create', compact('categories', 'materials', 'stones'));
     }
 
@@ -44,16 +44,16 @@ class ProductController extends Controller
     public function store(Request $request)
     {
 
-        $allCategory = Category::all();
+        $allCategory = Category::all();         // получаем все категории
         $nameFolder = '';
 
-        foreach ($allCategory as $cat) {
-            if ($cat->id == $request->category_id) {
-                $nameFolder = $cat->slug;
+        foreach ($allCategory as $cat) {            // перебираем все записи
+            if ($cat->id == $request->category_id) {            // если категория из БД == пришедшей категории из поля
+                $nameFolder = $cat->slug;           // имя папки для фото изделия делаем таким же как слаг категории
             }
         }
 
-        Product::create([
+        Product::create([           // сохраняем в БД инфу по данному изделию
             'title' => $request->title,
             'slug' => $request->slug,
             'category_id' => $request->category_id,
@@ -63,7 +63,7 @@ class ProductController extends Controller
             'weight' => $request->weight,
             'size' => $request->size,
             'price' => $request->price,
-            'picture' => $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName()),
+            'picture' => $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName()),         // создаём в БД запись с путём до папки(имя папки слаг категории) имя файла оставляем оригинальным
         ]);
 
         session()->flash('success', 'Изделие сохранено');
@@ -89,10 +89,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::find($id);
-        $categories = Category::all();
-        $materials = Material::all();
-        $stones = Stone::all();
+        $product = Product::find($id);          // находим конкретное изделие по id
+        $categories = Category::all();          // получаем все категории
+        $materials = Material::all();           // получаем все материалы
+        $stones = Stone::all();         // получем все вставки
         return view('admin.products.edit', compact('product', 'categories', 'materials', 'stones'));
     }
 
@@ -105,26 +105,26 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $allCategory = Category::all();
+        $allCategory = Category::all();         // получаем все категории
         $nameFolder = '';
 
-        foreach ($allCategory as $cat) {
-            if ($cat->id == $request->category_id) {
-                $nameFolder = $cat->slug;
+        foreach ($allCategory as $cat) {            // перебираем все записи
+            if ($cat->id == $request->category_id) {            // если id категории из БД == id который пришёл из поля
+                $nameFolder = $cat->slug;           // имя папки присваиваем слаг из категории в БД
             }
         }
 
-        $product = Product::find($id);
+        $product = Product::find($id);          // находим конкретное изделие по id
 
         $pathTopict = '';
 
-        if ($request->picture == null) {
-            $pathTopict = $product->picture;
+        if ($request->picture == null) {            // если картинка пустая(т.е. пользователь её не подвязал)
+            $pathTopict = $product->picture;            // путь до картинки оставляем таким же как и был раньше
         } else {
-            $pathTopict = $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName());
+            $pathTopict = $request->picture->storeAs("img/products/" . $nameFolder, $request->picture->getClientOriginalName());            // иначе мы сохраняем новую картинку(если пользователь её подвязал)
         }
 
-        $product->update([
+        $product->update([          // сохраняем все записи в БД
             'title' => $request->title,
             'slug' => $request->slug,
             'category_id' => $request->category_id,
@@ -149,7 +149,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::destroy($id);
+        Product::destroy($id);          // удаляем запись по конкретному изделию, которое получаем по id
         session()->flash('success', 'Изделие удалено');
 
         return redirect()->route('products.index');
