@@ -83,8 +83,7 @@ class ExceptionHandler implements EventSubscriberInterface
                 ? $throwable->getMessage()
                 : $this->translator->translateErrorMessage($exceptionCode, $replacements);
 
-        $response = new JsonResponse();
-        $response->withError($exceptionCode, $message);
+        $response = JsonResponse::create()->withError($exceptionCode, $message);
 
         $event->setThrowable(new HttpException($httpStatusCode));
 
