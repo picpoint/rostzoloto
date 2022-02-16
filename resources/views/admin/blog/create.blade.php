@@ -24,9 +24,14 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="form-group" id="blogpost">
+                {{--<div class="form-group" id="blogpost" name="blogpost">--}}
                     {{--<input type="text" name="contentpost" class="form-control" id="contentpost" placeholder="Введите название поста">--}}
-                </div>
+                {{--</div>--}}
+
+                <textarea name="blogpost" id="blogpost" cols="30" rows="10">
+
+                </textarea>
+
             </div>
             <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">
                 <label for="preview">Загрузить изображение</label>
