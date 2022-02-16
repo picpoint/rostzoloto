@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -35,7 +36,18 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+//        dd($request->all());
+
+        Blog::create([
+            'title' => $request->title,
+            'content' => $request->blogpost,
+            'preview' => $request->preview->storeAs('public/assets/users/img/blog/images', $request->preview->getClientOriginalName()),
+        ]);
+
+        session()->flash('success', 'Пост сохранён');
+
+        return redirect()->route('blog.index');
+
     }
 
     /**

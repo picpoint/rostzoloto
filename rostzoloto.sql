@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 14 2022 г., 16:43
+-- Время создания: Фев 16 2022 г., 22:47
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- База данных: `rostzoloto`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` bigint(20) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `preview` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `title`, `slug`, `content`, `preview`, `created_at`, `updated_at`) VALUES
+(3, 'ujnjdj', 'ujnjdj', '<p>Товарищи! постоянный количественный рост и сфера нашей активности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p><figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/F3c_FdZT37Y.jpg\"></figure>', 'public/assets/users/img/blog/images/F3c_FdZT37Y.jpg', '2022-02-16 16:46:33', '2022-02-16 16:46:33');
 
 -- --------------------------------------------------------
 
@@ -349,6 +372,12 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `email_verified_at`
 --
 
 --
+-- Индексы таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `categories`
 --
 ALTER TABLE `categories`
@@ -415,6 +444,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
