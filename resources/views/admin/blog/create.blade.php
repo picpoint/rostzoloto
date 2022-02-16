@@ -19,8 +19,13 @@
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="title">Название поста</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название поста">
+                    <label for="title">Название поста блога</label>
+                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group" id="blogpost">
+                    <input type="text" name="contentpost" class="form-control" id="contentpost" placeholder="Введите название поста">
                 </div>
             </div>
 

@@ -151,7 +151,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="{{ route('blog.create') }}" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Создать</p>
                                 </a>
@@ -194,6 +194,16 @@
 
 
 <script src="public/assets/admin/js/admin.js"></script>
+<script src="/public/assets/admin/ckeditor5/build/ckeditor.js"></script>
+<script src="/public/assets/admin/ckfinder/ckfinder.js"></script>
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#blogpost' ) )
+        .catch( error => {
+        console.error( error );
+    } );
+</script>
 
 
 </body>
