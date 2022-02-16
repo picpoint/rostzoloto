@@ -35,6 +35,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        dump($request->input('textbox'));
         dd($request->all());
     }
 
