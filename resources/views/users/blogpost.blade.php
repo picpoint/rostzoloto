@@ -17,7 +17,10 @@
     </div>
 
     <div class="blogpost__contentblog">
-        <span>текущий пост блога</span>
+        <div class="blogpost__contentblogwrp">
+            <h3>{!! $blogpost[0]->title !!}</h3>
+            <span>{!! $blogpost[0]->content !!}</span>
+        </div>
     </div>
 
     <div class="blogpost__footerblog">

@@ -15,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('admin.blog.index');
+        $blogposts = Blog::all();
+        return view('admin.blog.index', compact('blogposts'));
     }
 
     /**
@@ -68,7 +69,12 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+//        dd($id);
+        $blog = Blog::find($id);
+
+//        dd($blog);
+
+        return view('admin.blog.edit', compact('blog'));
     }
 
     /**
@@ -80,7 +86,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request->all());
     }
 
     /**

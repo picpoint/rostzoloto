@@ -965,6 +965,25 @@
   justify-content: center;
   flex-grow: 1;
 }
+.blogpost__contentblogwrp {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: 30px 0;
+}
+.blogpost__contentblogwrp h3 {
+  font-family: Montserrat-Regular;
+  font-size: 1.3rem;
+}
+.blogpost__contentblogwrp span {
+  text-align: justify;
+  font-family: Montserrat-Regular;
+  font-size: 1.1rem;
+  width: 100%;
+}
+.blogpost__contentblogwrp span img {
+  width: 100%;
+}
 html {
   scroll-behavior: smooth;
 }

@@ -12,15 +12,15 @@
 
 
         <div class="card-header">
-            <h3 class="card-title">Создание поста блога</h3>
+            <h3 class="card-title">Редактирование поста блога</h3>
         </div>
 
-        <form action="{{ route('blog.store') }}" method="post" enctype="multipart/form-data">
+        <form action="#" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="title">Название поста блога</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="Введите название">
+                    <label for="title">Редактирование поста блога</label>
+                    <input type="text" name="title" class="form-control" id="title">
                 </div>
             </div>
             <div class="card-body">
@@ -38,7 +38,7 @@
             </div>
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Создать</button>
+                <button type="submit" class="btn btn-primary">Редактировать</button>
             </div>
         </form>
     </div>
