@@ -20,13 +20,12 @@
 
             @foreach($posts as $post)
                 <div class="blog__postblg">
-                    <a href="#">
+                    <a href="{{ route('blogpost', ['slug' => $post->slug]) }}">
                         <div class="blog__postblgimg">
                             <img src="public/assets/users/{{ $post->preview }}" alt="img">
                         </div>
                         <div class="blog__postblgcontent">
                             <span>{{ $post->title }}</span>
-                            <span>Какой то текст поста, о чём то, ни кто не знает о чём</span>
                         </div>
                     </a>
                 </div>

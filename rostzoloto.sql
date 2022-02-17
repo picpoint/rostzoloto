@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 17 2022 г., 08:44
+-- Время создания: Фев 17 2022 г., 16:43
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -42,7 +42,10 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `title`, `slug`, `content`, `preview`, `created_at`, `updated_at`) VALUES
-(9, 'asdadsasdasd', 'asdadsasdasd', '<p>asdasdasdasdasd</p><figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/1076b8f5c6c15e99178b530160b23e39.png\"></figure>', 'img/blog/images/31312.png', '2022-02-17 02:41:48', '2022-02-17 02:41:48');
+(10, 'Беглый взгляд на Go Workspaces в Go 1.18', 'beglyy-vzglyad-na-go-workspaces-v-go-1-18', '<p>Скоро выходит версия Go 1.18, и в массовом сознании она, скорее всего, будет ассоциироваться с Generic-ами. Но помимо них туда попадает еще несколько вкусных фичей. Например, <a href=\"https://go.googlesource.com/proposal/+/master/design/45713-workspace.md\">Go Workspaces</a>.</p><figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/612a9aa864c973104174349d9a46c284.png\"></figure>', 'img/blog/images/612a9aa864c973104174349d9a46c284.png', '2022-02-17 10:15:36', '2022-02-17 10:15:36'),
+(11, 'От песочных часов к пирамиде: как усовершенствовать структуру тестов', 'ot-pesochnyh-chasov-k-piramide-kak-usovershenstvovat-strukturu-testov', '<p>Меня зовут Владислав Романенко, я Senior iOS QA Engineer в Badoo и Bumble. Мы регулярно внедряем новые фичи в приложения, и автоматизация тестирования — один из способов не пропустить баги. Фактически автотесты входят в жизненный цикл всех частей наших приложений: бэкенда, сервисов, фронтенда и мобильных клиентов. Чем раньше мы обнаружим ошибку, тем дешевле будет её исправить.&nbsp;</p><figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/0e045d089d2864b4ff14471958918b1a.jpg\"></figure>', 'img/blog/images/0e045d089d2864b4ff14471958918b1a.jpg', '2022-02-17 10:17:01', '2022-02-17 10:17:01'),
+(12, 'Всем привет, я инди разработчик, но когда то я им не был :) За всё время своих скитаний я успел сменить много различных профессий', 'vsem-privet-ya-indi-razrabotchik-no-kogda-to-ya-im-ne-byl-za-vse-vremya-svoih-skitaniy-ya-uspel-smenit-mnogo-razlichnyh-professiy', '<p>Всем привет, я инди разработчик, но когда то я им не был :) За всё время своих скитаний я успел сменить много различных профессий, от грузчика и продавца консультанта, до сотрудника торгового зала в \"Ленте\", но всё это не особо меня устраивало, поэтому в свободное от работы время начал учиться программировать, и, в конце концов таки стал веб разработчиком, после чего нашёл себе неплохую работу в этой сфере и сидел бы я так дальше и не рыпался из веба, если бы однажды не захотел скоротать время и поиграть на эмуляторе Nintendo DS в одну из самых моих любимых на ней игр - \"Picross DS\".</p><figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/a0a0089b716a7d8d9811197d9ecb46e4.png\"></figure>', 'img/blog/images/a0a0089b716a7d8d9811197d9ecb46e4.png', '2022-02-17 10:24:40', '2022-02-17 10:24:40'),
+(13, 'Моделирование как оно есть ...', 'modelirovanie-kak-ono-est', '<figure class=\"image\"><img src=\"/public/assets/users/img/blog/images/1076b8f5c6c15e99178b530160b23e39.png\"></figure>', 'img/blog/images/31312.png', '2022-02-17 10:30:03', '2022-02-17 10:30:03');
 
 -- --------------------------------------------------------
 
@@ -449,7 +452,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`

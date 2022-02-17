@@ -13,4 +13,10 @@ class BlogController extends Controller
         return view('users.blog', compact('posts'));
     }
 
+
+    public function currentPost(Request $request) {
+        return view('users.blogpost');
+    }
+
+
 }
