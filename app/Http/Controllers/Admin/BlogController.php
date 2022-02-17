@@ -36,12 +36,11 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
 
         Blog::create([
             'title' => $request->title,
             'content' => $request->blogpost,
-            'preview' => $request->preview->storeAs('public/assets/users/img/blog/images', $request->preview->getClientOriginalName()),
+            'preview' => $request->preview->storeAs('img/blog/images', $request->preview->getClientOriginalName()),
         ]);
 
         session()->flash('success', 'Пост сохранён');

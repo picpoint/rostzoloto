@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
 
     public function index() {
-        return view('users.blog');
+        $posts = Blog::all();
+        return view('users.blog', compact('posts'));
     }
 
 }
