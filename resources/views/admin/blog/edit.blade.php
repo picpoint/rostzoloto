@@ -15,16 +15,18 @@
             <h3 class="card-title">Редактирование поста блога</h3>
         </div>
 
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="{{ route('blog.update', ['blog' => $blog->id]) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PATCH')
             <div class="card-body">
                 <div class="form-group">
                     <label for="title">Редактирование поста блога</label>
-                    <input type="text" name="title" class="form-control" id="title">
+                    <input type="text" name="title" class="form-control" id="title" value="{{ $blog->title }}">
                 </div>
             </div>
             <div class="card-body">
                 <textarea name="blogpost" id="blogpost" cols="30" rows="10">
+                    {{ $blog->content }}
                 </textarea>
             </div>
             <div class="form-group" style="width: 96%; margin-left: auto; margin-right: auto">

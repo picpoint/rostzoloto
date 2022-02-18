@@ -69,10 +69,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-//        dd($id);
         $blog = Blog::find($id);
-
-//        dd($blog);
 
         return view('admin.blog.edit', compact('blog'));
     }
@@ -86,7 +83,23 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
+        $blog = Blog::find($id);
+
+        if ($request->title != $blog->title || $request->blogpost != $blog->content) {
+            $blog->slug = null;
+
+            $blog->update([
+                'title' => $request->title,
+                'content' => $request->blogpost,
+            ]);
+        }
+
+
+
+
+
+        session()->flash('success', 'Пост обновлён');
+        return redirect()->route('blog.index');
     }
 
     /**
