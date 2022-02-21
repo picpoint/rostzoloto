@@ -1,0 +1,36 @@
+.partner {
+  //border: $border;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  &__contentprt {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  &__contentprtwrp {
+    border: $border;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 65%;
+  }
+  &__currentprt {
+    border: $border;
+    display: flex;
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+      img {
+        border: $border;
+        width: 100%;
+        height: 100%;
+      }
+  }
+
+
+
+}

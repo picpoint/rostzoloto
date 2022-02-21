@@ -30,6 +30,7 @@ Route::get('/gallery', 'GalleryController@index')->name('gallery');
 Route::get('/gallery/{slug}', 'GalleryController@showAlbum')->name('album');
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blogpost/{slug}', 'BlogController@currentPost')->name('blogpost');
+Route::get('/partner', 'PartnerController@index')->name('partner');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
@@ -43,6 +44,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::resource('/promotions', 'PromoutionController');
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/blog', 'BlogController');
+    Route::resource('/partner', 'PartnerController');
 });
 
 
