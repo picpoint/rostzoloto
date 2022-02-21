@@ -116,9 +116,8 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $pathPict = DB::table('blogs')->where('id', '=', $id)->pluck('preview');
-        unlink();
 
-        dd($pathPict[0]);
+        unlink("C:/OpenServer/domains/rostzoloto/public/assets/users/" . $pathPict[0]);
 
         Blog::destroy($id);
 
