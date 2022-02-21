@@ -35,7 +35,7 @@
                                 </button>
                             </a>
 
-                            <form action="#" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('blog.destroy', ['blog' => $blogpost->id]) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger m-1">

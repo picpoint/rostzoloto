@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -95,7 +96,11 @@ class BlogController extends Controller
         }
 
 
-
+        if ($request->preview != null) {
+            $blog->update([
+                'preview' => $request->preview->storeAs('img/blog/images', $request->preview->getClientOriginalName()),
+            ]);
+        }
 
 
         session()->flash('success', 'Пост обновлён');
@@ -110,6 +115,14 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pathPict = DB::table('blogs')->where('id', '=', $id)->pluck('preview');
+        unlink();
+
+        dd($pathPict[0]);
+
+        Blog::destroy($id);
+
+        session()->flash('success', 'Пост удалён');
+        return redirect()->route('blog.index');
     }
 }
