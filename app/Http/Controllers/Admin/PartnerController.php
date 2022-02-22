@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class PartnerController extends Controller
@@ -14,7 +15,8 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        return view('admin.partners.index');
+        $partners = Partner::all();
+        return view('admin.partners.index', compact('partners'));
     }
 
     /**
@@ -35,7 +37,16 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+
+        Partner::create([
+            'title' => $request->title,
+            'picture' => $request->picture->storeAs('img/partners', $request->picture->getClientOriginalName()),
+        ]);
+
+        session()->flash('success', 'Партнёр сохранён');
+
+        return redirect()->route('partner.index');
+
     }
 
     /**
@@ -57,7 +68,9 @@ class PartnerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $partner = Partner::find($id);
+
+        return view('admin.partners.edit', compact('partner'));
     }
 
     /**
@@ -69,7 +82,26 @@ class PartnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $partner = Partner::find($id);
+
+        if ($request->title != $partner->title) {
+            $partner->slug = null;
+
+            $partner->update([
+                'title' => $request->title,
+            ]);
+        }
+
+        if ($request->picture != null) {
+            $partner->update([
+                'picture' => $request->picture->storeAs('img/partners', $request->picture->getClientOriginalName()),
+            ]);
+        }
+
+        session()->flash('success', 'Информация по партнёру обновлена');
+
+        return redirect()->route('partner.index');
+
     }
 
     /**

@@ -24,27 +24,27 @@
                 </thead>
 
                 <tbody>
-                {{--@foreach($blogposts as $blogpost)--}}
-                    {{--<tr>--}}
-                        {{--<td style="width: 50px; text-align: center; vertical-align: middle">{{ $blogpost->id }}</td>--}}
-                        {{--<td style="vertical-align: middle">{{ $blogpost->title }}</td>--}}
-                        {{--<td style="display: flex; justify-content: center"><img src="/public/assets/users/{{ $blogpost->preview }}" alt="picture" style="height: 100px"></td>--}}
-                        {{--<td style="width: 400px; text-align: center">--}}
-                            {{--<a href="{{route('blog.edit', ['blog' => $blogpost->id])}}">--}}
-                                {{--<button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>--}}
-                                {{--</button>--}}
-                            {{--</a>--}}
+                @foreach($partners as $partner)
+                    <tr>
+                        <td style="width: 50px; text-align: center; vertical-align: middle">{{ $partner->id }}</td>
+                        <td style="vertical-align: middle">{{ $partner->title }}</td>
+                        <td style="display: flex; justify-content: center"><img src="/public/assets/users/{{ $partner->picture }}" alt="picture" style="height: 100px"></td>
+                        <td style="width: 400px; text-align: center">
+                            <a href="{{route('partner.edit', ['partner' => $partner->id])}}">
+                                <button type="submit" class="btn btn-primary m-1"><i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </a>
 
-                            {{--<form action="{{ route('blog.destroy', ['blog' => $blogpost->id]) }}" method="post" enctype="multipart/form-data">--}}
-                                {{--@csrf--}}
-                                {{--@method('DELETE')--}}
-                                {{--<button type="submit" class="btn btn-danger m-1">--}}
-                                    {{--<i class="fas fa-trash-alt"></i>--}}
-                                {{--</button>--}}
-                            {{--</form>--}}
-                        {{--</td>--}}
-                    {{--</tr>--}}
-                {{--@endforeach--}}
+                            <form action="{{ route('partner.destroy', ['partner' => $partner->id]) }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-1">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

@@ -11,7 +11,7 @@ class Partner extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['name', 'slug', 'picture'];
+    protected $fillable = ['title', 'slug', 'picture'];
 
 
     /**
