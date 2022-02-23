@@ -1022,17 +1022,47 @@
 }
 .lombard__contentlbwrp {
   display: flex;
-  justify-content: center;
-  align-content: flex-start;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 65%;
 }
-.lombard__currentlb {
+.lombard__hdrlb {
   display: flex;
   justify-content: center;
-  width: 150px;
-  height: 150px;
-  margin: 20px;
+}
+.lombard__hdrlb h3 {
+  font-family: Montserrat-Regular;
+  font-size: 1.3rem;
+}
+.lombard__currentlb {
+  border: 1px solid lightgrey;
+  display: flex;
+  margin: 40px;
+  width: 90%;
+  height: 400px;
+}
+.lombard__maplb {
+  display: flex;
+  height: 100%;
+}
+.lombard__describelb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+.lombard__describelb span {
+  margin: 20px 0;
+  font-family: Montserrat-Regular;
+  font-size: 1.1rem;
+}
+.lombard__describelb span:nth-child(1) {
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 html {
