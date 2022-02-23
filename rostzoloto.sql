@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 17 2022 г., 16:43
+-- Время создания: Фев 23 2022 г., 13:39
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -185,6 +185,30 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2020_05_21_300000_create_team_invitations_table', 1),
 (9, '2021_10_17_113052_create_sessions_table', 1),
 (10, '2021_12_31_071739_create_categories_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `partners`
+--
+
+CREATE TABLE `partners` (
+  `id` bigint(20) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `partners`
+--
+
+INSERT INTO `partners` (`id`, `title`, `slug`, `picture`, `created_at`, `updated_at`) VALUES
+(7, 'наташ либель', 'natash-libel', 'img/partners/Natasha_Libelle_logo_light_purple.png', '2022-02-22 15:58:09', '2022-02-23 07:14:35'),
+(8, 'саргон', 'sargon', 'img/partners/sargon.jpg', '2022-02-22 15:59:08', '2022-02-22 15:59:08'),
+(10, 'sokolov', 'sokolov', 'img/partners/соколов.png', '2022-02-23 07:33:27', '2022-02-23 07:33:27');
 
 -- --------------------------------------------------------
 
@@ -412,6 +436,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `partners`
+--
+ALTER TABLE `partners`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `products`
 --
 ALTER TABLE `products`
@@ -483,6 +513,12 @@ ALTER TABLE `materials`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `partners`
+--
+ALTER TABLE `partners`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `products`

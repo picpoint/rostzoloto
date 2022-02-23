@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PartnerController extends Controller
 {
@@ -112,6 +113,16 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rawData = DB::table('partners')->where('id', '=', $id)->pluck('picture');
+        $pathImg = $rawData[0];
+
+//        dd($pathImg);
+
+        Partner::destroy($id);
+        unlink("C:/OpenServer/domains/rostzoloto/public/assets/users/" . $pathImg);
+
+
+        session()->flash('success', 'Партнёр удалён');
+        return redirect()->route('partner.index');
     }
 }
