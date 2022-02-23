@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 23 2022 г., 13:39
+-- Время создания: Фев 23 2022 г., 16:27
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -206,9 +206,13 @@ CREATE TABLE `partners` (
 --
 
 INSERT INTO `partners` (`id`, `title`, `slug`, `picture`, `created_at`, `updated_at`) VALUES
-(7, 'наташ либель', 'natash-libel', 'img/partners/Natasha_Libelle_logo_light_purple.png', '2022-02-22 15:58:09', '2022-02-23 07:14:35'),
-(8, 'саргон', 'sargon', 'img/partners/sargon.jpg', '2022-02-22 15:59:08', '2022-02-22 15:59:08'),
-(10, 'sokolov', 'sokolov', 'img/partners/соколов.png', '2022-02-23 07:33:27', '2022-02-23 07:33:27');
+(11, 'sokolov', 'sokolov', 'img/partners/соколов.png', '2022-02-23 08:34:09', '2022-02-23 08:34:09'),
+(12, 'karatov', 'karatov', 'img/partners/karatov.png', '2022-02-23 08:34:36', '2022-02-23 08:34:36'),
+(13, 'delta', 'delta', 'img/partners/delta.png', '2022-02-23 08:34:54', '2022-02-23 08:34:54'),
+(14, 'atoll', 'atoll', 'img/partners/atoll.png', '2022-02-23 08:35:26', '2022-02-23 08:35:26'),
+(15, 'sargon', 'sargon', 'img/partners/logo.png', '2022-02-23 08:35:53', '2022-02-23 08:35:53'),
+(16, 'defleur', 'defleur', 'img/partners/defleur.png', '2022-02-23 08:36:23', '2022-02-23 08:36:23'),
+(17, 'natasha lebelle', 'natasha-lebelle', 'img/partners/Natasha_Libelle.png', '2022-02-23 08:37:01', '2022-02-23 08:37:01');
 
 -- --------------------------------------------------------
 
@@ -518,7 +522,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `products`

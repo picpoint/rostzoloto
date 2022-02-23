@@ -31,6 +31,7 @@ Route::get('/gallery/{slug}', 'GalleryController@showAlbum')->name('album');
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blogpost/{slug}', 'BlogController@currentPost')->name('blogpost');
 Route::get('/partner', 'PartnerController@index')->name('partner');
+Route::get('/lombards', 'LombardController@index')->name('lombards');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {

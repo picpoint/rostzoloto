@@ -116,11 +116,8 @@ class PartnerController extends Controller
         $rawData = DB::table('partners')->where('id', '=', $id)->pluck('picture');
         $pathImg = $rawData[0];
 
-//        dd($pathImg);
-
         Partner::destroy($id);
         unlink("C:/OpenServer/domains/rostzoloto/public/assets/users/" . $pathImg);
-
 
         session()->flash('success', 'Партнёр удалён');
         return redirect()->route('partner.index');

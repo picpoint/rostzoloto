@@ -23,7 +23,7 @@
             <a href="{{ route('catalog') }}">КАТАЛОГ</a>
             <a href="{{ route('gallery') }}">ГАЛЕРЕЯ</a>
             <a href="{{ route('blog') }}">БЛОГ</a>
-            <a href="#">ЛОМБАРДЫ</a>
+            <a href="{{ route('lombards') }}">ЛОМБАРДЫ</a>
             <a href="{{ route('partner') }}">ПАРТНЁРЫ</a>
             <a href="#">О НАС</a>
             <a href="#">КОНТАКТЫ</a>
