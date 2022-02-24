@@ -32,6 +32,8 @@ Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blogpost/{slug}', 'BlogController@currentPost')->name('blogpost');
 Route::get('/partner', 'PartnerController@index')->name('partner');
 Route::get('/lombards', 'LombardController@index')->name('lombards');
+Route::get('/about', 'AboutController@index')->name('about');
+
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
