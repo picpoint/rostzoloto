@@ -1110,6 +1110,22 @@
   margin: 30px 0;
   text-align: center;
 }
+.about__hotline {
+  display: flex;
+  justify-content: center;
+}
+.about__hotline span {
+  font-weight: bold;
+}
+.about__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.about__info span {
+  margin: 0;
+}
 
 html {
   scroll-behavior: smooth;

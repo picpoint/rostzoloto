@@ -50,6 +50,24 @@
         text-align: center;
       }
   }
+  &__hotline {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+      span {
+        font-weight: bold;
+      }
+  }
+  &__info {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0;
+      span {
+        margin: 0;
+      }
+  }
 
 
 

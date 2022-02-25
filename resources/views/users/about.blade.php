@@ -55,6 +55,30 @@
                     с <a href="{{ route('catalog') }}">ювелирным каталогом</a> нашего производства.
                 </p>
                 <span>Наш девиз - лучшее качество, по лучшей цене!</span>
+                <div class="about__hotline">
+                    <span>Бесплатная горячая линия: 8 (800)-234-35-54</span>
+                </div>
+                <div class="about__info">
+                    <span>По вопросам сотрудничества (поставки): </span>
+                    <span>тел. +7 (988) 168-43-62</span>
+                    <span>email: 1@rostzoloto23.ru</span>
+                </div>
+                <div class="about__info">
+                    <span>Филиал - склад г. Краснодар</span>
+                    <span>тел. +7 (989)-808-50-05</span>
+                    <span>email: 3opt@rostzoloto23.ru</span>
+                </div>
+                <div class="about__info">
+                    <span>Бухгалтерия:</span>
+                    <span>тел. +7 (862)-290-26-87</span>
+                    <span>+7 (988)-233-65-54</span>
+                </div>
+                <div class="about__info">
+                    <span>По вопросам рекламы:</span>
+                    <span>тел. +7 (918)-606-15-98</span>
+                    <span>email: rek@rostzoloto23.ru</span>
+                    <span>email: kincle89@mail.ru</span>
+                </div>
 
             </div>
 
