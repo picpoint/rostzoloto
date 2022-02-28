@@ -12,7 +12,8 @@ class HomepageController extends Controller
     public function index() {
         $title = 'Ювелирная компания РОСТЗОЛОТО - купить ювелирные украшения (Сочи, Краснодар)';
         $products = DB::table('products')->orderBy('id', 'desc')->paginate(8);          // получаем 8 записей из БД отсортированных в обратном порядке
-        return view('index', compact('title', 'products'));
+        $blogPosts = DB::table('blogs')->orderBy('id', 'desc')->paginate(3);
+        return view('index', compact('title', 'products', 'blogPosts'));
     }
 
 }

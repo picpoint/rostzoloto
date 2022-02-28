@@ -88,6 +88,39 @@
                 </div>
             </div>
 
+            <div class="lombard__currentlb">
+                <div class="lombard__maplb">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8be9e0ee43414a9e5ec7a4e54f15520860cf1ff87554ff4303827e2f0f232369&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <div class="lombard__describelb">
+                    <span>г.Сочи Курортный проспект 16</span>
+                    <span>ТЦ «Мелодия» 1 этаж</span>
+                    <span>тел: +7 (862)-296-77-79</span>
+                </div>
+            </div>
+
+            <div class="lombard__currentlb">
+                <div class="lombard__maplb">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad52e46890cfcfcfcb38bb6407dab9b69def8653fa02520db017e129261f64deb&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <div class="lombard__describelb">
+                    <span>г.Сочи Красная Поляна ТЦ "Золотая Нива"</span>
+                    <span>ул. Защитников Кавказа 118</span>
+                    <span>тел: +7 (862)-243-79-43</span>
+                </div>
+            </div>
+
+            <div class="lombard__currentlb">
+                <div class="lombard__maplb">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5d66141ba330e61626efd10f43cf31fcab32fd35250f9ac6f0a8cdd157154302&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <div class="lombard__describelb">
+                    <span>Адлер ТРЦ "Плаза"</span>
+                    <span> ул. Кирова 58</span>
+                    <span>тел:  +7 (862)-444-00-83</span>
+                </div>
+            </div>
+
 
 
         </div>
