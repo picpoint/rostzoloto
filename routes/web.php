@@ -33,6 +33,7 @@ Route::get('/blogpost/{slug}', 'BlogController@currentPost')->name('blogpost');
 Route::get('/partner', 'PartnerController@index')->name('partner');
 Route::get('/lombards', 'LombardController@index')->name('lombards');
 Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/salons', 'SalonController@index')->name('salons');
 
 
 

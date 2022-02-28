@@ -25,7 +25,7 @@
             <a href="{{ route('blog') }}">БЛОГ</a>
             <a href="{{ route('lombards') }}">ЛОМБАРДЫ</a>
             <a href="{{ route('partner') }}">ПАРТНЁРЫ</a>
-            <a href="#">САЛОНЫ</a>
+            <a href="{{ route('salons') }}">САЛОНЫ</a>
             <a href="{{ route('about') }}">О НАС</a>
 
         </div>
