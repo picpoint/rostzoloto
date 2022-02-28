@@ -112,12 +112,12 @@
 
             <div class="homepage__leftblock">
                 <div class="homepage__lefttopblock">
-                    <a href="#">
+                    <a href="http://localhost:3000/filter?_token=BPT9XeyFHudxHonbZnnHqmPqnIaREb9Ax9r2TDjp&c_zhenskie-kolca=19">
                         <img src="public/assets/users/img/baner1.jpg" alt="baner">
                     </a>
                 </div>
                 <div class="homepage__leftbottomblock">
-                    <a href="#">
+                    <a href="http://localhost:3000/filter?_token=BPT9XeyFHudxHonbZnnHqmPqnIaREb9Ax9r2TDjp&c_obruchalnye-kolca=24">
                         <img src="public/assets/users/img/baner2.jpg" alt="baner">
                     </a>
                 </div>
@@ -125,7 +125,7 @@
 
             <div class="homepage__rightblock">
                 <div class="homepage__righttopblock">
-                    <a href="#">
+                    <a href="http://localhost:3000/filter?_token=BPT9XeyFHudxHonbZnnHqmPqnIaREb9Ax9r2TDjp&c_podveski=26">
                         <img src="public/assets/users/img/baner3.jpg" alt="baner">
                     </a>
                 </div>
@@ -155,13 +155,12 @@
             <div class="homepage__blogcontent">
                 @foreach($blogPosts as $post)
                     <div class="homepage__blogpost">
-                        <a href="#">
+                        <a href="{{ route('blogpost', ['slug' => $post->slug]) }}">
                             <div class="homepage__blogpostimg">
                                 <img src="public/assets/users/{{ $post->preview }}" alt="img">
                             </div>
                             <div class="homepage__blogpostcontent">
                                 <span>{{ $post->title }}</span>
-                                <span>Какой то текст поста, о чём то, ни кто не знает о чём</span>
                             </div>
                         </a>
                     </div>
@@ -177,12 +176,9 @@
                 <span>НАШИ ПАРТНЁРЫ</span>
             </div>
             <div class="homepage__partnerscurrent">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
-                <img src="public/assets/users/img/partners/sargon.jpg" alt="partner">
+                @foreach($partners as $partner)
+                    <img src="public/assets/users/{{ $partner->picture }}" alt="partner">
+                @endforeach
             </div>
         </div>
     </div>

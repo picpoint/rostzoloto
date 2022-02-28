@@ -1591,6 +1591,8 @@ body {
 .homepage__blogpostcontent span {
   font-family: Montserrat-Regular;
   padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .homepage__blogpostcontent span:nth-child(1) {
   font-size: 1.1rem;

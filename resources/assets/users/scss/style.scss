@@ -548,6 +548,8 @@ body {
       //border: $border;
       font-family: Montserrat-Regular;
       padding-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       &:nth-child(1) {
         font-size: 1.1rem;
         font-weight: bolder;
